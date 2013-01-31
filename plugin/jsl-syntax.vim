@@ -1,2 +1,3 @@
 
-syntax include jquery syntax/javascript/jquery.vim
+
+" autocmd FileType javascript syntax include @jFunctions syntax/javascript-libries/jquery.vim
