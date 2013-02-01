@@ -5,20 +5,20 @@
 " Version:     0.9.10
 " URL:         http://backbonejs.org/
 
-syn keyword backbone containedin=ALL Backbone
+syn keyword javascriptBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
 
-syn keyword Events containedin=ALL on off trigger once listenTo stopListening
-syn keyword Model containedin=ALL extend constructor initialize get set escape has unset clear id idAttribute cid attributes
-syn keyword Model containedin=ALL changed defaults toJSON sync fetch save destroy validate validationError url urlRoot parse
-syn keyword Model containedin=ALL clone isNew hasChanged changedAttributes previous previousAttributes
-syn keyword Collection containedin=ALL extend model constructor initialize models toJSON sync add remove reset update get at 
-syn keyword Collection containedin=ALL push pop unshift shift length comparator sort pluck where url parse clone fetch create
-syn keyword Router containedin=ALL extend routes constructor initialize route navigate
-syn keyword History containedin=ALL start
-syn keyword Sync containedin=ALL sync ajax emulateHTTP emulateJSON
-syn keyword View containedin=ALL extend constructor initialize el $el setElement attributes render remove delegateEvents
-syn keyword View containedin=ALL undelegateEvents
-syn keyword Utility containedin=ALL noConflict 
+syn keyword javascriptBEvents containedin=ALL on off trigger once listenTo stopListening
+syn keyword javascriptBModel containedin=ALL extend constructor initialize get set escape has unset clear id idAttribute cid attributes
+syn keyword javascriptBModel containedin=ALL changed defaults toJSON sync fetch save destroy validate validationError url urlRoot parse
+syn keyword javascriptBModel containedin=ALL clone isNew hasChanged changedAttributes previous previousAttributes
+syn keyword javascriptBCollection containedin=ALL extend model constructor initialize models toJSON sync add remove reset update get at 
+syn keyword javascriptBCollection containedin=ALL push pop unshift shift length comparator sort pluck where url parse clone fetch create
+syn keyword javascriptBRouter containedin=ALL extend routes constructor initialize route navigate
+syn keyword javascriptBHistory containedin=ALL start
+syn keyword javascriptBSync containedin=ALL sync ajax emulateHTTP emulateJSON
+syn keyword javascriptBView containedin=ALL extend constructor initialize el $el setElement attributes render remove delegateEvents
+syn keyword javascriptBView containedin=ALL undelegateEvents
+syn keyword javascriptBUtility containedin=ALL noConflict 
 
 
 " Define the default highlighting.
@@ -32,16 +32,17 @@ if version >= 508 || !exists("did_lisp_syntax_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink abackbone       Constant
+  HiLink javascriptBackbone         Constant
+  HiLink coffeeBackbone             javascriptBackbone
 
-  HiLink Events          PreProc
-  HiLink Model           PreProc
-  HiLink Collection      PreProc
-  HiLink Router          PreProc
-  HiLink History         PreProc
-  HiLink Sync            PreProc
-  HiLink View            PreProc
-  HiLink Utility         PreProc
+  HiLink javascriptBEvents          PreProc
+  HiLink javascriptBModel           PreProc
+  HiLink javascriptBCollection      PreProc
+  HiLink javascriptBRouter          PreProc
+  HiLink javascriptBHistory         PreProc
+  HiLink javascriptBSync            PreProc
+  HiLink javascriptBView            PreProc
+  HiLink javascriptBUtility         PreProc
 
   delcommand HiLink
 endif
