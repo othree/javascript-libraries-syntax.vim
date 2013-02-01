@@ -1,6 +1,6 @@
 
-" autocmd FileType javascript syntax include @jquery syntax/jquery.vim
-autocmd FileType javascript exe('setl dict+='.expand('<sfile>:p:h').'/../after/syntax/javascript/jquery.vim')
+autocmd FileType javascript exe('source '.expand('<sfile>:p:h').'/syntax/jquery.vim')
+autocmd FileType javascript exe('setlocal dict+='.expand('<sfile>:p:h').'/syntax/jquery.vim')
 
-" autocmd FileType javascript syntax include @underscore plugin/syntax/underscore.vim
-autocmd FileType javascript exe('setl dict+='.expand('<sfile>:p:h').'/../after/syntax/javascript/underscore.vim')
+autocmd FileType javascript exe('source '.expand('<sfile>:p:h').'/syntax/underscore.vim')
+autocmd FileType javascript exe('setlocal dict+='.expand('<sfile>:p:h').'/syntax/underscore.vim')
