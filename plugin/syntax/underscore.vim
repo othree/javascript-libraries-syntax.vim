@@ -1,9 +1,9 @@
 " Vim syntax file
-" Language:    underscore
-" Maintainer:  
-" Last Change: 
-" Version:     
-" URL:         
+" Language:    underscore.js
+" Maintainer:  othree <othree@gmail.com>
+" Last Change: 2013/02/01
+" Version:     1.4.4
+" URL:         http://underscorejs.org/
 
 syn match   underscore  containedin=ALL /\<_\>/
 
