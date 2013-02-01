@@ -5,46 +5,46 @@
 " Version:     0.5.2
 " URL:         http://api.jquery.com/
 
-syn match   jQuery          /jQuery\|\$/ containedin=ALL
+syn match   jQuery          containedin=ALL /jQuery\|\$/
 
 
 syn match   jFunc           /\.\w\+(\@=/ contains=@jFunctions
 
 syn cluster jFunctions      contains=jAjax,jAttributes,jCore,jCSS,jData,jDeferred,jDimensions,jEffects,jEvents,jManipulation,jMiscellaneous,jOffset,jProperties,jTraversing,jUtilities
-syn keyword jAjax           contained ajaxComplete ajaxError ajaxSend ajaxStart ajaxStop ajaxSuccess containedin=ALL
-syn keyword jAjax           contained param serialize serializeArray containedin=ALL
-syn keyword jAjax           contained ajax ajaxPrefilter ajaxSetup ajaxSettings ajaxTransport containedin=ALL
-syn keyword jAjax           contained get getJSON getScript load post containedin=ALL
-syn keyword jAttributes     contained addClass attr hasClass prop removeAttr removeClass removeProp toggleClass val containedin=ALL
-syn keyword jCore           contained holdReady noConflict sub when containedin=ALL
-syn keyword jCSS            contained css cssHooks containedin=ALL
-syn keyword jData           contained clearQueue data dequeue hasData queue removeData containedin=ALL
-syn keyword jDeferred       contained Deferred always done fail isRejected isResolved pipe promise reject rejectWith resolved resolveWith then containedin=ALL
-syn keyword jDimensions     contained height innerHeight innerWidth outerHeight outerWidth width containedin=ALL
-syn keyword jEffects        contained hide show toggle containedin=ALL
-syn keyword jEffects        contained animate delay stop containedin=ALL
-syn keyword jEffects        contained fadeIn fadeOut fadeTo fadeToggle containedin=ALL
-syn keyword jEffects        contained slideDown slideToggle slideUp containedin=ALL
-syn keyword jEvents         contained error resize scroll containedin=ALL
-syn keyword jEvents         contained ready unload containedin=ALL
-syn keyword jEvents         contained bind delegate die live one proxy trigger triggerHandler unbind undelegate containedin=ALL
-syn keyword jEvents         contained Event currentTarget isDefaultPrevented isImmediatePropagationStopped isPropagationStopped namespace pageX pageY preventDefault relatedTarget result stopImmediatePropagation stopPropagation target timeStamp which containedin=ALL
-syn keyword jEvents         contained blur change focus select submit containedin=ALL
-syn keyword jEvents         contained focusin focusout keydown keypress keyup containedin=ALL
-syn keyword jEvents         contained click dblclick hover mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup containedin=ALL
-syn keyword jManipulation   contained clone containedin=ALL
-syn keyword jManipulation   contained unwrap wrap wrapAll wrapInner containedin=ALL
-syn keyword jManipulation   contained append appendTo html preprend prependTo text containedin=ALL
-syn keyword jManipulation   contained after before insertAfter insertBefore containedin=ALL
-syn keyword jManipulation   contained detach empty remove containedin=ALL
-syn keyword jManipulation   contained replaceAll replaceWith containedin=ALL
-syn keyword jMiscellaneous  contained index size toArray containedin=ALL
-syn keyword jOffset         contained offset offsetParent position scrollTop scrollLeft containedin=ALL
-syn keyword jProperties     contained browser context fx.interval fx.off length selector support containedin=ALL
-syn keyword jTraversing     contained eq filter first has is last map not slice containedin=ALL
-syn keyword jTraversing     contained add andSelf contents end containedin=ALL
-syn keyword jTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings containedin=ALL
-syn keyword jUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray merge noop now parseJSON parseXML trim type unique containedin=ALL
+syn keyword jAjax           containedin=ALL ajaxComplete ajaxError ajaxSend ajaxStart ajaxStop ajaxSuccess
+syn keyword jAjax           containedin=ALL param serialize serializeArray
+syn keyword jAjax           containedin=ALL ajax ajaxPrefilter ajaxSetup ajaxSettings ajaxTransport
+syn keyword jAjax           containedin=ALL get getJSON getScript load post
+syn keyword jAttributes     containedin=ALL addClass attr hasClass prop removeAttr removeClass removeProp toggleClass val
+syn keyword jCore           containedin=ALL holdReady noConflict sub when
+syn keyword jCSS            containedin=ALL css cssHooks
+syn keyword jData           containedin=ALL clearQueue data dequeue hasData queue removeData
+syn keyword jDeferred       containedin=ALL Deferred always done fail isRejected isResolved pipe promise reject rejectWith resolved resolveWith then
+syn keyword jDimensions     containedin=ALL height innerHeight innerWidth outerHeight outerWidth width
+syn keyword jEffects        containedin=ALL hide show toggle
+syn keyword jEffects        containedin=ALL animate delay stop
+syn keyword jEffects        containedin=ALL fadeIn fadeOut fadeTo fadeToggle
+syn keyword jEffects        containedin=ALL slideDown slideToggle slideUp
+syn keyword jEvents         containedin=ALL error resize scroll
+syn keyword jEvents         containedin=ALL ready unload
+syn keyword jEvents         containedin=ALL bind delegate die live one proxy trigger triggerHandler unbind undelegate
+syn keyword jEvents         containedin=ALL Event currentTarget isDefaultPrevented isImmediatePropagationStopped isPropagationStopped namespace pageX pageY preventDefault relatedTarget result stopImmediatePropagation stopPropagation target timeStamp which
+syn keyword jEvents         containedin=ALL blur change focus select submit
+syn keyword jEvents         containedin=ALL focusin focusout keydown keypress keyup
+syn keyword jEvents         containedin=ALL click dblclick hover mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup
+syn keyword jManipulation   containedin=ALL clone
+syn keyword jManipulation   containedin=ALL unwrap wrap wrapAll wrapInner
+syn keyword jManipulation   containedin=ALL append appendTo html preprend prependTo text
+syn keyword jManipulation   containedin=ALL after before insertAfter insertBefore
+syn keyword jManipulation   containedin=ALL detach empty remove
+syn keyword jManipulation   containedin=ALL replaceAll replaceWith
+syn keyword jMiscellaneous  containedin=ALL index size toArray
+syn keyword jOffset         containedin=ALL offset offsetParent position scrollTop scrollLeft
+syn keyword jProperties     containedin=ALL browser context fx.interval fx.off length selector support
+syn keyword jTraversing     containedin=ALL eq filter first has is last map not slice
+syn keyword jTraversing     containedin=ALL add andSelf contents end
+syn keyword jTraversing     containedin=ALL children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
+syn keyword jUtilities      containedin=ALL each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray merge noop now parseJSON parseXML trim type unique
 
 
 syn region  javaScriptStringD          start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=javaScriptSpecial,@htmlPreproc,@jSelectors
