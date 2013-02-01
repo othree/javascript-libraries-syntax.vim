@@ -1,8 +1,9 @@
 " Vim syntax file
 " Language:    jQuery
+" Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: May 28th, 2011
-" Version:     0.5.2
+" Last Change: 2013/02/01
+" Version:     1.9
 " URL:         http://api.jquery.com/
 
 syn match   jQuery          containedin=ALL /jQuery\|\$/
@@ -15,11 +16,12 @@ syn keyword jAjax           containedin=ALL ajaxComplete ajaxError ajaxSend ajax
 syn keyword jAjax           containedin=ALL param serialize serializeArray
 syn keyword jAjax           containedin=ALL ajax ajaxPrefilter ajaxSetup ajaxSettings ajaxTransport
 syn keyword jAjax           containedin=ALL get getJSON getScript load post
-syn keyword jAttributes     containedin=ALL addClass attr hasClass prop removeAttr removeClass removeProp toggleClass val
-syn keyword jCore           containedin=ALL holdReady noConflict sub when
+syn keyword jAttributes     containedin=ALL addClass attr hasClass html prop removeAttr removeClass removeProp toggleClass val
+syn keyword jCallbacks      containedin=ALL add disable disabled empty fire fired fireWith has lock locked remove Callbacks
+syn keyword jCore           containedin=ALL holdReady noConflict when
 syn keyword jCSS            containedin=ALL css cssHooks
 syn keyword jData           containedin=ALL clearQueue data dequeue hasData queue removeData
-syn keyword jDeferred       containedin=ALL Deferred always done fail isRejected isResolved pipe promise reject rejectWith resolved resolveWith then
+syn keyword jDeferred       containedin=ALL Deferred always done fail notify pipe progress promise reject rejectWith resolved resolveWith notifyWith state then
 syn keyword jDimensions     containedin=ALL height innerHeight innerWidth outerHeight outerWidth width
 syn keyword jEffects        containedin=ALL hide show toggle
 syn keyword jEffects        containedin=ALL animate delay stop
@@ -27,7 +29,7 @@ syn keyword jEffects        containedin=ALL fadeIn fadeOut fadeTo fadeToggle
 syn keyword jEffects        containedin=ALL slideDown slideToggle slideUp
 syn keyword jEvents         containedin=ALL error resize scroll
 syn keyword jEvents         containedin=ALL ready unload
-syn keyword jEvents         containedin=ALL bind delegate die live one proxy trigger triggerHandler unbind undelegate
+syn keyword jEvents         containedin=ALL bind delegate on off one proxy trigger triggerHandler unbind undelegate
 syn keyword jEvents         containedin=ALL Event currentTarget isDefaultPrevented isImmediatePropagationStopped isPropagationStopped namespace pageX pageY preventDefault relatedTarget result stopImmediatePropagation stopPropagation target timeStamp which
 syn keyword jEvents         containedin=ALL blur change focus select submit
 syn keyword jEvents         containedin=ALL focusin focusout keydown keypress keyup
@@ -40,7 +42,7 @@ syn keyword jManipulation   containedin=ALL detach empty remove
 syn keyword jManipulation   containedin=ALL replaceAll replaceWith
 syn keyword jMiscellaneous  containedin=ALL index size toArray
 syn keyword jOffset         containedin=ALL offset offsetParent position scrollTop scrollLeft
-syn keyword jProperties     containedin=ALL browser context fx.interval fx.off length selector support
+syn keyword jProperties     containedin=ALL context fx.interval fx.off length selector support
 syn keyword jTraversing     containedin=ALL eq filter first has is last map not slice
 syn keyword jTraversing     containedin=ALL add andSelf contents end
 syn keyword jTraversing     containedin=ALL children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
@@ -76,6 +78,7 @@ if version >= 508 || !exists("did_lisp_syntax_inits")
 
   HiLink jAjax           PreProc
   HiLink jAttributes     PreProc
+  HiLink jCallbacks      PreProc
   HiLink jCore           PreProc
   HiLink jCSS            PreProc
   HiLink jData           PreProc
