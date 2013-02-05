@@ -4,8 +4,20 @@ Syntax file for javascript libries.
 
 ## Feature
 
-- Supports *.js, *.coffee, *.ls
 - Supports [SyntaxComplete][]
+
+## File Types
+
+- JavaScript
+- [CoffeeScript](http://coffeescript.org/)
+- [LiveScript](http://livescript.net/)
+
+## Libries
+
+- [jQuery](http://jquery.com/)
+- [underscore.js](http://underscorejs.org/)
+- [Backbone.js](http://backbonejs.org/)
+- [prelude.ls](http://gkz.github.com/prelude-ls/)
 
 ## Install
 
