@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    underscore.js
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/01
+" Last Change: 2013/02/05
 " Version:     1.4.4
 " URL:         http://underscorejs.org/
 

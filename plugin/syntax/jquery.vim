@@ -2,7 +2,7 @@
 " Language:    jQuery
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/02/01
+" Last Change: 2013/02/05
 " Version:     1.9
 " URL:         http://api.jquery.com/
 
