@@ -5,52 +5,58 @@
 " Version:     0.9.10
 " URL:         http://backbonejs.org/
 
-syn keyword javascriptBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
+syntax keyword javascriptBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
 
-syn keyword javascriptBEvents containedin=ALL on off trigger once listenTo stopListening
-syn keyword javascriptBModel containedin=ALL extend constructor initialize get set escape has unset clear id idAttribute cid attributes
-syn keyword javascriptBModel containedin=ALL changed defaults toJSON sync fetch save destroy validate validationError url urlRoot parse
-syn keyword javascriptBModel containedin=ALL clone isNew hasChanged changedAttributes previous previousAttributes
-syn keyword javascriptBCollection containedin=ALL extend model constructor initialize models toJSON sync add remove reset update get at 
-syn keyword javascriptBCollection containedin=ALL push pop unshift shift length comparator sort pluck where url parse clone fetch create
-syn keyword javascriptBRouter containedin=ALL extend routes constructor initialize route navigate
-syn keyword javascriptBHistory containedin=ALL start
-syn keyword javascriptBSync containedin=ALL sync ajax emulateHTTP emulateJSON
-syn keyword javascriptBView containedin=ALL extend constructor initialize el $el setElement attributes render remove delegateEvents
-syn keyword javascriptBView containedin=ALL undelegateEvents
-syn keyword javascriptBUtility containedin=ALL noConflict 
+syntax cluster javascriptBFunctions contains=javascriptBEvents,javascriptBModel,javascriptBCollection,javascriptBRouter,javascriptBHistory,javascriptBSync,javascriptBView,javascriptBUtility
 
-
-syn keyword coffeeBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
-
-syn keyword coffeeBEvents containedin=ALL on off trigger once listenTo stopListening
-syn keyword coffeeBModel containedin=ALL extend constructor initialize get set escape has unset clear id idAttribute cid attributes
-syn keyword coffeeBModel containedin=ALL changed defaults toJSON sync fetch save destroy validate validationError url urlRoot parse
-syn keyword coffeeBModel containedin=ALL clone isNew hasChanged changedAttributes previous previousAttributes
-syn keyword coffeeBCollection containedin=ALL extend model constructor initialize models toJSON sync add remove reset update get at 
-syn keyword coffeeBCollection containedin=ALL push pop unshift shift length comparator sort pluck where url parse clone fetch create
-syn keyword coffeeBRouter containedin=ALL extend routes constructor initialize route navigate
-syn keyword coffeeBHistory containedin=ALL start
-syn keyword coffeeBSync containedin=ALL sync ajax emulateHTTP emulateJSON
-syn keyword coffeeBView containedin=ALL extend constructor initialize el $el setElement attributes render remove delegateEvents
-syn keyword coffeeBView containedin=ALL undelegateEvents
-syn keyword coffeeBUtility containedin=ALL noConflict 
+syntax keyword javascriptBEvents contained on off trigger once listenTo stopListening
+syntax keyword javascriptBModel contained extend constructor initialize get set escape has unset clear id idAttribute cid attributes
+syntax keyword javascriptBModel contained changed defaults toJSON sync fetch save destroy validate validationError url urlRoot parse
+syntax keyword javascriptBModel contained clone isNew hasChanged changedAttributes previous previousAttributes
+syntax keyword javascriptBCollection contained extend model constructor initialize models toJSON sync add remove reset update get at 
+syntax keyword javascriptBCollection contained push pop unshift shift length comparator sort pluck where url parse clone fetch create
+syntax keyword javascriptBRouter contained extend routes constructor initialize route navigate
+syntax keyword javascriptBHistory contained start
+syntax keyword javascriptBSync contained sync ajax emulateHTTP emulateJSON
+syntax keyword javascriptBView contained extend constructor initialize el $el setElement attributes render remove delegateEvents
+syntax keyword javascriptBView contained undelegateEvents
+syntax keyword javascriptBUtility contained noConflict 
 
 
-syn keyword lsBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
+syntax keyword coffeeBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
 
-syn keyword lsBEvents containedin=ALL on off trigger once listenTo stopListening
-syn keyword lsBModel containedin=ALL extend constructor initialize get set escape has unset clear id idAttribute cid attributes
-syn keyword lsBModel containedin=ALL changed defaults toJSON sync fetch save destroy validate validationError url urlRoot parse
-syn keyword lsBModel containedin=ALL clone isNew hasChanged changedAttributes previous previousAttributes
-syn keyword lsBCollection containedin=ALL extend model constructor initialize models toJSON sync add remove reset update get at 
-syn keyword lsBCollection containedin=ALL push pop unshift shift length comparator sort pluck where url parse clone fetch create
-syn keyword lsBRouter containedin=ALL extend routes constructor initialize route navigate
-syn keyword lsBHistory containedin=ALL start
-syn keyword lsBSync containedin=ALL sync ajax emulateHTTP emulateJSON
-syn keyword lsBView containedin=ALL extend constructor initialize el $el setElement attributes render remove delegateEvents
-syn keyword lsBView containedin=ALL undelegateEvents
-syn keyword lsBUtility containedin=ALL noConflict 
+syntax cluster coffeeBFunctions contains=coffeeBEvents,coffeeBModel,coffeeBCollection,coffeeBRouter,coffeeBHistory,coffeeBSync,coffeeBView,coffeeBUtility
+
+syntax keyword coffeeBEvents contained on off trigger once listenTo stopListening
+syntax keyword coffeeBModel contained extend constructor initialize get set escape has unset clear id idAttribute cid attributes
+syntax keyword coffeeBModel contained changed defaults toJSON sync fetch save destroy validate validationError url urlRoot parse
+syntax keyword coffeeBModel contained clone isNew hasChanged changedAttributes previous previousAttributes
+syntax keyword coffeeBCollection contained extend model constructor initialize models toJSON sync add remove reset update get at 
+syntax keyword coffeeBCollection contained push pop unshift shift length comparator sort pluck where url parse clone fetch create
+syntax keyword coffeeBRouter contained extend routes constructor initialize route navigate
+syntax keyword coffeeBHistory contained start
+syntax keyword coffeeBSync contained sync ajax emulateHTTP emulateJSON
+syntax keyword coffeeBView contained extend constructor initialize el $el setElement attributes render remove delegateEvents
+syntax keyword coffeeBView contained undelegateEvents
+syntax keyword coffeeBUtility contained noConflict 
+
+
+syntax keyword lsBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
+
+syntax cluster lsBFunctions contains=lsBEvents,lsBModel,lsBCollection,lsBRouter,lsBHistory,lsBSync,lsBView,lsBUtility
+
+syntax keyword lsBEvents contained on off trigger once listenTo stopListening
+syntax keyword lsBModel contained extend constructor initialize get set escape has unset clear id idAttribute cid attributes
+syntax keyword lsBModel contained changed defaults toJSON sync fetch save destroy validate validationError url urlRoot parse
+syntax keyword lsBModel contained clone isNew hasChanged changedAttributes previous previousAttributes
+syntax keyword lsBCollection contained extend model constructor initialize models toJSON sync add remove reset update get at 
+syntax keyword lsBCollection contained push pop unshift shift length comparator sort pluck where url parse clone fetch create
+syntax keyword lsBRouter contained extend routes constructor initialize route navigate
+syntax keyword lsBHistory contained start
+syntax keyword lsBSync contained sync ajax emulateHTTP emulateJSON
+syntax keyword lsBView contained extend constructor initialize el $el setElement attributes render remove delegateEvents
+syntax keyword lsBView contained undelegateEvents
+syntax keyword lsBUtility contained noConflict 
 
 
 " Define the default highlighting.

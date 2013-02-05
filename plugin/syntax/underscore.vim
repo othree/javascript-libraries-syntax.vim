@@ -5,67 +5,73 @@
 " Version:     1.4.4
 " URL:         http://underscorejs.org/
 
-syn match   javascriptunderscore  containedin=ALL /\<_\>/
+syntax match   javascriptunderscore  containedin=ALL /\<_\>/
 
-syn match   javascript_collections containedin=ALL /contains/
-syn keyword javascript_collections containedin=ALL each map reduce reduceRight find filter where findWhere
-syn keyword javascript_collections containedin=ALL reject every some invoke pluck max min sortBy
-syn keyword javascript_collections containedin=ALL groupBy countBy shuffle toArray size
-syn keyword javascript_arrays containedin=ALL first initial last rest compact flatten without union
-syn keyword javascript_arrays containedin=ALL intersection difference uniq zip object indextOf
-syn keyword javascript_arrays containedin=ALL lastIndexOf sortedIndex range
-syn keyword javascript_functions containedin=ALL bind bindAll partial memoize delay throttle debounce
-syn keyword javascript_functions containedin=ALL once after wrap compose
-syn keyword javascript_objects containedin=ALL keys values pairs invert functions extend pick omit
-syn keyword javascript_objects containedin=ALL defaults clone tap has isEqual isEmpty isElement isArray
-syn keyword javascript_objects containedin=ALL isObject isArguments isFunction isString isNumber
-syn keyword javascript_objects containedin=ALL isFinite isBoolean isDate isRegExp isNaN isNull 
-syn keyword javascript_objects containedin=ALL isUndefined
-syn keyword javascript_utility containedin=ALL noConflict identify times random mixin uniqueId
-syn keyword javascript_utility containedin=ALL escape unescape result template
-syn keyword javascript_chaining containedin=ALL chain value
+syntax cluster javascript_Functions contains=javascript_collections,javascript_arrays,javascript_functions,javascript_objects,javascript_chaining
 
-
-syn match   coffeeunderscore  containedin=ALL /\<_\>/
-
-syn match   coffee_collections containedin=ALL /contains/
-syn keyword coffee_collections containedin=ALL each map reduce reduceRight find filter where findWhere
-syn keyword coffee_collections containedin=ALL reject every some invoke pluck max min sortBy
-syn keyword coffee_collections containedin=ALL groupBy countBy shuffle toArray size
-syn keyword coffee_arrays containedin=ALL first initial last rest compact flatten without union
-syn keyword coffee_arrays containedin=ALL intersection difference uniq zip object indextOf
-syn keyword coffee_arrays containedin=ALL lastIndexOf sortedIndex range
-syn keyword coffee_functions containedin=ALL bind bindAll partial memoize delay throttle debounce
-syn keyword coffee_functions containedin=ALL once after wrap compose
-syn keyword coffee_objects containedin=ALL keys values pairs invert functions extend pick omit
-syn keyword coffee_objects containedin=ALL defaults clone tap has isEqual isEmpty isElement isArray
-syn keyword coffee_objects containedin=ALL isObject isArguments isFunction isString isNumber
-syn keyword coffee_objects containedin=ALL isFinite isBoolean isDate isRegExp isNaN isNull 
-syn keyword coffee_objects containedin=ALL isUndefined
-syn keyword coffee_utility containedin=ALL noConflict identify times random mixin uniqueId
-syn keyword coffee_utility containedin=ALL escape unescape result template
-syn keyword coffee_chaining containedin=ALL chain value
+syntax match   javascript_collections contained /contains/
+syntax keyword javascript_collections contained each map reduce reduceRight find filter where findWhere
+syntax keyword javascript_collections contained reject every some invoke pluck max min sortBy
+syntax keyword javascript_collections contained groupBy countBy shuffle toArray size
+syntax keyword javascript_arrays contained first initial last rest compact flatten without union
+syntax keyword javascript_arrays contained intersection difference uniq zip object indextOf
+syntax keyword javascript_arrays contained lastIndexOf sortedIndex range
+syntax keyword javascript_functions contained bind bindAll partial memoize delay throttle debounce
+syntax keyword javascript_functions contained once after wrap compose
+syntax keyword javascript_objects contained keys values pairs invert functions extend pick omit
+syntax keyword javascript_objects contained defaults clone tap has isEqual isEmpty isElement isArray
+syntax keyword javascript_objects contained isObject isArguments isFunction isString isNumber
+syntax keyword javascript_objects contained isFinite isBoolean isDate isRegExp isNaN isNull 
+syntax keyword javascript_objects contained isUndefined
+syntax keyword javascript_utility contained noConflict identify times random mixin uniqueId
+syntax keyword javascript_utility contained escape unescape result template
+syntax keyword javascript_chaining contained chain value
 
 
-syn match   lsunderscore  containedin=ALL /\<_\>/
+syntax match   coffeeunderscore  containedin=ALL /\<_\>/
 
-syn match   ls_collections containedin=ALL /contains/
-syn keyword ls_collections containedin=ALL each map reduce reduceRight find filter where findWhere
-syn keyword ls_collections containedin=ALL reject every some invoke pluck max min sortBy
-syn keyword ls_collections containedin=ALL groupBy countBy shuffle toArray size
-syn keyword ls_arrays containedin=ALL first initial last rest compact flatten without union
-syn keyword ls_arrays containedin=ALL intersection difference uniq zip object indextOf
-syn keyword ls_arrays containedin=ALL lastIndexOf sortedIndex range
-syn keyword ls_functions containedin=ALL bind bindAll partial memoize delay throttle debounce
-syn keyword ls_functions containedin=ALL once after wrap compose
-syn keyword ls_objects containedin=ALL keys values pairs invert functions extend pick omit
-syn keyword ls_objects containedin=ALL defaults clone tap has isEqual isEmpty isElement isArray
-syn keyword ls_objects containedin=ALL isObject isArguments isFunction isString isNumber
-syn keyword ls_objects containedin=ALL isFinite isBoolean isDate isRegExp isNaN isNull 
-syn keyword ls_objects containedin=ALL isUndefined
-syn keyword ls_utility containedin=ALL noConflict identify times random mixin uniqueId
-syn keyword ls_utility containedin=ALL escape unescape result template
-syn keyword ls_chaining containedin=ALL chain value
+syntax cluster coffee_Functions contains=coffee_collections,coffee_arrays,coffee_functions,coffee_objects,coffee_chaining
+
+syntax match   coffee_collections contained /contains/
+syntax keyword coffee_collections contained each map reduce reduceRight find filter where findWhere
+syntax keyword coffee_collections contained reject every some invoke pluck max min sortBy
+syntax keyword coffee_collections contained groupBy countBy shuffle toArray size
+syntax keyword coffee_arrays contained first initial last rest compact flatten without union
+syntax keyword coffee_arrays contained intersection difference uniq zip object indextOf
+syntax keyword coffee_arrays contained lastIndexOf sortedIndex range
+syntax keyword coffee_functions contained bind bindAll partial memoize delay throttle debounce
+syntax keyword coffee_functions contained once after wrap compose
+syntax keyword coffee_objects contained keys values pairs invert functions extend pick omit
+syntax keyword coffee_objects contained defaults clone tap has isEqual isEmpty isElement isArray
+syntax keyword coffee_objects contained isObject isArguments isFunction isString isNumber
+syntax keyword coffee_objects contained isFinite isBoolean isDate isRegExp isNaN isNull 
+syntax keyword coffee_objects contained isUndefined
+syntax keyword coffee_utility contained noConflict identify times random mixin uniqueId
+syntax keyword coffee_utility contained escape unescape result template
+syntax keyword coffee_chaining contained chain value
+
+
+syntax match   lsunderscore  containedin=ALL /\<_\>/
+
+syntax cluster ls_Functions contains=ls_collections,ls_arrays,ls_functions,ls_objects,ls_chaining
+
+syntax match   ls_collections contained /contains/
+syntax keyword ls_collections contained each map reduce reduceRight find filter where findWhere
+syntax keyword ls_collections contained reject every some invoke pluck max min sortBy
+syntax keyword ls_collections contained groupBy countBy shuffle toArray size
+syntax keyword ls_arrays contained first initial last rest compact flatten without union
+syntax keyword ls_arrays contained intersection difference uniq zip object indextOf
+syntax keyword ls_arrays contained lastIndexOf sortedIndex range
+syntax keyword ls_functions contained bind bindAll partial memoize delay throttle debounce
+syntax keyword ls_functions contained once after wrap compose
+syntax keyword ls_objects contained keys values pairs invert functions extend pick omit
+syntax keyword ls_objects contained defaults clone tap has isEqual isEmpty isElement isArray
+syntax keyword ls_objects contained isObject isArguments isFunction isString isNumber
+syntax keyword ls_objects contained isFinite isBoolean isDate isRegExp isNaN isNull 
+syntax keyword ls_objects contained isUndefined
+syntax keyword ls_utility contained noConflict identify times random mixin uniqueId
+syntax keyword ls_utility contained escape unescape result template
+syntax keyword ls_chaining contained chain value
 
 
 " Define the default highlighting.
