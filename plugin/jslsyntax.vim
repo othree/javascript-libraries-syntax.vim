@@ -1,5 +1,5 @@
 
-autocmd BufNewFile,BufRead *.javascript,*.coffee,*.ls
+autocmd FileType 'javascript\|coffee\|ls'
       \ exe('source '.expand('<sfile>:p:h').'/syntax/jquery.vim') |
       \ exe('source '.expand('<sfile>:p:h').'/syntax/underscore.vim') |
       \ exe('source '.expand('<sfile>:p:h').'/syntax/backbone.vim') |
