@@ -4,9 +4,11 @@ if &filetype == 'javascript'
 endif
 
 if &filetype == 'coffee'
-  syntax match   coffeeQFuncA /\.\w\+(\@=/   containedin=ALL contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions
-  syntax match   coffeeQFuncB /\.\w\+ \w\@=/ containedin=ALL contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions
+  syntax match   coffeeQFunc /\.\w\+(\@=/   containedin=ALL contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions
+  syntax match   coffeeQFunc /\.\w\+ [0-9A-Za-z_(\[{]\@=/ containedin=ALL contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions
 endif
 
 if &filetype == 'ls'
+  syntax match   coffeeQFunc /[\.!]\w\+[(!]\@=/   containedin=ALL contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions
+  syntax match   coffeeQFunc /[\.!]\w\+ [0-9A-Za-z_(\[{]\@=/ containedin=ALL contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions
 endif
