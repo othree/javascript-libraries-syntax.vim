@@ -1,16 +1,8 @@
 # javascript-libries-syntax.vim
 
-Syntax file for javascript libries.
-
-## Feature
-
-- Supports [SyntaxComplete][]
-
-## File Types
-
-- JavaScript
-- [CoffeeScript](http://coffeescript.org/)
-- [LiveScript](http://livescript.net/)
+Syntax file for javascript libries. Supports javascript libraris I am using (patches welcome).
+Should works well with other JavaScript syntax file. [SyntaxComplete][] also works well on all 
+supported languages.
 
 ## Libries
 
@@ -19,13 +11,38 @@ Syntax file for javascript libries.
 - [Backbone.js](http://backbonejs.org/)
 - [prelude.ls](http://gkz.github.com/prelude-ls/)
 
+## File Types
+
+- JavaScript
+- [CoffeeScript](http://coffeescript.org/)
+- [LiveScript](http://livescript.net/)
+
+Will be more when SyntaxComplete has new version.
+
 ## Install
 
-Use [pathogen][] or [vundle][]
+Use [pathogen][] or [vundle][].
 
 ## Todo
 
 - Support option to choose libries
+- Support feature version of SyntaxComplete
+- Possibility to set used libries in project
+- Add YUI
+
+## Known Issue
+
+SyntaxComplete only accept groups with filetype prefixed. For example, 'javascript' files.
+Only keywords in groups which's name is /javascript.*/ will be available. So to make it
+possible to use SyntaxComplete on CoffeeScript, LiveScript and other compile to JavaScript
+languages. We must redefine all syntax many times, with different name prefix. SyntaxComplete
+might have new feature to support a user define pattern for group name to include. 
+All repeat defination will be removed when SyntaxComplete supports this feature.
+
+## Changes
+
+### Version 0.1
+- 0.1 First release.
 
 ## License
 
