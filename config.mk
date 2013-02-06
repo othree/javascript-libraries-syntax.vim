@@ -1,4 +1,4 @@
-NAME=javascript-libries-syntax.vim
+NAME=javascript-libraries-syntax.vim
 VERSION=0.1
 
 bundle-deps:

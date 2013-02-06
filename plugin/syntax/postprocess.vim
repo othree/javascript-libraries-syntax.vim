@@ -3,7 +3,7 @@
 " Maintainer:  othree <othree@gmail.com>
 " Last Change: 2013/02/05
 " Version:     0.1
-" URL:         https://github.com/othree/javascript-libries-syntax.vim
+" URL:         https://github.com/othree/javascript-libraries-syntax.vim
 "
 
 if &filetype == 'javascript'

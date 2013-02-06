@@ -3,7 +3,7 @@
 " Maintainer:  othree <othree@gmail.com>
 " Last Change: 2013/02/06
 " Version:     0.1
-" URL:         https://github.com/othree/javascript-libries-syntax.vim
+" URL:         https://github.com/othree/javascript-libraries-syntax.vim
 
 autocmd FileType javascript call LoadLibs(expand('<sfile>:p:h'))
 autocmd FileType coffee call LoadLibs(expand('<sfile>:p:h'))
