@@ -1,10 +1,10 @@
-# javascript-libries-syntax.vim
+# javascript-libraries-syntax.vim
 
-Syntax file for javascript libries. Supports javascript libraris I am using (patches welcome).
+Syntax file for javascript libraries. Supports javascript libraris I am using (patches welcome).
 Should works well with other JavaScript syntax file. [SyntaxComplete][] also works well on all 
 supported languages.
 
-## Libries
+## Libraries
 
 - [jQuery](http://jquery.com/)
 - [underscore.js](http://underscorejs.org/)
@@ -25,9 +25,9 @@ Use [pathogen][] or [vundle][].
 
 ## Todo
 
-- Support option to choose libries
+- Support option to choose libraries
 - Support feature version of SyntaxComplete
-- Possibility to set used libries in project
+- Possibility to set used libraries in project
 - Add YUI
 
 ## Known Issue
