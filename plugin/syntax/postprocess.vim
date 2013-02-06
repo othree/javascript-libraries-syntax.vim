@@ -5,22 +5,28 @@
 " Version:     0.1
 " URL:         https://github.com/othree/javascript-libries-syntax.vim
 "
-syntax cluster   javascriptLibraryFuncs contains=@javascriptQFunctions,@javascript_Functions,@javascriptBFunctions,@javascriptpFunctions
-syntax cluster   coffeeLibraryFuncs contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions,@coffeepFunctions
-syntax cluster   lsLibraryFuncs contains=@lsQFunctions,@ls_Functions,@lsBFunctions,@lspFunctions
 
 if &filetype == 'javascript'
-  syntax match   javascriptMethods /\.\h\w*(\@=/ containedin=ALL contains=@javascriptLibraryFuncs
+  syntax cluster javascriptLibraryFuncs contains=@javascriptQFunctions,@javascript_Functions,@javascriptBFunctions,@javascriptpFunctions
+  syntax cluster javascriptLibraryAttrs contains=@javascriptQAttrs,@javascript_Attrs,@javascriptBAttrs,@javascriptpAttrs
+  syntax match   javascriptLMethods /\.\h\w*(\@=/ containedin=ALL contains=@javascriptLibraryFuncs
+  syntax match   javascriptLAttrs /\.\h\w*/ containedin=ALL contains=@javascriptLibraryAttrs
 endif
 
 if &filetype == 'coffee'
-  syntax match   coffeeMethods /\.\h\w*(\@=/   containedin=ALL contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions,@coffeepFunctions
-  syntax match   coffeeMethods /\.\h\w* +[0-9A-Za-z_(\[{]\@=/ containedin=ALL contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions,@coffeepFunctions
+  syntax cluster coffeeLibraryFuncs contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions,@coffeepFunctions
+  syntax cluster coffeeLibraryAttrs contains=@coffeeQAttrs,@coffee_Attrs,@coffeeBAttrs,@coffeepAttrs
+  syntax match   coffeeLMethods /\.\h\w*(\@=/   containedin=ALL contains=@coffeeLibraryFuncs
+  syntax match   coffeeLMethods /\.\h\w* +[0-9A-Za-z_(\[{]\@=/ containedin=ALL contains=@coffeeLibraryFuncs
+  syntax match   coffeeLAttrs /\.\h\w*/   containedin=ALL contains=@coffeeLibraryAttrs
 endif
 
 if &filetype == 'ls'
-  syntax match   lsMethods /[\.!]\h\w*[(!]\@=/   containedin=ALL contains=@lsLibraryFuncs
-  syntax match   lsMethods /[\.!]\h\w* +[0-9A-Za-z_(\[{]\@=/ containedin=ALL contains=@lsLibraryFuncs
-  syntax match   lsPipe /|>/ containedin=ALL skipwhite nextgroup=@lspFunctions
-  syntax match   lsCompose />>/ containedin=ALL skipwhite nextgroup=@lspFunctions
+  syntax cluster lsLibraryFuncs contains=@lsQFunctions,@ls_Functions,@lsBFunctions,@lspFunctions
+  syntax cluster lsLibraryAttrs contains=@lsQAttrs,@ls_Attrs,@lsBAttrs,@lspAttrs
+  syntax match   lsLMethods /[\.!]\h\w*[(!]\@=/   containedin=ALL contains=@lsLibraryFuncs
+  syntax match   lsLMethods /[\.!]\h\w* +[0-9A-Za-z_(\[{]\@=/ containedin=ALL contains=@lsLibraryFuncs
+  syntax match   lsLPipe /|>/ containedin=ALL skipwhite nextgroup=@lspFunctions
+  syntax match   lsLCompose />>/ containedin=ALL skipwhite nextgroup=@lspFunctions
+  syntax match   lsLAttrs /[\.!]\h\w*/   containedin=ALL contains=@lsLibraryAttrs
 endif

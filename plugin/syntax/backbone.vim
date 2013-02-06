@@ -8,24 +8,33 @@
 syntax keyword javascriptBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
 
 syntax cluster javascriptBFunctions contains=javascriptBEvents,javascriptBModel,javascriptBCollection,javascriptBRouter,javascriptBHistory,javascriptBSync,javascriptBView,javascriptBUtility
+syntax cluster javascriptBAttrs contains=javascriptBModelAttrs,javascriptBCollectionAttrs,javascriptBRouterAttrs,javascriptBSyncAttrs,javascriptBViewAttrs
 
 syntax keyword javascriptBEvents contained on off trigger once listenTo stopListening
-syntax keyword javascriptBModel contained extend constructor initialize get set escape has unset clear id idAttribute cid attributes
-syntax keyword javascriptBModel contained changed defaults toJSON sync fetch save destroy validate validationError url urlRoot parse
+syntax keyword javascriptBModel contained extend constructor initialize get set escape has unset clear
+syntax keyword javascriptBModel contained toJSON sync fetch save destroy validate validationError url parse
 syntax keyword javascriptBModel contained clone isNew hasChanged changedAttributes previous previousAttributes
-syntax keyword javascriptBCollection contained extend model constructor initialize models toJSON sync add remove reset update get at 
+syntax keyword javascriptBCollection contained extend constructor initialize toJSON sync add remove reset update get at 
 syntax keyword javascriptBCollection contained push pop unshift shift length comparator sort pluck where url parse clone fetch create
-syntax keyword javascriptBRouter contained extend routes constructor initialize route navigate
+syntax keyword javascriptBRouter contained extend constructor initialize route navigate
 syntax keyword javascriptBHistory contained start
-syntax keyword javascriptBSync contained sync ajax emulateHTTP emulateJSON
-syntax keyword javascriptBView contained extend constructor initialize el $el setElement attributes render remove delegateEvents
-syntax keyword javascriptBView contained undelegateEvents
+syntax keyword javascriptBSync contained ajax 
+syntax keyword javascriptBView contained extend constructor initialize setElement render remove delegateEvents undelegateEvents
 syntax keyword javascriptBUtility contained noConflict 
+
+syntax keyword javascriptBModelAttrs contained id idAttribute cid attributes changed defaults urlRoot
+syntax keyword javascriptBCollectionAttrs contained model models length comparator url
+syntax keyword javascriptBRouterAttrs contained routes
+syntax keyword javascriptBSyncAttrs contained emulateHTTP emulateJSON
+syntax keyword javascriptBViewAttrs contained el attributes
+syntax keyword javascriptBViewAttrs match /$el/
+
 
 
 syntax keyword coffeeBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
 
 syntax cluster coffeeBFunctions contains=coffeeBEvents,coffeeBModel,coffeeBCollection,coffeeBRouter,coffeeBHistory,coffeeBSync,coffeeBView,coffeeBUtility
+syntax cluster coffeeBAttrs contains=coffeeBModelAttrs,coffeeBCollectionAttrs,coffeeBRouterAttrs,coffeeBSyncAttrs,coffeeBViewAttrs
 
 syntax keyword coffeeBEvents contained on off trigger once listenTo stopListening
 syntax keyword coffeeBModel contained extend constructor initialize get set escape has unset clear id idAttribute cid attributes
@@ -40,10 +49,19 @@ syntax keyword coffeeBView contained extend constructor initialize el $el setEle
 syntax keyword coffeeBView contained undelegateEvents
 syntax keyword coffeeBUtility contained noConflict 
 
+syntax keyword coffeeBModelAttrs contained id idAttribute cid attributes changed defaults urlRoot
+syntax keyword coffeeBCollectionAttrs contained model models length comparator url
+syntax keyword coffeeBRouterAttrs contained routes
+syntax keyword coffeeBSyncAttrs contained emulateHTTP emulateJSON
+syntax keyword coffeeBViewAttrs contained el attributes
+syntax keyword coffeeBViewAttrs match /$el/
+
+
 
 syntax keyword lsBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALL
 
 syntax cluster lsBFunctions contains=lsBEvents,lsBModel,lsBCollection,lsBRouter,lsBHistory,lsBSync,lsBView,lsBUtility
+syntax cluster lsBAttrs contains=lsBModelAttrs,lsBCollectionAttrs,lsBRouterAttrs,lsBSyncAttrs,lsBViewAttrs
 
 syntax keyword lsBEvents contained on off trigger once listenTo stopListening
 syntax keyword lsBModel contained extend constructor initialize get set escape has unset clear id idAttribute cid attributes
@@ -57,6 +75,14 @@ syntax keyword lsBSync contained sync ajax emulateHTTP emulateJSON
 syntax keyword lsBView contained extend constructor initialize el $el setElement attributes render remove delegateEvents
 syntax keyword lsBView contained undelegateEvents
 syntax keyword lsBUtility contained noConflict 
+
+syntax keyword lsBModelAttrs contained id idAttribute cid attributes changed defaults urlRoot
+syntax keyword lsBCollectionAttrs contained model models length comparator url
+syntax keyword lsBRouterAttrs contained routes
+syntax keyword lsBSyncAttrs contained emulateHTTP emulateJSON
+syntax keyword lsBViewAttrs contained el attributes
+syntax keyword lsBViewAttrs match /$el/
+
 
 
 " Define the default highlighting.
@@ -81,6 +107,13 @@ if version >= 508 || !exists("did_lisp_syntax_inits")
   HiLink javascriptBView            PreProc
   HiLink javascriptBUtility         PreProc
 
+  HiLink javascriptBModelAttrs      PreProc
+  HiLink javascriptBCollectionAttrs PreProc
+  HiLink javascriptBRouterAttrs     PreProc
+  HiLink javascriptBSyncAttrs       PreProc
+  HiLink javascriptBViewAttrs       PreProc
+
+
   HiLink coffeeBackbone         Constant
 
   HiLink coffeeBEvents          PreProc
@@ -92,6 +125,13 @@ if version >= 508 || !exists("did_lisp_syntax_inits")
   HiLink coffeeBView            PreProc
   HiLink coffeeBUtility         PreProc
 
+  HiLink coffeeBModelAttrs      PreProc
+  HiLink coffeeBCollectionAttrs PreProc
+  HiLink coffeeBRouterAttrs     PreProc
+  HiLink coffeeBSyncAttrs       PreProc
+  HiLink coffeeBViewAttrs       PreProc
+
+
   HiLink lsBackbone         Constant
 
   HiLink lsBEvents          PreProc
@@ -102,6 +142,12 @@ if version >= 508 || !exists("did_lisp_syntax_inits")
   HiLink lsBSync            PreProc
   HiLink lsBView            PreProc
   HiLink lsBUtility         PreProc
+
+  HiLink lsBModelAttrs      PreProc
+  HiLink lsBCollectionAttrs PreProc
+  HiLink lsBRouterAttrs     PreProc
+  HiLink lsBSyncAttrs       PreProc
+  HiLink lsBViewAttrs       PreProc
 
   delcommand HiLink
 endif
