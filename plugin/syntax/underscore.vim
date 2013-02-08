@@ -5,7 +5,8 @@
 " Version:     1.4.4
 " URL:         http://underscorejs.org/
 
-syntax match   javascriptunderscore  containedin=ALL /\<_\>/
+syntax match   javascriptunderscore containedin=ALL /\<_\>/
+syntax match   javascriptunderscoredot containedin=ALL /\<_\.\h\w*/ contains=@javascript_Functions
 
 syntax cluster javascript_Functions contains=javascript_collections,javascript_arrays,javascript_functions,javascript_objects,javascript_chaining
 
@@ -28,7 +29,8 @@ syntax keyword javascript_utility contained escape unescape result template
 syntax keyword javascript_chaining contained chain value
 
 
-syntax match   coffeeunderscore  containedin=ALL /\<_\>/
+syntax match   coffeeunderscore containedin=ALL /\<_\>/
+syntax match   coffeeunderscoredot containedin=ALL /\<_\.\h\w*/ contains=@coffee_Functions
 
 syntax cluster coffee_Functions contains=coffee_collections,coffee_arrays,coffee_functions,coffee_objects,coffee_chaining
 
@@ -51,7 +53,8 @@ syntax keyword coffee_utility contained escape unescape result template
 syntax keyword coffee_chaining contained chain value
 
 
-syntax match   lsunderscore  containedin=ALL /\<_\>/
+syntax match   lsunderscore containedin=ALL /\<_\>/
+syntax match   lsunderscoredot containedin=ALL /\<_\.\h\w*/ contains=@ls_Functions
 
 syntax cluster ls_Functions contains=ls_collections,ls_arrays,ls_functions,ls_objects,ls_chaining
 
