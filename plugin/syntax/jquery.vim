@@ -7,17 +7,27 @@
 " URL:         http://api.jquery.com/
 
 syntax match   javascriptjQuery          containedin=ALL /jQuery\|\$/
+syntax match   javascriptjQuerydot       containedin=ALL /\(\<\(jQuery\|\$\)\.\)\@<=\h\w*/ contains=@javascriptQGlobals
+syntax match   javascriptjQuerydot       containedin=ALL /\(\<\(jQuery\|\$\)([^)]*)\.\)\@<=\h\w*/ contains=@javascriptQFunctions
 
-syntax cluster javascriptQFunctions      contains=javascriptQAjax,javascriptQAttributes,javascriptQCallbacks,javascriptQCore,javascriptQCSS,javascriptQData,javascriptQDeferred,javascriptQDimensions,javascriptQEffects,javascriptQEvents,javascriptQManipulation,javascriptQMiscellaneous,javascriptQOffset,javascriptQProperties,javascriptQTraversing,javascriptQUtilities
+" jQuery.*
+syntax cluster javascriptQGlobals        contains=javascriptQCore,javascriptQCoreObj,javascriptQCoreData,javascriptQUtilities,javascriptQProperties
+syntax keyword javascriptQCore           contained holdReady noConflict when
+syntax keyword javascriptQCoreObj        contained Callback Deferred
+syntax keyword javascriptQCoreData       contained data dequeue hasData queue removeData
+syntax keyword javascriptQCoreAjax       contained ajaxPrefilter ajaxSetup ajaxTransport param get getJSON getScript post
+syntax keyword javascriptQProperties     contained context fx.interval fx.off length selector support cssHooks
+syntax keyword javascriptQUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray map merge noop now parseHTML parseJSON parseXML proxy trim type unique
+syntax match   javascriptQUtilities      contained /contains/
+
+" jqobj.*
+syntax cluster javascriptQFunctions      contains=javascriptQAjax,javascriptQAttributes,javascriptQCallbacks,javascriptQCore,javascriptQCSS,javascriptQData,javascriptQDeferred,javascriptQDimensions,javascriptQEffects,javascriptQEvents,javascriptQManipulation,javascriptQMiscellaneous,javascriptQOffset,javascriptQTraversing,javascriptQUtilities
 syntax keyword javascriptQAjax           contained ajaxComplete ajaxError ajaxSend ajaxStart ajaxStop ajaxSuccess
-syntax keyword javascriptQAjax           contained param serialize serializeArray
-syntax keyword javascriptQAjax           contained ajax ajaxPrefilter ajaxSetup ajaxSettings ajaxTransport
-syntax keyword javascriptQAjax           contained get getJSON getScript load post
+syntax keyword javascriptQAjax           contained serialize serializeArray ajaxTransport load
 syntax keyword javascriptQAttributes     contained addClass attr hasClass html prop removeAttr removeClass removeProp toggleClass val
 syntax keyword javascriptQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
-syntax keyword javascriptQCore           contained holdReady noConflict when
-syntax keyword javascriptQCSS            contained css cssHooks
-syntax keyword javascriptQData           contained clearQueue data dequeue hasData queue removeData
+syntax keyword javascriptQCSS            contained css
+syntax keyword javascriptQData           contained clearQueue data dequeue queue removeData
 syntax keyword javascriptQDeferred       contained Deferred always done fail notify pipe progress promise reject rejectWith resolved resolveWith notifyWith state then
 syntax keyword javascriptQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword javascriptQEffects        contained hide show toggle
@@ -39,39 +49,31 @@ syntax keyword javascriptQManipulation   contained detach empty remove
 syntax keyword javascriptQManipulation   contained replaceAll replaceWith
 syntax keyword javascriptQMiscellaneous  contained index size toArray
 syntax keyword javascriptQOffset         contained offset offsetParent position scrollTop scrollLeft
-syntax keyword javascriptQProperties     contained context fx.interval fx.off length selector support
 syntax keyword javascriptQTraversing     contained eq filter first has is last map not slice
 syntax keyword javascriptQTraversing     contained add andSelf contents end
 syntax keyword javascriptQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
-syntax keyword javascriptQUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray merge noop now parseJSON parseXML trim type unique
-
-
-syntax region  javaScriptStringD          start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=javaScriptSpecial,@htmlPreproc,@jSelectors
-syntax region  javaScriptStringS          start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=javaScriptSpecial,@htmlPreproc,@jSelectors
-
-syntax cluster javascriptjSelectors      contains=jId,jClass,jOperators,jBasicFilters,jContentFilters,jVisibility,jChildFilters,jForms,jFormFilters
-syntax match   javascriptjId             contained /#[0-9A-Za-z_\-]\+/
-syntax match   javascriptjClass          contained /\.[0-9A-Za-z_\-]\+/
-syntax match   javascriptjOperators      contained /*\|>\|+\|-\|\~/
-syntax match   javascriptjBasicFilters   contained /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lt\|not\|odd\)/
-syntax match   javascriptjChildFilters   contained /:\(first\|last\|nth\|only\)-child/
-syntax match   javascriptjContentFilters contained /:\(contains\|empty\|has\|parent\)/
-syntax match   javascriptjForms          contained /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
-syntax match   javascriptjVisibility     contained /:\(hidden\|visible\)/
 
 
 syntax match   coffeejQuery          containedin=ALL /jQuery\|\$/
 
-syntax cluster coffeeQFunctions      contains=coffeeQAjax,coffeeQAttributes,lsQCallbacks,coffeeQCore,coffeeQCSS,coffeeQData,coffeeQDeferred,coffeeQDimensions,coffeeQEffects,coffeeQEvents,coffeeQManipulation,coffeeQMiscellaneous,coffeeQOffset,coffeeQProperties,coffeeQTraversing,coffeeQUtilities
+" jQuery.*
+syntax cluster coffeeQGlobals        contains=coffeeQCore,coffeeQCoreObj,coffeeQCoreData,coffeeQUtilities,coffeeQProperties
+syntax keyword coffeeQCore           contained holdReady noConflict when
+syntax keyword coffeeQCoreObj        contained Callback Deferred
+syntax keyword coffeeQCoreData       contained data dequeue hasData queue removeData
+syntax keyword coffeeQCoreAjax       contained ajaxPrefilter ajaxSetup ajaxTransport param get getJSON getScript post
+syntax keyword coffeeQProperties     contained context fx.interval fx.off length selector support cssHooks
+syntax keyword coffeeQUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray map merge noop now parseHTML parseJSON parseXML proxy trim type unique
+syntax match   coffeeQUtilities      contained /contains/
+
+" jqobj.*
+syntax cluster coffeeQFunctions      contains=coffeeQAjax,coffeeQAttributes,coffeeQCallbacks,coffeeQCore,coffeeQCSS,coffeeQData,coffeeQDeferred,coffeeQDimensions,coffeeQEffects,coffeeQEvents,coffeeQManipulation,coffeeQMiscellaneous,coffeeQOffset,coffeeQTraversing,coffeeQUtilities
 syntax keyword coffeeQAjax           contained ajaxComplete ajaxError ajaxSend ajaxStart ajaxStop ajaxSuccess
-syntax keyword coffeeQAjax           contained param serialize serializeArray
-syntax keyword coffeeQAjax           contained ajax ajaxPrefilter ajaxSetup ajaxSettings ajaxTransport
-syntax keyword coffeeQAjax           contained get getJSON getScript load post
+syntax keyword coffeeQAjax           contained serialize serializeArray ajaxTransport load
 syntax keyword coffeeQAttributes     contained addClass attr hasClass html prop removeAttr removeClass removeProp toggleClass val
 syntax keyword coffeeQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
-syntax keyword coffeeQCore           contained holdReady noConflict when
-syntax keyword coffeeQCSS            contained css cssHooks
-syntax keyword coffeeQData           contained clearQueue data dequeue hasData queue removeData
+syntax keyword coffeeQCSS            contained css
+syntax keyword coffeeQData           contained clearQueue data dequeue queue removeData
 syntax keyword coffeeQDeferred       contained Deferred always done fail notify pipe progress promise reject rejectWith resolved resolveWith notifyWith state then
 syntax keyword coffeeQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword coffeeQEffects        contained hide show toggle
@@ -93,25 +95,31 @@ syntax keyword coffeeQManipulation   contained detach empty remove
 syntax keyword coffeeQManipulation   contained replaceAll replaceWith
 syntax keyword coffeeQMiscellaneous  contained index size toArray
 syntax keyword coffeeQOffset         contained offset offsetParent position scrollTop scrollLeft
-syntax keyword coffeeQProperties     contained context fx.interval fx.off length selector support
 syntax keyword coffeeQTraversing     contained eq filter first has is last map not slice
 syntax keyword coffeeQTraversing     contained add andSelf contents end
 syntax keyword coffeeQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
-syntax keyword coffeeQUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray merge noop now parseJSON parseXML trim type unique
 
 
 syntax match   lsjQuery          containedin=ALL /jQuery\|\$/
 
-syntax cluster lsQFunctions      contains=lsQAjax,lsQAttributes,lsQCallbacks,lsQCore,lsQCSS,lsQData,lsQDeferred,lsQDimensions,lsQEffects,lsQEvents,lsQManipulation,lsQMiscellaneous,lsQOffset,lsQProperties,lsQTraversing,lsQUtilities
+" jQuery.*
+syntax cluster lsQGlobals        contains=lsQCore,lsQCoreObj,lsQCoreData,lsQUtilities,lsQProperties
+syntax keyword lsQCore           contained holdReady noConflict when
+syntax keyword lsQCoreObj        contained Callback Deferred
+syntax keyword lsQCoreData       contained data dequeue hasData queue removeData
+syntax keyword lsQCoreAjax       contained ajaxPrefilter ajaxSetup ajaxTransport param get getJSON getScript post
+syntax keyword lsQProperties     contained context fx.interval fx.off length selector support cssHooks
+syntax keyword lsQUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray map merge noop now parseHTML parseJSON parseXML proxy trim type unique
+syntax match   lsQUtilities      contained /contains/
+
+" jqobj.*
+syntax cluster lsQFunctions      contains=lsQAjax,lsQAttributes,lsQCallbacks,lsQCore,lsQCSS,lsQData,lsQDeferred,lsQDimensions,lsQEffects,lsQEvents,lsQManipulation,lsQMiscellaneous,lsQOffset,lsQTraversing,lsQUtilities
 syntax keyword lsQAjax           contained ajaxComplete ajaxError ajaxSend ajaxStart ajaxStop ajaxSuccess
-syntax keyword lsQAjax           contained param serialize serializeArray
-syntax keyword lsQAjax           contained ajax ajaxPrefilter ajaxSetup ajaxSettings ajaxTransport
-syntax keyword lsQAjax           contained get getJSON getScript load post
+syntax keyword lsQAjax           contained serialize serializeArray ajaxTransport load
 syntax keyword lsQAttributes     contained addClass attr hasClass html prop removeAttr removeClass removeProp toggleClass val
 syntax keyword lsQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
-syntax keyword lsQCore           contained holdReady noConflict when
-syntax keyword lsQCSS            contained css cssHooks
-syntax keyword lsQData           contained clearQueue data dequeue hasData queue removeData
+syntax keyword lsQCSS            contained css
+syntax keyword lsQData           contained clearQueue data dequeue queue removeData
 syntax keyword lsQDeferred       contained Deferred always done fail notify pipe progress promise reject rejectWith resolved resolveWith notifyWith state then
 syntax keyword lsQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword lsQEffects        contained hide show toggle
@@ -133,11 +141,24 @@ syntax keyword lsQManipulation   contained detach empty remove
 syntax keyword lsQManipulation   contained replaceAll replaceWith
 syntax keyword lsQMiscellaneous  contained index size toArray
 syntax keyword lsQOffset         contained offset offsetParent position scrollTop scrollLeft
-syntax keyword lsQProperties     contained context fx.interval fx.off length selector support
 syntax keyword lsQTraversing     contained eq filter first has is last map not slice
 syntax keyword lsQTraversing     contained add andSelf contents end
 syntax keyword lsQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
-syntax keyword lsQUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray merge noop now parseJSON parseXML trim type unique
+
+
+" selector
+syntax region  javaScriptStringD          start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=javaScriptSpecial,@htmlPreproc,@jSelectors
+syntax region  javaScriptStringS          start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=javaScriptSpecial,@htmlPreproc,@jSelectors
+
+syntax cluster jSelectors      contains=jId,jClass,jOperators,jBasicFilters,jContentFilters,jVisibility,jChildFilters,jForms,jFormFilters
+syntax match   jId             contained /#[0-9A-Za-z_\-]\+/
+syntax match   jClass          contained /\.[0-9A-Za-z_\-]\+/
+syntax match   jOperators      contained /*\|>\|+\|-\|\~/
+syntax match   jBasicFilters   contained /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lt\|not\|odd\)/
+syntax match   jChildFilters   contained /:\(first\|last\|nth\|only\)-child/
+syntax match   jContentFilters contained /:\(contains\|empty\|has\|parent\)/
+syntax match   jForms          contained /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
+syntax match   jVisibility     contained /:\(hidden\|visible\)/
 
 
 " Define the default highlighting.
@@ -153,10 +174,13 @@ if version >= 508 || !exists("did_lisp_syntax_inits")
 
   HiLink javascriptjQuery          Constant
 
+  HiLink javascriptQCore           PreProc
+  HiLink javascriptQCoreObj        PreProc
+  HiLink javascriptQCoreData       PreProc
+
   HiLink javascriptQAjax           PreProc
   HiLink javascriptQAttributes     PreProc
   HiLink javascriptQCallbacks      PreProc
-  HiLink javascriptQCore           PreProc
   HiLink javascriptQCSS            PreProc
   HiLink javascriptQData           PreProc
   HiLink javascriptQDeferred       PreProc
@@ -170,15 +194,15 @@ if version >= 508 || !exists("did_lisp_syntax_inits")
   HiLink javascriptQTraversing     PreProc
   HiLink javascriptQUtilities      PreProc
 
-  HiLink javascriptjId             Identifier
-  HiLink javascriptjClass          Constant
-  HiLink javascriptjOperators      Special
-  HiLink javascriptjBasicFilters   Statement
-  HiLink javascriptjContentFilters Statement
-  HiLink javascriptjVisibility     Statement
-  HiLink javascriptjChildFilters   Statement
-  HiLink javascriptjForms          Statement
-  HiLink javascriptjFormFilters    Statement
+  HiLink jId             Identifier
+  HiLink jClass          Constant
+  HiLink jOperators      Special
+  HiLink jBasicFilters   Statement
+  HiLink jContentFilters Statement
+  HiLink jVisibility     Statement
+  HiLink jChildFilters   Statement
+  HiLink jForms          Statement
+  HiLink jFormFilters    Statement
 
   HiLink coffeejQuery          Constant
 
