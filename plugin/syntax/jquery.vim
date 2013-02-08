@@ -6,7 +6,7 @@
 " Version:     1.9
 " URL:         http://api.jquery.com/
 
-syntax match   javascriptjQuery          containedin=ALL /jQuery\|\$/
+syntax keyword javascriptjQuery          containedin=ALL jQuery $
 syntax match   javascriptjQuerydot       containedin=ALL /\(\<\(jQuery\|\$\)\.\)\@<=\h\w*/ contains=@javascriptQGlobals
 syntax match   javascriptjQuerydot       containedin=ALL /\(\<\(jQuery\|\$\)([^)]*)\.\)\@<=\h\w*/ contains=@javascriptQFunctions
 
@@ -54,7 +54,7 @@ syntax keyword javascriptQTraversing     contained add andSelf contents end
 syntax keyword javascriptQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
 
 
-syntax match   coffeejQuery          containedin=ALL /jQuery\|\$/
+syntax keyword coffeejQuery          containedin=ALL jQuery $
 
 " jQuery.*
 syntax cluster coffeeQGlobals        contains=coffeeQCore,coffeeQCoreObj,coffeeQCoreData,coffeeQUtilities,coffeeQProperties
@@ -100,7 +100,7 @@ syntax keyword coffeeQTraversing     contained add andSelf contents end
 syntax keyword coffeeQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
 
 
-syntax match   lsjQuery          containedin=ALL /jQuery\|\$/
+syntax keyword lsjQuery          containedin=ALL jQuery $
 
 " jQuery.*
 syntax cluster lsQGlobals        contains=lsQCore,lsQCoreObj,lsQCoreData,lsQUtilities,lsQProperties
