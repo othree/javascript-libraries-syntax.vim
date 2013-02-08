@@ -154,8 +154,9 @@ syntax cluster jSelectors      contains=jId,jClass,jOperators,jBasicFilters,jCon
 syntax match   jId             contained /#[0-9A-Za-z_\-]\+/
 syntax match   jClass          contained /\.[0-9A-Za-z_\-]\+/
 syntax match   jOperators      contained /*\|>\|+\|-\|\~/
-syntax match   jBasicFilters   contained /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lt\|not\|odd\)/
+syntax match   jBasicFilters   contained /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lt\|not\|odd\|root\|target\)/
 syntax match   jChildFilters   contained /:\(first\|last\|nth\|only\)-child/
+syntax match   jChildFilters   contained /:\(first\|last\|nth\|only\)-of-type/
 syntax match   jContentFilters contained /:\(contains\|empty\|has\|parent\)/
 syntax match   jForms          contained /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
 syntax match   jVisibility     contained /:\(hidden\|visible\)/
