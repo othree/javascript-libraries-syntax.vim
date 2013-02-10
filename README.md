@@ -46,7 +46,7 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 ## Credits
 
-- Bruno Michel, [syntax of jquery][jquery.vim]
+- Bruno Michel, [jQuery : Syntax file for jQuery][jquery.vim]
 
 [jquery.vim]:http://www.vim.org/scripts/script.php?script_id=2416
 
