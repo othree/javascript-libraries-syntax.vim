@@ -26,7 +26,7 @@ Use [pathogen][] or [vundle][].
 ## Todo
 
 - Support option to choose libraries
-- Support feature version of SyntaxComplete
+- Support future version of SyntaxComplete
 - Possibility to set used libraries in project
 - Add YUI
 
