@@ -9,17 +9,17 @@
 if &filetype == 'javascript'
   syntax cluster javascriptLibraryFuncs contains=@javascriptQFunctions,@javascript_Functions,@javascriptBFunctions,@javascriptpFunctions
   syntax cluster javascriptLibraryAttrs contains=@javascriptQAttrs,@javascript_Attrs,@javascriptBAttrs,@javascriptpAttrs
-  syntax match   javascriptLMethods /[0-9A-Za-z_$)]\@<=\.\h\w*(\@=/ containedin=ALL contains=@javascriptLibraryFuncs
-  syntax match   javascriptLAttrs /[0-9A-Za-z_$)]\@<=\.\h\w*/ containedin=ALL contains=@javascriptLibraryAttrs
+  syntax match   javascriptLMethods /[0-9A-Za-z_$)]\@<=\.\h\w*(\@=/ containedin=ALLBUT,javascriptComment contains=@javascriptLibraryFuncs
+  syntax match   javascriptLAttrs /[0-9A-Za-z_$)]\@<=\.\h\w*/ containedin=ALLBUT,javascriptComment contains=@javascriptLibraryAttrs
 endif
 
 if &filetype == 'coffee'
   syntax cluster coffeeLibraryFuncs contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions,@coffeepFunctions
   syntax cluster coffeeLibraryAttrs contains=@coffeeQAttrs,@coffee_Attrs,@coffeeBAttrs,@coffeepAttrs
-  syntax match   coffeeLMethods /[0-9A-Za-z_$)]\@<=\.\h\w*(\@=/   containedin=ALL contains=@coffeeLibraryFuncs
-  syntax match   coffeeLMethods /[0-9A-Za-z_$)]\@<=\.\h\w* \+[0-9A-Za-z_$([{'"]\@=/ containedin=ALL contains=@coffeeLibraryFuncs
-  syntax match   coffeeLMethods /[0-9A-Za-z_$)]\@<=\.\h\w* \([-=]>\)\@=/ containedin=ALL contains=@coffeeLibraryFuncs
-  syntax match   coffeeLAttrs /[0-9A-Za-z_$)]\@<=\.\h\w*/   containedin=ALL contains=@coffeeLibraryAttrs
+  syntax match   coffeeLMethods /[0-9A-Za-z_$)]\@<=\.\h\w*(\@=/   containedin=ALLBUT,coffeeComment contains=@coffeeLibraryFuncs
+  syntax match   coffeeLMethods /[0-9A-Za-z_$)]\@<=\.\h\w* \+[0-9A-Za-z_$([{'"]\@=/ containedin=ALLBUT,coffeeComment contains=@coffeeLibraryFuncs
+  syntax match   coffeeLMethods /[0-9A-Za-z_$)]\@<=\.\h\w* \([-=]>\)\@=/ containedin=ALLBUT,coffeeComment contains=@coffeeLibraryFuncs
+  syntax match   coffeeLAttrs /[0-9A-Za-z_$)]\@<=\.\h\w*/   containedin=ALLBUT,coffeeComment contains=@coffeeLibraryAttrs
 endif
 
 if &filetype == 'ls'
@@ -31,16 +31,16 @@ if &filetype == 'ls'
   " fun0!fun()
   " obj.fun!
   " obj.fun()
-  syntax match   lsLMethods /\([0-9A-Za-z_$][.!]\|)\.\)\@<=\h\w*[(!]\@=/   containedin=ALL contains=@lsLibraryFuncs
+  syntax match   lsLMethods /\([0-9A-Za-z_$][.!]\|)\.\)\@<=\h\w*[(!]\@=/   containedin=ALLBUT,lsComment contains=@lsLibraryFuncs
   " ).fun arg
   " !fun arg
   " obj.fun arg
-  syntax match   lsLMethods /\([0-9A-Za-z_$][.!]\|)\.\)\@<=\h\w* \+[0-9A-Za-z_$([{\'"]\@=/ containedin=ALL contains=@lsLibraryFuncs
+  syntax match   lsLMethods /\([0-9A-Za-z_$][.!]\|)\.\)\@<=\h\w* \+[0-9A-Za-z_$([{\'"]\@=/ containedin=ALLBUT,lsComment contains=@lsLibraryFuncs
   " ).fun funarg
   " !fun funarg
   " obj.fun funarg
-  syntax match   lsLMethods /\([0-9A-Za-z_$][.!]\|)\.\)\@<=\h\w* \(!\?[~-]>\)\@=/ containedin=ALL contains=@lsLibraryFuncs
-  syntax match   lsLPipe /|>/ containedin=ALL skipwhite nextgroup=@lspFunctions
-  syntax match   lsLCompose />>/ containedin=ALL skipwhite nextgroup=@lspFunctions
+  syntax match   lsLMethods /\([0-9A-Za-z_$][.!]\|)\.\)\@<=\h\w* \(!\?[~-]>\)\@=/ containedin=ALLBUT,lsComment contains=@lsLibraryFuncs
+  syntax match   lsLPipe /|>/ containedin=ALLBUT,lsComment skipwhite nextgroup=@lspFunctions
+  syntax match   lsLCompose />>/ containedin=ALLBUT,lsComment skipwhite nextgroup=@lspFunctions
   syntax match   lsLAttrs /\([0-9A-Za-z_$][.!]\|)\.\)\@<=\h\w*/   containedin=ALL contains=@lsLibraryAttrs
 endif

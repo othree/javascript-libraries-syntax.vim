@@ -5,47 +5,56 @@
 " Version:     0.6.0
 " URL:         http://gkz.github.com/prelude-ls/
 
-syntax cluster javascriptpFunctions contains=javascriptpFunction
+if &filetype == 'javascript'
 
-syntax keyword javascriptpFunction contained map filter reject partition find each head tail last initial
-syntax keyword javascriptpFunction contained empty values keys length cons append join reverse fold fold1
-syntax keyword javascriptpFunction contained foldr foldr1 unfold andList orList any all unique sort sortBy
-syntax keyword javascriptpFunction contained compare sum product mean concat concatMap maximum minimum scan scan1
-syntax keyword javascriptpFunction contained scanr scanr1 replicate take drop splitAt takeWhile dropWhile span breakIt
-syntax keyword javascriptpFunction contained listToObj objToFunc zip zipWith zipAll zipAllWith compose curry id flip
-syntax keyword javascriptpFunction contained fix lines unlines words unwords max min negate abs signum
-syntax keyword javascriptpFunction contained quot rem div mod recip pi tau exp sqrt ln
-syntax keyword javascriptpFunction contained pow sin cos tan asin acos atan atan2 truncate round
-syntax keyword javascriptpFunction contained ceiling floor isItNaN even odd gcd lcm
+    syntax cluster javascriptpFunctions contains=javascriptpFunction
 
+    syntax keyword javascriptpFunction contained map filter reject partition find each head tail last initial
+    syntax keyword javascriptpFunction contained empty values keys length cons append join reverse fold fold1
+    syntax keyword javascriptpFunction contained foldr foldr1 unfold andList orList any all unique sort sortBy
+    syntax keyword javascriptpFunction contained compare sum product mean concat concatMap maximum minimum scan scan1
+    syntax keyword javascriptpFunction contained scanr scanr1 replicate take drop splitAt takeWhile dropWhile span breakIt
+    syntax keyword javascriptpFunction contained listToObj objToFunc zip zipWith zipAll zipAllWith compose curry id flip
+    syntax keyword javascriptpFunction contained fix lines unlines words unwords max min negate abs signum
+    syntax keyword javascriptpFunction contained quot rem div mod recip pi tau exp sqrt ln
+    syntax keyword javascriptpFunction contained pow sin cos tan asin acos atan atan2 truncate round
+    syntax keyword javascriptpFunction contained ceiling floor isItNaN even odd gcd lcm
 
-syntax cluster coffeepFunctions contains=coffeepFunction
+endif
 
-syntax keyword coffeepFunction contained map filter reject partition find each head tail last initial
-syntax keyword coffeepFunction contained empty values keys length cons append join reverse fold fold1
-syntax keyword coffeepFunction contained foldr foldr1 unfold andList orList any all unique sort sortBy
-syntax keyword coffeepFunction contained compare sum product mean concat concatMap maximum minimum scan scan1
-syntax keyword coffeepFunction contained scanr scanr1 replicate take drop splitAt takeWhile dropWhile span breakIt
-syntax keyword coffeepFunction contained listToObj objToFunc zip zipWith zipAll zipAllWith compose curry id flip
-syntax keyword coffeepFunction contained fix lines unlines words unwords max min negate abs signum
-syntax keyword coffeepFunction contained quot rem div mod recip pi tau exp sqrt ln
-syntax keyword coffeepFunction contained pow sin cos tan asin acos atan atan2 truncate round
-syntax keyword coffeepFunction contained ceiling floor isItNaN even odd gcd lcm
+if &filetype == 'coffee'
 
+  syntax cluster coffeepFunctions contains=coffeepFunction
 
-syntax cluster lspFunctions contains=lspFunction
+  syntax keyword coffeepFunction contained map filter reject partition find each head tail last initial
+  syntax keyword coffeepFunction contained empty values keys length cons append join reverse fold fold1
+  syntax keyword coffeepFunction contained foldr foldr1 unfold andList orList any all unique sort sortBy
+  syntax keyword coffeepFunction contained compare sum product mean concat concatMap maximum minimum scan scan1
+  syntax keyword coffeepFunction contained scanr scanr1 replicate take drop splitAt takeWhile dropWhile span breakIt
+  syntax keyword coffeepFunction contained listToObj objToFunc zip zipWith zipAll zipAllWith compose curry id flip
+  syntax keyword coffeepFunction contained fix lines unlines words unwords max min negate abs signum
+  syntax keyword coffeepFunction contained quot rem div mod recip pi tau exp sqrt ln
+  syntax keyword coffeepFunction contained pow sin cos tan asin acos atan atan2 truncate round
+  syntax keyword coffeepFunction contained ceiling floor isItNaN even odd gcd lcm
 
-syntax keyword lspFunction contained map filter reject partition find each head tail last initial
-syntax keyword lspFunction contained empty values keys length cons append join reverse fold fold1
-syntax keyword lspFunction contained foldr foldr1 unfold andList orList any all unique sort sortBy
-syntax keyword lspFunction contained compare sum product mean concat concatMap maximum minimum scan scan1
-syntax keyword lspFunction contained scanr scanr1 replicate take drop splitAt takeWhile dropWhile span breakIt
-syntax keyword lspFunction contained listToObj objToFunc zip zipWith zipAll zipAllWith compose curry id flip
-syntax keyword lspFunction contained fix lines unlines words unwords max min negate abs signum
-syntax keyword lspFunction contained quot rem div mod recip pi tau exp sqrt ln
-syntax keyword lspFunction contained pow sin cos tan asin acos atan atan2 truncate round
-syntax keyword lspFunction contained ceiling floor isItNaN even odd gcd lcm
+endif
 
+if &filetype == 'ls'
+
+  syntax cluster lspFunctions contains=lspFunction
+
+  syntax keyword lspFunction contained map filter reject partition find each head tail last initial
+  syntax keyword lspFunction contained empty values keys length cons append join reverse fold fold1
+  syntax keyword lspFunction contained foldr foldr1 unfold andList orList any all unique sort sortBy
+  syntax keyword lspFunction contained compare sum product mean concat concatMap maximum minimum scan scan1
+  syntax keyword lspFunction contained scanr scanr1 replicate take drop splitAt takeWhile dropWhile span breakIt
+  syntax keyword lspFunction contained listToObj objToFunc zip zipWith zipAll zipAllWith compose curry id flip
+  syntax keyword lspFunction contained fix lines unlines words unwords max min negate abs signum
+  syntax keyword lspFunction contained quot rem div mod recip pi tau exp sqrt ln
+  syntax keyword lspFunction contained pow sin cos tan asin acos atan atan2 truncate round
+  syntax keyword lspFunction contained ceiling floor isItNaN even odd gcd lcm
+
+endif
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
