@@ -23,6 +23,12 @@ Will be more when SyntaxComplete has new version.
 
 Use [pathogen][] or [vundle][].
 
+## Config
+
+You can use g:used_javascript_libs to setup used libraries, ex:
+
+    let g:used_javascript_libs = 'underscore,backbone'
+
 ## Todo
 
 - Support option to choose libraries
@@ -33,7 +39,7 @@ Use [pathogen][] or [vundle][].
 ## Known Issue
 
 SyntaxComplete only accept groups with filetype prefixed. For example, 'javascript' files.
-Only keywords in groups which's name is /javascript.*/ will be available. So to make it
+Only keywords in groups which's name matches /javascript.*/ will be available. So to make it
 possible to use SyntaxComplete on CoffeeScript, LiveScript and other compile to JavaScript
 languages. We must redefine all syntax many times, with different name prefix. SyntaxComplete
 might have new feature to support a user define pattern for group name to include. 
@@ -41,8 +47,11 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 ## Changes
 
+### Version 0.2
+- Supports library selection
+
 ### Version 0.1
-- 0.1 First release.
+- First release.
 
 ## Credits
 
