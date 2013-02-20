@@ -21,13 +21,17 @@ function! LoadLibs(path)
   endif
 
   let index = 0
+  let loaded = 0
   while index < len(libs)
     let lib = libs[index]
     if g:used_javascript_libs =~ lib
       exe('source '.a:path.'/syntax/'.lib.'.vim')
+      let loaded = loaded + 1
     endif
     let index = index + 1
   endwhile
-  exe('source '.a:path.'/syntax/postprocess.vim')
+  if loaded > 0
+    exe('source '.a:path.'/syntax/postprocess.vim')
+  endif
 endfunction
 
