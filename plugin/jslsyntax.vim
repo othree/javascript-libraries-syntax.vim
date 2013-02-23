@@ -15,7 +15,7 @@ function! LoadLibs(path)
   endif
   let b:javascript_libraries_syntax = 1
 
-  let libs = ['jquery', 'underscore', 'backbone', 'prelude']
+  let libs = ['jquery', 'underscore', 'backbone', 'prelude', 'angularjs']
   if !exists('g:used_javascript_libs') 
     let g:used_javascript_libs = join(libs, ',')
   endif
@@ -25,13 +25,16 @@ function! LoadLibs(path)
   while index < len(libs)
     let lib = libs[index]
     if g:used_javascript_libs =~ lib
-      exe('source '.a:path.'/syntax/'.lib.'.vim')
-      let loaded = loaded + 1
+      let fn = a:path.'/../autoload/syntax/'.lib.'.vim'
+      if filereadable(fn)
+        exe('source '.fn)
+        let loaded = loaded + 1
+      endif
     endif
     let index = index + 1
   endwhile
   if loaded > 0
-    exe('source '.a:path.'/syntax/postprocess.vim')
+    exe('source '.a:path.'/../autoload/syntax/postprocess.vim')
   endif
 endfunction
 
