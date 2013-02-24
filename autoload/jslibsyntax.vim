@@ -11,7 +11,7 @@ function! jslibsyntax#load(path)
   endif
   let b:javascript_libraries_syntax = 1
 
-  let s:libs = ['jquery', 'underscore', 'backbone', 'prelude', 'angularjs', 'require']
+  let s:libs = ['jquery', 'underscore', 'backbone', 'prelude', 'angularjs', 'requirejs']
   if !exists('g:used_javascript_libs') 
     let g:used_javascript_libs = join(s:libs, ',')
   endif
