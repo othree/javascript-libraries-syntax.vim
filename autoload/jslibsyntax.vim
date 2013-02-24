@@ -22,7 +22,6 @@ function! jslibsyntax#load(path)
     let lib = libs[index]
     if g:used_javascript_libs =~ lib
       let fn = a:path.'/autoload/syntax/'.lib.'.vim'
-      echom fn
       if filereadable(fn)
         exe('source '.fn)
         let loaded = loaded + 1
