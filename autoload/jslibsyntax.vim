@@ -11,16 +11,20 @@ function! jslibsyntax#load(path)
   endif
   let b:javascript_libraries_syntax = 1
 
-  let libs = ['jquery', 'underscore', 'backbone', 'prelude', 'angularjs']
+  let s:libs = ['jquery', 'underscore', 'backbone', 'prelude', 'angularjs']
   if !exists('g:used_javascript_libs') 
-    let g:used_javascript_libs = join(libs, ',')
+    let g:used_javascript_libs = join(s:libs, ',')
   endif
 
   let index = 0
   let loaded = 0
-  while index < len(libs)
-    let lib = libs[index]
-    if g:used_javascript_libs =~ lib
+  while index < len(s:libs)
+    let lib = s:libs[index]
+    let use = g:used_javascript_libs =~ lib
+    if exists('b:javascript_lib_use_'.lib)
+      exec('let use = b:javascript_lib_use_'.lib)
+    endif
+    if use
       let fn = a:path.'/autoload/syntax/'.lib.'.vim'
       if filereadable(fn)
         exe('source '.fn)
