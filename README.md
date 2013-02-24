@@ -82,11 +82,9 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 ## Credits
 
 - Bruno Michel, [jQuery : Syntax file for jQuery][jquery.vim]
-
-[jquery.vim]:http://www.vim.org/scripts/script.php?script_id=2416
-
 - [Peter Renström][], for [summarize and explain AngularJS stuff][issue1].
 
+[jquery.vim]:http://www.vim.org/scripts/script.php?script_id=2416
 [Peter Renström]:https://github.com/renstrom
 [issue1]:https://github.com/othree/javascript-libraries-syntax.vim/issues/1
 
