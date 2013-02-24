@@ -38,12 +38,19 @@ Support libs id:
 - prelude.ls: prelude
 - AngularJS: angularjs
 
+You can use [local vimrc][] to setup libraries used in project. Sample code for local vimrc:
+
+    autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+    autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
+    autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 1
+    autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
+    autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 0
+
+[local vimrc]:https://github.com/MarcWeber/vim-addon-local-vimrc
+
 ## Todo
 
-- Support option to choose libraries
 - Support future version of SyntaxComplete
-- Possibility to set used libraries in project
-- Add YUI
 
 ## Known Issue
 
@@ -55,6 +62,12 @@ might have new feature to support a user define pattern for group name to includ
 All repeat defination will be removed when SyntaxComplete supports this feature.
 
 ## Changes
+
+### Version 0.3
+
+- Supports AngularJS
+- Setup used libraries
+- Better init way
 
 ### Version 0.2
 - Supports library selection
