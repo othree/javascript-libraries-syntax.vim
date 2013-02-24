@@ -5,13 +5,23 @@
 " Version:     0.3
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 
-function! jslibsyntax#load(path)
+let s:libs = [
+  \ 'jquery',
+  \ 'underscore',
+  \ 'backbone',
+  \ 'prelude',
+  \ 'angularjs',
+  \ 'requirejs'
+  \ ]
+
+let s:path = expand('<sfile>:p:h')
+
+function! jslibsyntax#load()
   if exists('b:javascript_libraries_syntax')
     return
   endif
   let b:javascript_libraries_syntax = 1
 
-  let s:libs = ['jquery', 'underscore', 'backbone', 'prelude', 'angularjs', 'requirejs']
   if !exists('g:used_javascript_libs') 
     let g:used_javascript_libs = join(s:libs, ',')
   endif
@@ -25,7 +35,7 @@ function! jslibsyntax#load(path)
       exec('let use = b:javascript_lib_use_'.lib)
     endif
     if use
-      let fn = a:path.'/autoload/syntax/'.lib.'.'.&filetype.'.vim'
+      let fn = s:path.'/syntax/'.lib.'.'.&filetype.'.vim'
       if filereadable(fn)
         exe('source '.fn)
         let loaded = loaded + 1
@@ -34,7 +44,7 @@ function! jslibsyntax#load(path)
     let index = index + 1
   endwhile
   if loaded > 0
-    exe('source '.a:path.'/autoload/syntax/postprocess.vim')
+    exe('source '.s:path.'/syntax/postprocess.vim')
   endif
 endfunction
 
