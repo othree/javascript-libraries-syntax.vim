@@ -1,5 +1,5 @@
 NAME=javascript-libraries-syntax.vim
-VERSION=0.2
+VERSION=0.3
 
 bundle-deps:
 		$(call fetch_github,ID,REPOSITORY,BRANCH,PATH,TARGET_PATH)
