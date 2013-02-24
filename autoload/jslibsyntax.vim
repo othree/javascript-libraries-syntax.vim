@@ -1,15 +1,11 @@
 " Vim plugin file
 " Language:    JS Lib syntax loader
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/20
-" Version:     0.2
+" Last Change: 2013/02/24
+" Version:     0.3
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 
-autocmd FileType javascript call LoadLibs(expand('<sfile>:p:h'))
-autocmd FileType coffee call LoadLibs(expand('<sfile>:p:h'))
-autocmd FileType ls call LoadLibs(expand('<sfile>:p:h'))
-
-function! LoadLibs(path)
+function! jslibsyntax#load(path)
   if exists('b:javascript_libraries_syntax')
     return
   endif
@@ -25,7 +21,8 @@ function! LoadLibs(path)
   while index < len(libs)
     let lib = libs[index]
     if g:used_javascript_libs =~ lib
-      let fn = a:path.'/../autoload/syntax/'.lib.'.vim'
+      let fn = a:path.'/autoload/syntax/'.lib.'.vim'
+      echom fn
       if filereadable(fn)
         exe('source '.fn)
         let loaded = loaded + 1
@@ -34,7 +31,7 @@ function! LoadLibs(path)
     let index = index + 1
   endwhile
   if loaded > 0
-    exe('source '.a:path.'/../autoload/syntax/postprocess.vim')
+    exe('source '.a:path.'/autoload/syntax/postprocess.vim')
   endif
 endfunction
 
