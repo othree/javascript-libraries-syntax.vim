@@ -11,6 +11,7 @@ supported languages.
 - [Backbone.js](http://backbonejs.org/)
 - [prelude.ls](http://gkz.github.com/prelude-ls/)
 - [AngularJS](http://angularjs.org/)
+- [RequireJS](http://requirejs.org/)
 
 ## File Types
 
@@ -38,6 +39,7 @@ Support libs id:
 - Backbone.js: backbone
 - prelude.ls: prelude
 - AngularJS: angularjs
+- RequireJS: requirejs
 
 You can use [local vimrc][] to setup libraries used in project. Sample code for local vimrc:
 
@@ -66,7 +68,8 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 ### Version 0.3
 
-- Supports AngularJS
+- Supports AngularJS, RequireJS
+- Support TypeScript
 - Setup used libraries
 - Better init way
 
