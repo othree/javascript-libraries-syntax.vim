@@ -17,6 +17,7 @@ supported languages.
 - JavaScript
 - [CoffeeScript](http://coffeescript.org/)
 - [LiveScript](http://livescript.net/)
+- [TypeScript](http://www.typescriptlang.org/)
 
 Will be more when SyntaxComplete has new version.
 
