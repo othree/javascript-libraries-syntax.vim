@@ -10,6 +10,7 @@ supported languages.
 - [underscore.js](http://underscorejs.org/)
 - [Backbone.js](http://backbonejs.org/)
 - [prelude.ls](http://gkz.github.com/prelude-ls/)
+- [AngularJS](http://angularjs.org/)
 
 ## File Types
 
@@ -28,6 +29,14 @@ Use [pathogen][] or [vundle][].
 You can use g:used_javascript_libs to setup used libraries, ex:
 
     let g:used_javascript_libs = 'underscore,backbone'
+
+Support libs id:
+
+- jQuery: jquery
+- underscore.js: underscore
+- Backbone.js: backbone
+- prelude.ls: prelude
+- AngularJS: angularjs
 
 ## Todo
 
