@@ -44,7 +44,7 @@ function! jslibsyntax#load()
     let index = index + 1
   endwhile
   if loaded > 0
-    exe('source '.s:path.'/syntax/postprocess.vim')
+    exe('source '.s:path.'/syntax/postprocess.'.&filetype.'.vim')
   endif
 endfunction
 
