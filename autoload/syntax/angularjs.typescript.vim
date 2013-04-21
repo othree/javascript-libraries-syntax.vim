@@ -1,12 +1,12 @@
 " Vim syntax file
 " Language:    AngularJS for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/22
-" Version:     1.1.13
+" Last Change: 2013/04/21
+" Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-syntax keyword typescriptAngular angular containedin=ALLBUT,typescriptComment
-syntax match   typescriptAngulardot containedin=ALLBUT,typescriptComment /\(\<angular\.\)\@<=\h\w*/ contains=typescriptAngularMethods
+syntax keyword typescriptAngular angular containedin=ALLBUT,typescriptComment nextgroup=typescriptAngulardot
+syntax match   typescriptAngulardot contained /\./ nextgroup=typescriptAngularMethods
 syntax keyword typescriptAngularMethods contained bind bootstrap copy element equals
 syntax keyword typescriptAngularMethods contained extend forEach fromJson identity injector
 syntax keyword typescriptAngularMethods contained isArray isDate isDefined isElement isFunction
@@ -14,36 +14,45 @@ syntax keyword typescriptAngularMethods contained isNumber isObject isString isU
 syntax keyword typescriptAngularMethods contained mock module noop toJson uppercase version
 
 syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $anchorScroll $cacheFactory $compile $controller $document
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $exceptionHandler $filter $http $httpBackend $interpolate
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $locale $location $log $parse $q $rootElement $rootScope 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $scope $route $routeParams $templateCache $timeout $window 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $cookies $cookieStore $resource $sanitize
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $exceptionHandler $filter $httpBackend
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $locale $parse $rootElement
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $routeParams $templateCache $window 
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $cookies $resource $sanitize
 
-syntax match   typescriptAShttpdot containedin=ALLBUT,typescriptComment /\(\<\$http\.\)\@<=\h\w*/ contains=typescriptAShttpMethods
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $http nextgroup=typescriptAShttpdot
+syntax match   typescriptAShttpdot contained /\./ nextgroup=typescriptAShttpMethods
 syntax keyword typescriptAShttpMethods contained get head post put delete jsonp defaults prendingRequests 
 
-syntax match   typescriptASinterpolatedot containedin=ALLBUT,typescriptComment /\(\<\$interpolate\.\)\@<=\h\w*/ contains=typescriptASinterpolateMethods
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $interpolate nextgroup=typescriptASinterpolatedot
+syntax match   typescriptASinterpolatedot contained /\./ nextgroup=typescriptASinterpolateMethods
 syntax keyword typescriptASinterpolateMethods contained endSymbol startSymbol
 
-syntax match   typescriptASlocationdot containedin=ALLBUT,typescriptComment /\(\<\$location\.\)\@<=\h\w*/ contains=typescriptASlocationMethods
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $location nextgroup=typescriptASlocationdot
+syntax match   typescriptASlocationdot contained /\./ nextgroup=typescriptASlocationMethods
 syntax keyword typescriptASlocationMethods contained absUrl hash host path port protocol replace search url
 
-syntax match   typescriptASlogdot containedin=ALLBUT,typescriptComment /\(\<\$log\.\)\@<=\h\w*/ contains=typescriptASlogMethods
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $log nextgroup=typescriptASlogdot
+syntax match   typescriptASlogdot contained /\./ nextgroup=typescriptASlogMethods
 syntax keyword typescriptASlogMethods contained error info log warn
 
-syntax match   typescriptASqdot containedin=ALLBUT,typescriptComment /\(\<\$q\.\)\@<=\h\w*/ contains=typescriptASqMethods
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $q nextgroup=typescriptASqdot
+syntax match   typescriptASqdot contained /\./ nextgroup=typescriptASqMethods
 syntax keyword typescriptASqMethods contained all defer reject when
 
-syntax match   typescriptASroutedot containedin=ALLBUT,typescriptComment /\(\<\$route\.\)\@<=\h\w*/ contains=typescriptASrouteMethods
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $route nextgroup=typescriptASroutedot
+syntax match   typescriptASroutedot contained /\./ nextgroup=typescriptASrouteMethods
 syntax keyword typescriptASrouteMethods contained reload current route
 
-syntax match   typescriptAStimeoutdot containedin=ALLBUT,typescriptComment /\(\<\$timeout\.\)\@<=\h\w*/ contains=typescriptAStimeoutMethods
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $timeout nextgroup=typescriptAStimeoutdot
+syntax match   typescriptAStimeoutdot contained /\./ nextgroup=typescriptAStimeoutMethods
 syntax keyword typescriptAStimeoutMethods contained cancel
 
-syntax match   typescriptASscopedot containedin=ALLBUT,typescriptComment /\(\<\$scope\.\|\$rootScope\)\@<=\h\w*/ contains=typescriptASscopeMethods
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $scope $rootScope nextgroup=typescriptASscopedot
+syntax match   typescriptASscopedot contained /\./ nextgroup=typescriptASscopeMethods
 syntax keyword typescriptASscopeMethods contained $apply $broadcast $destroy $digest $emit $eval $evalAsync $new $on $watch $id
 
-syntax match   typescriptAScookieStoredot containedin=ALLBUT,typescriptComment /\(\<\$cookieStore\.\)\@<=\h\w*/ contains=typescriptAScookieStoreMethods
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $cookieStore nextgroup=typescriptAScookieStoredot
+syntax match   typescriptAScookieStoredot contained /\./ nextgroup=typescriptAScookieStoreMethods
 syntax keyword typescriptAScookieStoreMethods contained get put remove
 
 syntax cluster typescriptAFunctions contains=typescriptAMFunctions

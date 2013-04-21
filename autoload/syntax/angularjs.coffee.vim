@@ -1,12 +1,12 @@
 " Vim syntax file
 " Language:    AngularJS for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/22
-" Version:     1.1.13
+" Last Change: 2013/04/21
+" Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-syntax keyword coffeeAngular angular containedin=ALLBUT,coffeeComment
-syntax match   coffeeAngulardot containedin=ALLBUT,coffeeComment /\(\<angular\.\)\@<=\h\w*/ contains=coffeeAngularMethods
+syntax keyword coffeeAngular angular containedin=ALLBUT,coffeeComment nextgroup=coffeeAngulardot
+syntax match   coffeeAngulardot contained /\./ nextgroup=coffeeAngularMethods
 syntax keyword coffeeAngularMethods contained bind bootstrap copy element equals
 syntax keyword coffeeAngularMethods contained extend forEach fromJson identity injector
 syntax keyword coffeeAngularMethods contained isArray isDate isDefined isElement isFunction
@@ -14,36 +14,45 @@ syntax keyword coffeeAngularMethods contained isNumber isObject isString isUndef
 syntax keyword coffeeAngularMethods contained mock module noop toJson uppercase version
 
 syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $anchorScroll $cacheFactory $compile $controller $document
-syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $exceptionHandler $filter $http $httpBackend $interpolate
-syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $locale $location $log $parse $q $rootElement $rootScope 
-syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $scope $route $routeParams $templateCache $timeout $window 
-syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $cookies $cookieStore $resource $sanitize
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $exceptionHandler $filter $httpBackend
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $locale $parse $rootElement
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $routeParams $templateCache $window 
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $cookies $resource $sanitize
 
-syntax match   coffeeAShttpdot containedin=ALLBUT,coffeeComment /\(\<\$http\.\)\@<=\h\w*/ contains=coffeeAShttpMethods
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $http nextgroup=coffeeAShttpdot
+syntax match   coffeeAShttpdot contained /\./ nextgroup=coffeeAShttpMethods
 syntax keyword coffeeAShttpMethods contained get head post put delete jsonp defaults prendingRequests 
 
-syntax match   coffeeASinterpolatedot containedin=ALLBUT,coffeeComment /\(\<\$interpolate\.\)\@<=\h\w*/ contains=coffeeASinterpolateMethods
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $interpolate nextgroup=coffeeASinterpolatedot
+syntax match   coffeeASinterpolatedot contained /\./ nextgroup=coffeeASinterpolateMethods
 syntax keyword coffeeASinterpolateMethods contained endSymbol startSymbol
 
-syntax match   coffeeASlocationdot containedin=ALLBUT,coffeeComment /\(\<\$location\.\)\@<=\h\w*/ contains=coffeeASlocationMethods
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $location nextgroup=coffeeASlocationdot
+syntax match   coffeeASlocationdot contained /\./ nextgroup=coffeeASlocationMethods
 syntax keyword coffeeASlocationMethods contained absUrl hash host path port protocol replace search url
 
-syntax match   coffeeASlogdot containedin=ALLBUT,coffeeComment /\(\<\$log\.\)\@<=\h\w*/ contains=coffeeASlogMethods
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $log nextgroup=coffeeASlogdot
+syntax match   coffeeASlogdot contained /\./ nextgroup=coffeeASlogMethods
 syntax keyword coffeeASlogMethods contained error info log warn
 
-syntax match   coffeeASqdot containedin=ALLBUT,coffeeComment /\(\<\$q\.\)\@<=\h\w*/ contains=coffeeASqMethods
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $q nextgroup=coffeeASqdot
+syntax match   coffeeASqdot contained /\./ nextgroup=coffeeASqMethods
 syntax keyword coffeeASqMethods contained all defer reject when
 
-syntax match   coffeeASroutedot containedin=ALLBUT,coffeeComment /\(\<\$route\.\)\@<=\h\w*/ contains=coffeeASrouteMethods
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $route nextgroup=coffeeASroutedot
+syntax match   coffeeASroutedot contained /\./ nextgroup=coffeeASrouteMethods
 syntax keyword coffeeASrouteMethods contained reload current route
 
-syntax match   coffeeAStimeoutdot containedin=ALLBUT,coffeeComment /\(\<\$timeout\.\)\@<=\h\w*/ contains=coffeeAStimeoutMethods
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $timeout nextgroup=coffeeAStimeoutdot
+syntax match   coffeeAStimeoutdot contained /\./ nextgroup=coffeeAStimeoutMethods
 syntax keyword coffeeAStimeoutMethods contained cancel
 
-syntax match   coffeeASscopedot containedin=ALLBUT,coffeeComment /\(\<\$scope\.\|\$rootScope\)\@<=\h\w*/ contains=coffeeASscopeMethods
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $scope $rootScope nextgroup=coffeeASscopedot
+syntax match   coffeeASscopedot contained /\./ nextgroup=coffeeASscopeMethods
 syntax keyword coffeeASscopeMethods contained $apply $broadcast $destroy $digest $emit $eval $evalAsync $new $on $watch $id
 
-syntax match   coffeeAScookieStoredot containedin=ALLBUT,coffeeComment /\(\<\$cookieStore\.\)\@<=\h\w*/ contains=coffeeAScookieStoreMethods
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment $cookieStore nextgroup=coffeeAScookieStoredot
+syntax match   coffeeAScookieStoredot contained /\./ nextgroup=coffeeAScookieStoreMethods
 syntax keyword coffeeAScookieStoreMethods contained get put remove
 
 syntax cluster coffeeAFunctions contains=coffeeAMFunctions
