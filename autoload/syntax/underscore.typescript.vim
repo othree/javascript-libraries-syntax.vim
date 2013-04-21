@@ -1,13 +1,13 @@
 " Vim syntax file
 " Language:    underscore.js for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/05
-" Version:     1.4.4
+" Last Change: 2013/04/21
+" Version:     1.4.4.1
 " URL:         http://underscorejs.org/
 
-syntax match   typescriptunderscore containedin=ALLBUT,typescriptComment /\<_\>/
-syntax match   typescriptunderscoredot containedin=ALLBUT,typescriptComment /\(\<_\.\)\@<=\h\w*/ contains=@typescript_Functions
-syntax match   typescriptunderscoredot containedin=ALLBUT,typescriptComment /\(\<_([^)]*)\.\)\@<=\h\w*/ contains=@typescript_Functions
+syntax match   typescriptunderscore containedin=ALLBUT,typescriptComment /\<_\>/ nextgroup=typescriptunderscoredot
+syntax match   typescriptunderscoredot contained /\./ nextgroup=@typescript_Functions
+syntax match   typescriptunderscoredot contained /([^)]*)\./ nextgroup=@typescript_Functions
 
 syntax cluster typescript_Functions contains=typescript_collections,typescript_arrays,typescript_functions,typescript_objects,typescript_chaining
 

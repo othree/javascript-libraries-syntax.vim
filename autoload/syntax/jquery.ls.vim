@@ -2,13 +2,13 @@
 " Language:    jQuery for ls
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/02/05
-" Version:     1.9
+" Last Change: 2013/04/21
+" Version:     1.9.0.1
 " URL:         http://api.jquery.com/
 
-syntax keyword lsjQuery          containedin=ALLBUT,lsComment jQuery $
-syntax match   lsjQuerydot       containedin=ALLBUT,lsComment /\(\<\(jQuery\|\$\)\.\)\@<=\h\w*/ contains=@lsQGlobals
-syntax match   lsjQuerydot       containedin=ALLBUT,lsComment /\(\<\(jQuery\|\$\)([^)]*)\.\)\@<=\h\w*/ contains=@lsQFunctions
+syntax keyword lsjQuery          containedin=ALLBUT,lsComment jQuery $ nextgroup=lsjQuerydot,lsjQuerybracketsdot
+syntax match   lsjQuerydot       contained /\./ nextgroup=@lsQGlobals
+syntax match   lsjQuerydot       contained /([^)]*)\./ nextgroup=@lsQFunctions
 
 " jQuery.*
 syntax cluster lsQGlobals        contains=lsQCore,lsQCoreObj,lsQCoreData,lsQUtilities,lsQProperties

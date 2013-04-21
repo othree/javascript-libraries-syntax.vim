@@ -2,13 +2,13 @@
 " Language:    jQuery for typescript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/02/05
-" Version:     1.9
+" Last Change: 2013/04/21
+" Version:     1.9.0.1
 " URL:         http://api.jquery.com/
 
-syntax keyword typescriptjQuery          containedin=ALLBUT,typescriptComment jQuery $
-syntax match   typescriptjQuerydot       containedin=ALLBUT,typescriptComment /\(\<\(jQuery\|\$\)\.\)\@<=\h\w*/ contains=@typescriptQGlobals
-syntax match   typescriptjQuerydot       containedin=ALLBUT,typescriptComment /\(\<\(jQuery\|\$\)([^)]*)\.\)\@<=\h\w*/ contains=@typescriptQFunctions
+syntax keyword typescriptjQuery          containedin=ALLBUT,typescriptComment jQuery $ nextgroup=typescriptjQuerydot,typescriptjQuerybracketsdot
+syntax match   typescriptjQuerydot       contained /\./ nextgroup=@typescriptQGlobals
+syntax match   typescriptjQuerydot       contained /([^)]*)\./ nextgroup=@typescriptQFunctions
 
 " jQuery.*
 syntax cluster typescriptQGlobals        contains=typescriptQCore,typescriptQCoreObj,typescriptQCoreData,typescriptQUtilities,typescriptQProperties

@@ -1,13 +1,13 @@
 " Vim syntax file
 " Language:    underscore.js for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/05
-" Version:     1.4.4
+" Last Change: 2013/04/21
+" Version:     1.4.4.1
 " URL:         http://underscorejs.org/
 
-syntax match   javascriptunderscore containedin=ALLBUT,javascriptComment /\<_\>/
-syntax match   javascriptunderscoredot containedin=ALLBUT,javascriptComment /\(\<_\.\)\@<=\h\w*/ contains=@javascript_Functions
-syntax match   javascriptunderscoredot containedin=ALLBUT,javascriptComment /\(\<_([^)]*)\.\)\@<=\h\w*/ contains=@javascript_Functions
+syntax match   javascriptunderscore containedin=ALLBUT,javascriptComment /\<_\>/ nextgroup=javascriptunderscoredot
+syntax match   javascriptunderscoredot contained /\./ nextgroup=@javascript_Functions
+syntax match   javascriptunderscoredot contained /([^)]*)\./ nextgroup=@javascript_Functions
 
 syntax cluster javascript_Functions contains=javascript_collections,javascript_arrays,javascript_functions,javascript_objects,javascript_chaining
 

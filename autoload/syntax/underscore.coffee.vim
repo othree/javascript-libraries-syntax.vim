@@ -1,13 +1,13 @@
 " Vim syntax file
 " Language:    underscore.js for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/05
-" Version:     1.4.4
+" Last Change: 2013/04/21
+" Version:     1.4.4.1
 " URL:         http://underscorejs.org/
 
-syntax match   coffeeunderscore containedin=ALLBUT,coffeeComment /\<_\>/
-syntax match   coffeeunderscoredot containedin=ALLBUT,coffeeComment /\(\<_\.\)\@<=\h\w*/ contains=@coffee_Functions
-syntax match   coffeeunderscoredot containedin=ALLBUT,coffeeComment /\(\<_([^)]*)\.\)\@<=\h\w*/ contains=@coffee_Functions
+syntax match   coffeeunderscore containedin=ALLBUT,coffeeComment /\<_\>/ nextgroup=coffeeunderscoredot
+syntax match   coffeeunderscoredot contained /\./ nextgroup=@coffee_Functions
+syntax match   coffeeunderscoredot contained /([^)]*)\./ nextgroup=@coffee_Functions
 
 syntax cluster coffee_Functions contains=coffee_collections,coffee_arrays,coffee_functions,coffee_objects,coffee_chaining
 

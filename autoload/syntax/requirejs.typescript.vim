@@ -6,12 +6,12 @@
 " URL:         http://requirejs.org/
 
 
-syntax keyword typescriptRequire require requirejs containedin=ALLBUT,typescriptComment
-syntax match   typescriptRequiredot containedin=ALLBUT,typescriptComment /\(\<require\.\|requirejs\.\)\@<=\h\w*/ contains=typescriptRequireMethods
+syntax keyword typescriptRequire require requirejs containedin=ALLBUT,typescriptComment nextgroup=typescriptRequiredot
+syntax match   typescriptRequiredot contained /\./ nextgroup=typescriptRequireMethods
 syntax keyword typescriptRequireMethods contained config
 
-syntax keyword typescriptRdefine define containedin=ALLBUT,typescriptComment
-syntax match   typescriptRdefinedot containedin=ALLBUT,typescriptComment /\(\<define\.\)\@<=\h\w*/ contains=typescriptRdefineMethods
+syntax keyword typescriptRdefine define containedin=ALLBUT,typescriptComment nextgroup=typescriptRdefinedot
+syntax match   typescriptRdefinedot contained /\./ nextgroup=typescriptRdefineMethods
 syntax keyword typescriptRdefineMethods contained amd
 
 

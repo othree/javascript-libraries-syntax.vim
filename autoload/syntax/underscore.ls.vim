@@ -1,13 +1,13 @@
 " Vim syntax file
 " Language:    underscore.js for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/05
-" Version:     1.4.4
+" Last Change: 2013/04/21
+" Version:     1.4.4.1
 " URL:         http://underscorejs.org/
 
-syntax match   lsunderscore containedin=ALLBUT,lsComment /\<_\>/
-syntax match   lsunderscoredot containedin=ALLBUT,lsComment /\(\<_\.\)\@<=\h\w*/ contains=@ls_Functions
-syntax match   lsunderscoredot containedin=ALLBUT,lsComment /\(\<_([^)]*)\.\)\@<=\h\w*/ contains=@ls_Functions
+syntax match   lsunderscore containedin=ALLBUT,lsComment /\<_\>/ nextgroup=lsunderscoredot
+syntax match   lsunderscoredot contained /\./ nextgroup=@ls_Functions
+syntax match   lsunderscoredot contained /([^)]*)\./ nextgroup=@ls_Functions
 
 syntax cluster ls_Functions contains=ls_collections,ls_arrays,ls_functions,ls_objects,ls_chaining
 

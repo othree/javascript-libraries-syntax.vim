@@ -2,13 +2,13 @@
 " Language:    jQuery for coffee
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/02/05
-" Version:     1.9
+" Last Change: 2013/04/21
+" Version:     1.9.0.1
 " URL:         http://api.jquery.com/
 
-syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment jQuery $
-syntax match   coffeejQuerydot       containedin=ALLBUT,coffeeComment /\(\<\(jQuery\|\$\)\.\)\@<=\h\w*/ contains=@coffeeQGlobals
-syntax match   coffeejQuerydot       containedin=ALLBUT,coffeeComment /\(\<\(jQuery\|\$\)([^)]*)\.\)\@<=\h\w*/ contains=@coffeeQFunctions
+syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment jQuery $ nextgroup=coffeejQuerydot,coffeejQuerybracketsdot
+syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals
+syntax match   coffeejQuerydot       contained /([^)]*)\./ nextgroup=@coffeeQFunctions
 
 " jQuery.*
 syntax cluster coffeeQGlobals        contains=coffeeQCore,coffeeQCoreObj,coffeeQCoreData,coffeeQUtilities,coffeeQProperties

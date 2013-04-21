@@ -2,13 +2,13 @@
 " Language:    jQuery for javascript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/02/05
-" Version:     1.9
+" Last Change: 2013/04/21
+" Version:     1.9.0.1
 " URL:         http://api.jquery.com/
 
-syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment jQuery $
-syntax match   javascriptjQuerydot       containedin=ALLBUT,javascriptComment /\(\<\(jQuery\|\$\)\.\)\@<=\h\w*/ contains=@javascriptQGlobals
-syntax match   javascriptjQuerydot       containedin=ALLBUT,javascriptComment /\(\<\(jQuery\|\$\)([^)]*)\.\)\@<=\h\w*/ contains=@javascriptQFunctions
+syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment jQuery $ nextgroup=javascriptjQuerydot,javascriptjQuerybracketsdot
+syntax match   javascriptjQuerydot       contained /\./ nextgroup=@javascriptQGlobals
+syntax match   javascriptjQuerydot       contained /([^)]*)\./ nextgroup=@javascriptQFunctions
 
 " jQuery.*
 syntax cluster javascriptQGlobals        contains=javascriptQCore,javascriptQCoreObj,javascriptQCoreData,javascriptQUtilities,javascriptQProperties
