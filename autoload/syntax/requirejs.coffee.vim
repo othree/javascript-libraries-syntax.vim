@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:    require.js for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/24
-" Version:     2.1.4
+" Last Change: 2013/04/22
+" Version:     2.1.4.1
 " URL:         http://requirejs.org/
 
 
