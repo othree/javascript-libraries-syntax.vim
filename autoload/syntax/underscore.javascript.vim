@@ -4,12 +4,14 @@
 " Last Change: 2013/04/21
 " Version:     1.4.4.1
 " URL:         http://underscorejs.org/
+" LoDash:      1.2.0
+" URL:         http://lodash.com/
 
 syntax match   javascriptunderscore containedin=ALLBUT,javascriptComment /\<_\>/ nextgroup=javascriptunderscoredot
 syntax match   javascriptunderscoredot contained /\./ nextgroup=@javascript_Functions
 syntax match   javascriptunderscoredot contained /([^)]*)\./ nextgroup=@javascript_Functions
 
-syntax cluster javascript_Functions contains=javascript_collections,javascript_arrays,javascript_functions,javascript_objects,javascript_chaining
+syntax cluster javascript_Functions contains=javascript_collections,javascript_arrays,javascript_functions,javascript_objects,javascript_chaining,javascript_lodash
 
 syntax match   javascript_collections contained /contains/
 syntax keyword javascript_collections contained each map reduce reduceRight find filter where findWhere
@@ -28,6 +30,10 @@ syntax keyword javascript_objects contained isUndefined
 syntax keyword javascript_utility contained noConflict identify times random mixin uniqueId
 syntax keyword javascript_utility contained escape unescape result template
 syntax keyword javascript_chaining contained chain value
+
+syntax keyword javascript_lodash contained at bindKey cloneDeep createCallback findIndex findKey
+syntax keyword javascript_lodash contained forEach forIn forOwn isPlainObject merge parseInt partial
+syntax keyword javascript_lodash contained partialRight runInContext support unzip where 
 
 
 " Define the default highlighting.
