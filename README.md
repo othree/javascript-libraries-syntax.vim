@@ -66,6 +66,10 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 ## Changes
 
+### Version 0.3.1
+
+- Fix performance issue
+
 ### Version 0.3
 
 - Supports AngularJS, RequireJS
