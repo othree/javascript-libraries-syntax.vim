@@ -1,32 +1,42 @@
-# javascript-libraries-syntax.vim
+javascript-libraries-syntax.vim
+===============================
 
 Syntax file for JavaScript libraries. Supports JavaScript libraris I am using (patches welcome).
 Should works well with other JavaScript syntax file. [SyntaxComplete][] also works well on all 
 supported languages.
 
-## Libraries
+[SyntaxComplete]:http://www.vim.org/scripts/script.php?script_id=3172
 
-- [jQuery](http://jquery.com/)
-- [underscore.js](http://underscorejs.org/)
-- [Backbone.js](http://backbonejs.org/)
-- [prelude.ls](http://gkz.github.com/prelude-ls/)
-- [AngularJS](http://angularjs.org/)
-- [RequireJS](http://requirejs.org/)
+Libraries
+---------
 
-## File Types
+* [jQuery](http://jquery.com/)
+* [underscore.js](http://underscorejs.org/)
+* [Backbone.js](http://backbonejs.org/)
+* [prelude.ls](http://gkz.github.com/prelude-ls/)
+* [AngularJS](http://angularjs.org/)
+* [RequireJS](http://requirejs.org/)
 
-- JavaScript
-- [CoffeeScript](http://coffeescript.org/)
-- [LiveScript](http://livescript.net/)
-- [TypeScript](http://www.typescriptlang.org/)
+File Types
+----------
+
+* JavaScript
+* [CoffeeScript](http://coffeescript.org/)
+* [LiveScript](http://livescript.net/)
+* [TypeScript](http://www.typescriptlang.org/)
 
 Will be more when SyntaxComplete has new version.
 
-## Install
+Install
+-------
 
-Use [pathogen][] or [vundle][].
+Use [pathogen][] or [vundle][] is recommended.
 
-## Config
+[pathogen]:http://www.vim.org/scripts/script.php?script_id=2332
+[vundle]:https://github.com/gmarik/vundle
+
+Config
+------
 
 You can use g:used_javascript_libs to setup used libraries, ex:
 
@@ -34,12 +44,12 @@ You can use g:used_javascript_libs to setup used libraries, ex:
 
 Support libs id:
 
-- jQuery: jquery
-- underscore.js: underscore
-- Backbone.js: backbone
-- prelude.ls: prelude
-- AngularJS: angularjs
-- RequireJS: requirejs
+* jQuery: jquery
+* underscore.js: underscore
+* Backbone.js: backbone
+* prelude.ls: prelude
+* AngularJS: angularjs
+* RequireJS: requirejs
 
 You can use [local vimrc][] to setup libraries used in project. Sample code for local vimrc:
 
@@ -51,11 +61,13 @@ You can use [local vimrc][] to setup libraries used in project. Sample code for 
 
 [local vimrc]:https://github.com/MarcWeber/vim-addon-local-vimrc
 
-## Todo
+Todo
+----
 
-- Support future version of SyntaxComplete
+* Support future version of SyntaxComplete
 
-## Known Issue
+Known Issue
+-----------
 
 SyntaxComplete only accept groups with filetype prefixed. For example, 'javascript' files.
 Only keywords in groups which's name matches /javascript.*/ will be available. So to make it
@@ -64,35 +76,36 @@ languages. We must redefine all syntax many times, with different name prefix. S
 might have new feature to support a user define pattern for group name to include. 
 All repeat defination will be removed when SyntaxComplete supports this feature.
 
-## Changes
+Changes
+-------
 
 ### Version 0.3.1
-
-- Fix performance issue
+* Fix performance issue
 
 ### Version 0.3
-
-- Supports AngularJS, RequireJS
-- Support TypeScript
-- Setup used libraries
-- Better init way
+* Supports AngularJS, RequireJS
+* Support TypeScript
+* Setup used libraries
+* Better init way
 
 ### Version 0.2
-- Supports library selection
+* Supports library selection
 
 ### Version 0.1
-- First release.
+* First release.
 
-## Credits
+Credits
+-------
 
-- Bruno Michel, [jQuery : Syntax file for jQuery][jquery.vim]
-- [Peter Renström][], for [summarize and explain AngularJS stuff][issue1].
+* Bruno Michel, [jQuery : Syntax file for jQuery][jquery.vim]
+* [Peter Renström][], for [summarize and explain AngularJS stuff][issue1].
 
 [jquery.vim]:http://www.vim.org/scripts/script.php?script_id=2416
 [Peter Renström]:https://github.com/renstrom
 [issue1]:https://github.com/othree/javascript-libraries-syntax.vim/issues/1
 
-## License
+License
+-------
 
 Copyright (c) 2013 Wei-Ko Kao
 
@@ -114,6 +127,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-[SyntaxComplete]:http://www.vim.org/scripts/script.php?script_id=3172
-[pathogen]:http://www.vim.org/scripts/script.php?script_id=2332
-[vundle]:https://github.com/gmarik/vundle
+
