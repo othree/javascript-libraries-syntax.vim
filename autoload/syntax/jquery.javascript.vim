@@ -2,8 +2,8 @@
 " Language:    jQuery for javascript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/04/21
-" Version:     1.9.0.1
+" Last Change: 2013/04/22
+" Version:     1.9.1
 " URL:         http://api.jquery.com/
 
 syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment jQuery $ nextgroup=javascriptjQuerydot,javascriptjQuerybracketsdot
@@ -16,7 +16,7 @@ syntax keyword javascriptQCore           contained holdReady noConflict when
 syntax keyword javascriptQCoreObj        contained Callback Deferred
 syntax keyword javascriptQCoreData       contained data dequeue hasData queue removeData
 syntax keyword javascriptQCoreAjax       contained ajax ajaxPrefilter ajaxSetup ajaxTransport param get getJSON getScript post
-syntax keyword javascriptQProperties     contained context fx.interval fx.off length selector support cssHooks
+syntax keyword javascriptQProperties     contained context fx.interval fx.off length support cssHooks
 syntax keyword javascriptQUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray map merge noop now parseHTML parseJSON parseXML proxy trim type unique
 syntax match   javascriptQUtilities      contained /contains/
 
@@ -28,7 +28,7 @@ syntax keyword javascriptQAttributes     contained addClass attr hasClass html p
 syntax keyword javascriptQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
 syntax keyword javascriptQCSS            contained css
 syntax keyword javascriptQData           contained clearQueue data dequeue queue removeData
-syntax keyword javascriptQDeferred       contained Deferred always done fail notify pipe progress promise reject rejectWith resolved resolveWith notifyWith state then
+syntax keyword javascriptQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
 syntax keyword javascriptQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword javascriptQEffects        contained hide show toggle
 syntax keyword javascriptQEffects        contained animate delay stop
@@ -47,10 +47,10 @@ syntax keyword javascriptQManipulation   contained append appendTo html preprend
 syntax keyword javascriptQManipulation   contained after before insertAfter insertBefore
 syntax keyword javascriptQManipulation   contained detach empty remove
 syntax keyword javascriptQManipulation   contained replaceAll replaceWith
-syntax keyword javascriptQMiscellaneous  contained index size toArray
+syntax keyword javascriptQMiscellaneous  contained index toArray
 syntax keyword javascriptQOffset         contained offset offsetParent position scrollTop scrollLeft
 syntax keyword javascriptQTraversing     contained eq filter first has is last map not slice
-syntax keyword javascriptQTraversing     contained add andSelf contents end
+syntax keyword javascriptQTraversing     contained add andBack contents end
 syntax keyword javascriptQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
 
 

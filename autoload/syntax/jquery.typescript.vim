@@ -2,8 +2,8 @@
 " Language:    jQuery for typescript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/04/21
-" Version:     1.9.0.1
+" Last Change: 2013/04/22
+" Version:     1.9.1
 " URL:         http://api.jquery.com/
 
 syntax keyword typescriptjQuery          containedin=ALLBUT,typescriptComment jQuery $ nextgroup=typescriptjQuerydot,typescriptjQuerybracketsdot
@@ -16,7 +16,7 @@ syntax keyword typescriptQCore           contained holdReady noConflict when
 syntax keyword typescriptQCoreObj        contained Callback Deferred
 syntax keyword typescriptQCoreData       contained data dequeue hasData queue removeData
 syntax keyword typescriptQCoreAjax       contained ajax ajaxPrefilter ajaxSetup ajaxTransport param get getJSON getScript post
-syntax keyword typescriptQProperties     contained context fx.interval fx.off length selector support cssHooks
+syntax keyword typescriptQProperties     contained context fx.interval fx.off length support cssHooks
 syntax keyword typescriptQUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray map merge noop now parseHTML parseJSON parseXML proxy trim type unique
 syntax match   typescriptQUtilities      contained /contains/
 
@@ -28,7 +28,7 @@ syntax keyword typescriptQAttributes     contained addClass attr hasClass html p
 syntax keyword typescriptQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
 syntax keyword typescriptQCSS            contained css
 syntax keyword typescriptQData           contained clearQueue data dequeue queue removeData
-syntax keyword typescriptQDeferred       contained Deferred always done fail notify pipe progress promise reject rejectWith resolved resolveWith notifyWith state then
+syntax keyword typescriptQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
 syntax keyword typescriptQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword typescriptQEffects        contained hide show toggle
 syntax keyword typescriptQEffects        contained animate delay stop
@@ -47,10 +47,10 @@ syntax keyword typescriptQManipulation   contained append appendTo html preprend
 syntax keyword typescriptQManipulation   contained after before insertAfter insertBefore
 syntax keyword typescriptQManipulation   contained detach empty remove
 syntax keyword typescriptQManipulation   contained replaceAll replaceWith
-syntax keyword typescriptQMiscellaneous  contained index size toArray
+syntax keyword typescriptQMiscellaneous  contained index toArray
 syntax keyword typescriptQOffset         contained offset offsetParent position scrollTop scrollLeft
 syntax keyword typescriptQTraversing     contained eq filter first has is last map not slice
-syntax keyword typescriptQTraversing     contained add andSelf contents end
+syntax keyword typescriptQTraversing     contained add andBack contents end
 syntax keyword typescriptQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
 
 

@@ -2,8 +2,8 @@
 " Language:    jQuery for coffee
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/04/21
-" Version:     1.9.0.1
+" Last Change: 2013/04/22
+" Version:     1.9.1
 " URL:         http://api.jquery.com/
 
 syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment jQuery $ nextgroup=coffeejQuerydot,coffeejQuerybracketsdot
@@ -16,7 +16,7 @@ syntax keyword coffeeQCore           contained holdReady noConflict when
 syntax keyword coffeeQCoreObj        contained Callback Deferred
 syntax keyword coffeeQCoreData       contained data dequeue hasData queue removeData
 syntax keyword coffeeQCoreAjax       contained ajax ajaxPrefilter ajaxSetup ajaxTransport param get getJSON getScript post
-syntax keyword coffeeQProperties     contained context fx.interval fx.off length selector support cssHooks
+syntax keyword coffeeQProperties     contained context fx.interval fx.off length support cssHooks
 syntax keyword coffeeQUtilities      contained each extend globalEval grep inArray isArray isEmptyObject isFunction isPlainObject isWindow isXMLDoc makeArray map merge noop now parseHTML parseJSON parseXML proxy trim type unique
 syntax match   coffeeQUtilities      contained /contains/
 
@@ -28,7 +28,7 @@ syntax keyword coffeeQAttributes     contained addClass attr hasClass html prop 
 syntax keyword coffeeQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
 syntax keyword coffeeQCSS            contained css
 syntax keyword coffeeQData           contained clearQueue data dequeue queue removeData
-syntax keyword coffeeQDeferred       contained Deferred always done fail notify pipe progress promise reject rejectWith resolved resolveWith notifyWith state then
+syntax keyword coffeeQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
 syntax keyword coffeeQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword coffeeQEffects        contained hide show toggle
 syntax keyword coffeeQEffects        contained animate delay stop
@@ -47,10 +47,10 @@ syntax keyword coffeeQManipulation   contained append appendTo html preprend pre
 syntax keyword coffeeQManipulation   contained after before insertAfter insertBefore
 syntax keyword coffeeQManipulation   contained detach empty remove
 syntax keyword coffeeQManipulation   contained replaceAll replaceWith
-syntax keyword coffeeQMiscellaneous  contained index size toArray
+syntax keyword coffeeQMiscellaneous  contained index toArray
 syntax keyword coffeeQOffset         contained offset offsetParent position scrollTop scrollLeft
 syntax keyword coffeeQTraversing     contained eq filter first has is last map not slice
-syntax keyword coffeeQTraversing     contained add andSelf contents end
+syntax keyword coffeeQTraversing     contained add andBack contents end
 syntax keyword coffeeQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
 
 
