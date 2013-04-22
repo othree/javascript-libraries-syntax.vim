@@ -4,12 +4,14 @@
 " Last Change: 2013/04/21
 " Version:     1.4.4.1
 " URL:         http://underscorejs.org/
+" LoDash:      1.2.0
+" URL:         http://lodash.com/
 
 syntax match   coffeeunderscore containedin=ALLBUT,coffeeComment /\<_\>/ nextgroup=coffeeunderscoredot
 syntax match   coffeeunderscoredot contained /\./ nextgroup=@coffee_Functions
 syntax match   coffeeunderscoredot contained /([^)]*)\./ nextgroup=@coffee_Functions
 
-syntax cluster coffee_Functions contains=coffee_collections,coffee_arrays,coffee_functions,coffee_objects,coffee_chaining
+syntax cluster coffee_Functions contains=coffee_collections,coffee_arrays,coffee_functions,coffee_objects,coffee_chaining,coffee_lodash
 
 syntax match   coffee_collections contained /contains/
 syntax keyword coffee_collections contained each map reduce reduceRight find filter where findWhere
@@ -28,6 +30,10 @@ syntax keyword coffee_objects contained isUndefined
 syntax keyword coffee_utility contained noConflict identify times random mixin uniqueId
 syntax keyword coffee_utility contained escape unescape result template
 syntax keyword coffee_chaining contained chain value
+
+syntax keyword coffee_lodash contained at bindKey cloneDeep createCallback findIndex findKey
+syntax keyword coffee_lodash contained forEach forIn forOwn isPlainObject merge parseInt partial
+syntax keyword coffee_lodash contained partialRight runInContext support unzip where 
 
 
 " Define the default highlighting.

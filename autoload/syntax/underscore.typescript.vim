@@ -4,12 +4,14 @@
 " Last Change: 2013/04/21
 " Version:     1.4.4.1
 " URL:         http://underscorejs.org/
+" LoDash:      1.2.0
+" URL:         http://lodash.com/
 
 syntax match   typescriptunderscore containedin=ALLBUT,typescriptComment /\<_\>/ nextgroup=typescriptunderscoredot
 syntax match   typescriptunderscoredot contained /\./ nextgroup=@typescript_Functions
 syntax match   typescriptunderscoredot contained /([^)]*)\./ nextgroup=@typescript_Functions
 
-syntax cluster typescript_Functions contains=typescript_collections,typescript_arrays,typescript_functions,typescript_objects,typescript_chaining
+syntax cluster typescript_Functions contains=typescript_collections,typescript_arrays,typescript_functions,typescript_objects,typescript_chaining,typescript_lodash
 
 syntax match   typescript_collections contained /contains/
 syntax keyword typescript_collections contained each map reduce reduceRight find filter where findWhere
@@ -28,6 +30,10 @@ syntax keyword typescript_objects contained isUndefined
 syntax keyword typescript_utility contained noConflict identify times random mixin uniqueId
 syntax keyword typescript_utility contained escape unescape result template
 syntax keyword typescript_chaining contained chain value
+
+syntax keyword typescript_lodash contained at bindKey cloneDeep createCallback findIndex findKey
+syntax keyword typescript_lodash contained forEach forIn forOwn isPlainObject merge parseInt partial
+syntax keyword typescript_lodash contained partialRight runInContext support unzip where 
 
 
 " Define the default highlighting.

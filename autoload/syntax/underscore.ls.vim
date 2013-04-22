@@ -4,12 +4,14 @@
 " Last Change: 2013/04/21
 " Version:     1.4.4.1
 " URL:         http://underscorejs.org/
+" LoDash:      1.2.0
+" URL:         http://lodash.com/
 
 syntax match   lsunderscore containedin=ALLBUT,lsComment /\<_\>/ nextgroup=lsunderscoredot
 syntax match   lsunderscoredot contained /\./ nextgroup=@ls_Functions
 syntax match   lsunderscoredot contained /([^)]*)\./ nextgroup=@ls_Functions
 
-syntax cluster ls_Functions contains=ls_collections,ls_arrays,ls_functions,ls_objects,ls_chaining
+syntax cluster ls_Functions contains=ls_collections,ls_arrays,ls_functions,ls_objects,ls_chaining,ls_lodash
 
 syntax match   ls_collections contained /contains/
 syntax keyword ls_collections contained each map reduce reduceRight find filter where findWhere
@@ -28,6 +30,10 @@ syntax keyword ls_objects contained isUndefined
 syntax keyword ls_utility contained noConflict identify times random mixin uniqueId
 syntax keyword ls_utility contained escape unescape result template
 syntax keyword ls_chaining contained chain value
+
+syntax keyword ls_lodash contained at bindKey cloneDeep createCallback findIndex findKey
+syntax keyword ls_lodash contained forEach forIn forOwn isPlainObject merge parseInt partial
+syntax keyword ls_lodash contained partialRight runInContext support unzip where 
 
 
 " Define the default highlighting.
