@@ -12,6 +12,7 @@ Libraries
 
 * [jQuery](http://jquery.com/)
 * [underscore.js](http://underscorejs.org/)
+* [lo-dash](http://lodash.com/)
 * [Backbone.js](http://backbonejs.org/)
 * [prelude.ls](http://gkz.github.com/prelude-ls/)
 * [AngularJS](http://angularjs.org/)
@@ -78,6 +79,11 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 Changes
 -------
+
+### Version 0.3.2
+* Fix coffee script compatible
+* Update jQuery syntax to latest version
+* Support lo-dash
 
 ### Version 0.3.1
 * Fix performance issue
