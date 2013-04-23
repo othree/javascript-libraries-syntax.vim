@@ -47,6 +47,7 @@ Support libs id:
 
 * jQuery: jquery
 * underscore.js: underscore
+* Lo-Dash: underscore
 * Backbone.js: backbone
 * prelude.ls: prelude
 * AngularJS: angularjs
