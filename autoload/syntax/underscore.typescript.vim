@@ -7,7 +7,7 @@
 " LoDash:      1.2.0
 " URL:         http://lodash.com/
 
-syntax match   typescriptunderscore containedin=ALLBUT,typescriptComment /\<_\>/ nextgroup=typescriptunderscoredot
+syntax match   typescriptunderscore containedin=ALLBUT,typescriptComment,typescriptString /\<_\>/ nextgroup=typescriptunderscoredot
 syntax match   typescriptunderscoredot contained /\./ nextgroup=@typescript_Functions
 syntax match   typescriptunderscoredot contained /([^)]*)\./ nextgroup=@typescript_Functions
 

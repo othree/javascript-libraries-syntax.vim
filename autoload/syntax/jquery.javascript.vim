@@ -6,7 +6,7 @@
 " Version:     1.9.1
 " URL:         http://api.jquery.com/
 
-syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment jQuery $ nextgroup=javascriptjQuerydot,javascriptjQuerybracketsdot
+syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment,javascriptString jQuery $ nextgroup=javascriptjQuerydot,javascriptjQuerybracketsdot
 syntax match   javascriptjQuerydot       contained /\./ nextgroup=@javascriptQGlobals
 syntax match   javascriptjQuerydot       contained /([^)]*)\./ nextgroup=@javascriptQFunctions
 

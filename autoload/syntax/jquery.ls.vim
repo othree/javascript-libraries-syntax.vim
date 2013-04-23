@@ -6,7 +6,7 @@
 " Version:     1.9.1
 " URL:         http://api.jquery.com/
 
-syntax keyword lsjQuery          containedin=ALLBUT,lsComment jQuery $ nextgroup=lsjQuerydot,lsjQuerybracketsdot
+syntax keyword lsjQuery          containedin=ALLBUT,lsComment,lsString jQuery $ nextgroup=lsjQuerydot,lsjQuerybracketsdot
 syntax match   lsjQuerydot       contained /\./ nextgroup=@lsQGlobals
 syntax match   lsjQuerydot       contained /([^)]*)\./ nextgroup=@lsQFunctions
 

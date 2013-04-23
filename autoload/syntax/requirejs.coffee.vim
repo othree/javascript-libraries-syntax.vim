@@ -6,11 +6,11 @@
 " URL:         http://requirejs.org/
 
 
-syntax keyword coffeeRequire require requirejs containedin=ALLBUT,coffeeComment nextgroup=coffeeRequiredot
+syntax keyword coffeeRequire require requirejs containedin=ALLBUT,coffeeComment,coffeeString nextgroup=coffeeRequiredot
 syntax match   coffeeRequiredot contained /\./ nextgroup=coffeeRequireMethods
 syntax keyword coffeeRequireMethods contained config
 
-syntax keyword coffeeRdefine define containedin=ALLBUT,coffeeComment nextgroup=coffeeRdefinedot
+syntax keyword coffeeRdefine define containedin=ALLBUT,coffeeComment,coffeeString nextgroup=coffeeRdefinedot
 syntax match   coffeeRdefinedot contained /\./ nextgroup=coffeeRdefineMethods
 syntax keyword coffeeRdefineMethods contained amd
 

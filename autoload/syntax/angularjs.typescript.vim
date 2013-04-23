@@ -5,7 +5,7 @@
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-syntax keyword typescriptAngular angular containedin=ALLBUT,typescriptComment nextgroup=typescriptAngulardot
+syntax keyword typescriptAngular angular containedin=ALLBUT,typescriptComment,typescriptString nextgroup=typescriptAngulardot
 syntax match   typescriptAngulardot contained /\./ nextgroup=typescriptAngularMethods
 syntax keyword typescriptAngularMethods contained bind bootstrap copy element equals
 syntax keyword typescriptAngularMethods contained extend forEach fromJson identity injector
@@ -13,45 +13,45 @@ syntax keyword typescriptAngularMethods contained isArray isDate isDefined isEle
 syntax keyword typescriptAngularMethods contained isNumber isObject isString isUndefined lowercase
 syntax keyword typescriptAngularMethods contained mock module noop toJson uppercase version
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $anchorScroll $cacheFactory $compile $controller $document
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $exceptionHandler $filter $httpBackend
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $locale $parse $rootElement
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $routeParams $templateCache $window 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $cookies $resource $sanitize
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $anchorScroll $cacheFactory $compile $controller $document
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $exceptionHandler $filter $httpBackend
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $locale $parse $rootElement
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $routeParams $templateCache $window 
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $cookies $resource $sanitize
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $http nextgroup=typescriptAShttpdot
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $http nextgroup=typescriptAShttpdot
 syntax match   typescriptAShttpdot contained /\./ nextgroup=typescriptAShttpMethods
 syntax keyword typescriptAShttpMethods contained get head post put delete jsonp defaults prendingRequests 
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $interpolate nextgroup=typescriptASinterpolatedot
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $interpolate nextgroup=typescriptASinterpolatedot
 syntax match   typescriptASinterpolatedot contained /\./ nextgroup=typescriptASinterpolateMethods
 syntax keyword typescriptASinterpolateMethods contained endSymbol startSymbol
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $location nextgroup=typescriptASlocationdot
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $location nextgroup=typescriptASlocationdot
 syntax match   typescriptASlocationdot contained /\./ nextgroup=typescriptASlocationMethods
 syntax keyword typescriptASlocationMethods contained absUrl hash host path port protocol replace search url
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $log nextgroup=typescriptASlogdot
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $log nextgroup=typescriptASlogdot
 syntax match   typescriptASlogdot contained /\./ nextgroup=typescriptASlogMethods
 syntax keyword typescriptASlogMethods contained error info log warn
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $q nextgroup=typescriptASqdot
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $q nextgroup=typescriptASqdot
 syntax match   typescriptASqdot contained /\./ nextgroup=typescriptASqMethods
 syntax keyword typescriptASqMethods contained all defer reject when
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $route nextgroup=typescriptASroutedot
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $route nextgroup=typescriptASroutedot
 syntax match   typescriptASroutedot contained /\./ nextgroup=typescriptASrouteMethods
 syntax keyword typescriptASrouteMethods contained reload current route
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $timeout nextgroup=typescriptAStimeoutdot
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $timeout nextgroup=typescriptAStimeoutdot
 syntax match   typescriptAStimeoutdot contained /\./ nextgroup=typescriptAStimeoutMethods
 syntax keyword typescriptAStimeoutMethods contained cancel
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $scope $rootScope nextgroup=typescriptASscopedot
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $scope $rootScope nextgroup=typescriptASscopedot
 syntax match   typescriptASscopedot contained /\./ nextgroup=typescriptASscopeMethods
 syntax keyword typescriptASscopeMethods contained $apply $broadcast $destroy $digest $emit $eval $evalAsync $new $on $watch $id
 
-syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment $cookieStore nextgroup=typescriptAScookieStoredot
+syntax keyword typescriptAServices containedin=ALLBUT,typescriptComment,typescriptString $cookieStore nextgroup=typescriptAScookieStoredot
 syntax match   typescriptAScookieStoredot contained /\./ nextgroup=typescriptAScookieStoreMethods
 syntax keyword typescriptAScookieStoreMethods contained get put remove
 

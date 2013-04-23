@@ -5,7 +5,7 @@
 " Version:     0.9.10
 " URL:         http://backbonejs.org/
 
-syntax keyword lsBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,lsComment
+syntax keyword lsBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,lsComment,lsString
 
 syntax cluster lsBFunctions contains=lsBEvents,lsBModel,lsBCollection,lsBRouter,lsBHistory,lsBSync,lsBView,lsBUtility
 syntax cluster lsBAttrs contains=lsBModelAttrs,lsBCollectionAttrs,lsBRouterAttrs,lsBSyncAttrs,lsBViewAttrs

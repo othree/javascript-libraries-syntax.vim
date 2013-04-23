@@ -5,7 +5,7 @@
 " Version:     0.9.10
 " URL:         http://backbonejs.org/
 
-syntax keyword javascriptBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,javascriptComment
+syntax keyword javascriptBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,javascriptComment,javascriptString
 
 syntax cluster javascriptBFunctions contains=javascriptBEvents,javascriptBModel,javascriptBCollection,javascriptBRouter,javascriptBHistory,javascriptBSync,javascriptBView,javascriptBUtility
 syntax cluster javascriptBAttrs contains=javascriptBModelAttrs,javascriptBCollectionAttrs,javascriptBRouterAttrs,javascriptBSyncAttrs,javascriptBViewAttrs

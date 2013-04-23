@@ -6,11 +6,11 @@
 " URL:         http://requirejs.org/
 
 
-syntax keyword lsRequire require requirejs containedin=ALLBUT,lsComment nextgroup=lsRequiredot
+syntax keyword lsRequire require requirejs containedin=ALLBUT,lsComment,lsString nextgroup=lsRequiredot
 syntax match   lsRequiredot contained /\./ nextgroup=lsRequireMethods
 syntax keyword lsRequireMethods contained config
 
-syntax keyword lsRdefine define containedin=ALLBUT,lsComment nextgroup=lsRdefinedot
+syntax keyword lsRdefine define containedin=ALLBUT,lsComment,lsString nextgroup=lsRdefinedot
 syntax match   lsRdefinedot contained /\./ nextgroup=lsRdefineMethods
 syntax keyword lsRdefineMethods contained amd
 

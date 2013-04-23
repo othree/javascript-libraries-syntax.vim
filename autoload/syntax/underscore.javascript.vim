@@ -7,7 +7,7 @@
 " LoDash:      1.2.0
 " URL:         http://lodash.com/
 
-syntax match   javascriptunderscore containedin=ALLBUT,javascriptComment /\<_\>/ nextgroup=javascriptunderscoredot
+syntax match   javascriptunderscore containedin=ALLBUT,javascriptComment,javascriptString /\<_\>/ nextgroup=javascriptunderscoredot
 syntax match   javascriptunderscoredot contained /\./ nextgroup=@javascript_Functions
 syntax match   javascriptunderscoredot contained /([^)]*)\./ nextgroup=@javascript_Functions
 

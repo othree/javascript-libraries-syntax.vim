@@ -7,7 +7,7 @@
 " LoDash:      1.2.0
 " URL:         http://lodash.com/
 
-syntax match   lsunderscore containedin=ALLBUT,lsComment /\<_\>/ nextgroup=lsunderscoredot
+syntax match   lsunderscore containedin=ALLBUT,lsComment,lsString /\<_\>/ nextgroup=lsunderscoredot
 syntax match   lsunderscoredot contained /\./ nextgroup=@ls_Functions
 syntax match   lsunderscoredot contained /([^)]*)\./ nextgroup=@ls_Functions
 

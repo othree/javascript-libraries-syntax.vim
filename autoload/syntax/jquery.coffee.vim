@@ -6,7 +6,7 @@
 " Version:     1.9.1
 " URL:         http://api.jquery.com/
 
-syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment jQuery $ nextgroup=coffeejQuerydot,coffeejQuerybracketsdot
+syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment,coffeeString jQuery $ nextgroup=coffeejQuerydot,coffeejQuerybracketsdot
 syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals
 syntax match   coffeejQuerydot       contained /([^)]*)\./ nextgroup=@coffeeQFunctions
 

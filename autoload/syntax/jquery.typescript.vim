@@ -6,7 +6,7 @@
 " Version:     1.9.1
 " URL:         http://api.jquery.com/
 
-syntax keyword typescriptjQuery          containedin=ALLBUT,typescriptComment jQuery $ nextgroup=typescriptjQuerydot,typescriptjQuerybracketsdot
+syntax keyword typescriptjQuery          containedin=ALLBUT,typescriptComment,typescriptString jQuery $ nextgroup=typescriptjQuerydot,typescriptjQuerybracketsdot
 syntax match   typescriptjQuerydot       contained /\./ nextgroup=@typescriptQGlobals
 syntax match   typescriptjQuerydot       contained /([^)]*)\./ nextgroup=@typescriptQFunctions
 
