@@ -2,8 +2,8 @@
 " Language:    jQuery for ls
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/04/22
-" Version:     1.9.1
+" Last Change: 2013/04/23
+" Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
 syntax keyword lsjQuery          containedin=ALLBUT,lsComment,lsString jQuery $ nextgroup=lsjQuerydot,lsjQuerybracketsdot
@@ -62,9 +62,9 @@ syntax cluster jSelectors      contains=jId,jClass,jOperators,jBasicFilters,jCon
 syntax match   jId             contained /#[0-9A-Za-z_\-]\+/
 syntax match   jClass          contained /\.[0-9A-Za-z_\-]\+/
 syntax match   jOperators      contained /*\|>\|+\|-\|\~/
-syntax match   jBasicFilters   contained /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lt\|not\|odd\|root\|target\)/
-syntax match   jChildFilters   contained /:\(first\|last\|nth\|only\)-child/
-syntax match   jChildFilters   contained /:\(first\|last\|nth\|only\)-of-type/
+syntax match   jBasicFilters   contained /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lang\|lt\|not\|odd\|root\|target\)/
+syntax match   jChildFilters   contained /:\(first\|last\|nth\|only\|nth-last\)-child/
+syntax match   jChildFilters   contained /:\(first\|last\|nth\|only\|nth-last\)-of-type/
 syntax match   jContentFilters contained /:\(contains\|empty\|has\|parent\)/
 syntax match   jForms          contained /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
 syntax match   jVisibility     contained /:\(hidden\|visible\)/
