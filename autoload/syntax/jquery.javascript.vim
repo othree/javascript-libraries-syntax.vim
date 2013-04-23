@@ -55,8 +55,8 @@ syntax keyword javascriptQTraversing     contained children closest find next ne
 
 
 " selector
-syntax region  javascriptStringD          start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=javascriptSpecial,@htmlPreproc,@jSelectors
-syntax region  javascriptStringS          start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=javascriptSpecial,@htmlPreproc,@jSelectors
+syntax region  javascriptString           start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=javascriptSpecial,@htmlPreproc,@jSelectors
+syntax region  javascriptString           start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=javascriptSpecial,@htmlPreproc,@jSelectors
 
 syntax cluster jSelectors      contains=jId,jClass,jOperators,jBasicFilters,jContentFilters,jVisibility,jChildFilters,jForms,jFormFilters
 syntax match   jId             contained /#[0-9A-Za-z_\-]\+/

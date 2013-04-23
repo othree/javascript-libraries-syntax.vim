@@ -55,8 +55,8 @@ syntax keyword lsQTraversing     contained children closest find next nextAll ne
 
 
 " selector
-syntax region  lsStringD          start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=lsSpecial,@htmlPreproc,@jSelectors
-syntax region  lsStringS          start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=lsSpecial,@htmlPreproc,@jSelectors
+syntax region  lsString           start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=lsSpecial,@htmlPreproc,@jSelectors
+syntax region  lsString           start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=lsSpecial,@htmlPreproc,@jSelectors
 
 syntax cluster jSelectors      contains=jId,jClass,jOperators,jBasicFilters,jContentFilters,jVisibility,jChildFilters,jForms,jFormFilters
 syntax match   jId             contained /#[0-9A-Za-z_\-]\+/
