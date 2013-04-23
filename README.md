@@ -85,6 +85,8 @@ Changes
 * Fix coffee script compatible
 * Update jQuery syntax to latest version
 * Support lo-dash
+* jQuery selector update
+* Minor bug fix
 
 ### Version 0.3.1
 * Fix performance issue
