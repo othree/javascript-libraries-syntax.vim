@@ -14,15 +14,11 @@ syntax cluster lsLibraryAttrs contains=@lsQAttrs,@ls_Attrs,@lsBAttrs,@lspAttrs
 " fun0!fun()
 " obj.fun!
 " obj.fun()
-syntax match   lsLMethods /\([0-9A-Za-z_$][.!]\|)\.\)\h\w*[(!]\@=/   containedin=ALLBUT,lsComment,lsString contains=@lsLibraryFuncs transparent
 " ).fun arg
 " !fun arg
 " obj.fun arg
-syntax match   lsLMethods /\([0-9A-Za-z_$][.!]\|)\.\)\h\w* \+[0-9A-Za-z_$([{\'"]\@=/ containedin=ALLBUT,lsComment,lsString contains=@lsLibraryFuncs transparent
-" ).fun funarg
-" !fun funarg
-" obj.fun funarg
-syntax match   lsLMethods /\([0-9A-Za-z_$][.!]\|)\.\)\h\w* \(!\?[~-]>\)\@=/ containedin=ALLBUT,lsComment,lsString contains=@lsLibraryFuncs transparent
+syntax match   lsLDot /\./   containedin=ALLBUT,lsComment,lsString contains=@lsLibraryFuncs,@lsLibraryAttrs
+syntax match   lsLExp /!/   containedin=ALLBUT,lsComment,lsString contains=@lsLibraryFuncs,@lsLibraryAttrs
+
 syntax match   lsLPipe /|>/ containedin=ALLBUT,lsComment,lsString skipwhite nextgroup=@lspFunctions
 syntax match   lsLCompose />>/ containedin=ALLBUT,lsComment,lsString skipwhite nextgroup=@lspFunctions
-syntax match   lsLAttrs /\([0-9A-Za-z_$][.!]\|)\.\)\h\w*/   containedin=ALL contains=@lsLibraryAttrs transparent
