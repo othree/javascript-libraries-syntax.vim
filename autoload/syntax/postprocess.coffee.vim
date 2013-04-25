@@ -8,7 +8,4 @@
 
 syntax cluster coffeeLibraryFuncs contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions,@coffeepFunctions
 syntax cluster coffeeLibraryAttrs contains=@coffeeQAttrs,@coffee_Attrs,@coffeeBAttrs,@coffeepAttrs
-syntax match   coffeeLMethods /[0-9A-Za-z_$)]\.\h\w*(\@=/   containedin=ALLBUT,coffeeComment contains=@coffeeLibraryFuncs transparent
-syntax match   coffeeLMethods /[0-9A-Za-z_$)]\.\h\w* \+[0-9A-Za-z_$([{'"]\@=/ containedin=ALLBUT,coffeeComment contains=@coffeeLibraryFuncs transparent
-syntax match   coffeeLMethods /[0-9A-Za-z_$)]\.\h\w* \([-=]>\)\@=/ containedin=ALLBUT,coffeeComment contains=@coffeeLibraryFuncs transparent
-syntax match   coffeeLAttrs /[0-9A-Za-z_$)]\.\h\w*/   containedin=ALLBUT,coffeeComment contains=@coffeeLibraryAttrs transparent
+syntax match   coffeeLDot /\./   containedin=ALLBUT,coffeeComment,coffeeString nextgroup=@coffeeLibraryFuncs,@coffeeLibraryAttrs
