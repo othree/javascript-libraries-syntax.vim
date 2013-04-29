@@ -35,7 +35,7 @@ function! jslibsyntax#load()
       exec('let use = b:javascript_lib_use_'.lib)
     endif
     if use
-      let fn = s:path.'/syntax/'.lib.'.'.&filetype.'.vim'
+      let fn = s:path.'/syntax/'.lib.'.vim'
       if filereadable(fn)
         exe('source '.fn)
         let loaded = loaded + 1

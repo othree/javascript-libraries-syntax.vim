@@ -4,8 +4,9 @@
 " Last Change: 2013/02/25
 " Version:     0.4
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
-"
+
+syntax cluster stringcomment      contains=coffeeString,coffeeComment
 
 syntax cluster coffeeLibraryFuncs contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions,@coffeepFunctions
 syntax cluster coffeeLibraryAttrs contains=@coffeeQAttrs,@coffee_Attrs,@coffeeBAttrs,@coffeepAttrs
-syntax match   coffeeLDot /\./   containedin=ALLBUT,coffeeComment,coffeeString nextgroup=@coffeeLibraryFuncs,@coffeeLibraryAttrs
+syntax match   coffeeLDot /\./    containedin=ALLBUT,coffeeComment,coffeeString nextgroup=@coffeeLibraryFuncs,@coffeeLibraryAttrs

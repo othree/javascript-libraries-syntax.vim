@@ -6,6 +6,8 @@
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 "
 
+syntax cluster stringcomment          contains=lsString,lsComment
+
 syntax cluster lsLibraryFuncs contains=@lsQFunctions,@ls_Functions,@lsBFunctions,@lspFunctions
 syntax cluster lsLibraryAttrs contains=@lsQAttrs,@ls_Attrs,@lsBAttrs,@lspAttrs
 " ).fun!
