@@ -67,6 +67,7 @@ Todo
 ----
 
 * Support future version of SyntaxComplete
+* Use `b:current_syntax` instead of `&filetype`
 
 Known Issue
 -----------
