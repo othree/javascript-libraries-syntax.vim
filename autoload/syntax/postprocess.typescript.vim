@@ -6,7 +6,6 @@
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 "
 
-syntax cluster javascriptLibraryFuncs contains=@javascriptQFunctions,@javascript_Functions,@javascriptBFunctions,@javascriptpFunctions,@javascriptAFunctions
-syntax cluster javascriptLibraryAttrs contains=@javascriptQAttrs,@javascript_Attrs,@javascriptBAttrs,@javascriptpAttrs,@javascriptAAttrs
-syntax match   javascriptLMethods /[0-9A-Za-z_$)]\.\h\w*(\@=/ containedin=ALLBUT,javascriptComment contains=@javascriptLibraryFuncs transparent
-syntax match   javascriptLAttrs /[0-9A-Za-z_$)]\.\h\w*/ containedin=ALLBUT,javascriptComment contains=@javascriptLibraryAttrs transparent
+syntax cluster typescriptLibraryFuncs contains=@typescriptQFunctions,@typescript_Functions,@typescriptBFunctions,@typescriptpFunctions,@typescriptAFunctions
+syntax cluster typescriptLibraryAttrs contains=@typescriptQAttrs,@typescript_Attrs,@typescriptBAttrs,@typescriptpAttrs,@typescriptAAttrs
+syntax match   typescriptLDot /\./ containedin=ALLBUT,typescriptComment,typescriptString contains=@typescriptLibraryFuncs,@typescriptLibraryAttrs
