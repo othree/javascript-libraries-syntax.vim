@@ -63,6 +63,21 @@ You can use [local vimrc][] to setup libraries used in project. Sample code for 
 
 [local vimrc]:https://github.com/MarcWeber/vim-addon-local-vimrc
 
+Work with SyntaxComplete
+------------------------
+
+Latest [SyntaxComplete][] supports user define group name pattern. For example, if You want to
+have SyntaxComplete have javascript, jqeury, underscore and backbone syntaxs. You can add the 
+line in your vimrc:
+
+    let g:omni_syntax_group_include_javascript = 'javascript\w\+,jquery\w\+,underscore\w\+,backbone\w\+'
+
+If you write CoffeeScript:
+
+    let g:omni_syntax_group_include_coffee = 'coffee\w\+,jquery\w\+,underscore\w\+,backbone\w\+'
+
+All group name is start with the lib id. All lowercase.
+
 Todo
 ----
 
