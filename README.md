@@ -82,6 +82,9 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 Changes
 -------
 
+### Version 0.3.3
+* No strict mode, better compatibility.
+
 ### Version 0.3.2
 * Fix coffee script compatible
 * Update jQuery syntax to latest version
