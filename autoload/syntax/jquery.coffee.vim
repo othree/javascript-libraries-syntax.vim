@@ -7,8 +7,8 @@
 " URL:         http://api.jquery.com/
 
 syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment,coffeeString jQuery $ nextgroup=coffeejQuerydot,coffeejQuerybracketsdot
-syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals
-syntax match   coffeejQuerydot       contained /([^)]*)\./ nextgroup=@coffeeQFunctions
+" syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals
+" syntax match   coffeejQuerydot       contained /([^)]*)\./ nextgroup=@coffeeQFunctions
 
 " jQuery.*
 syntax cluster coffeeQGlobals        contains=coffeeQCore,coffeeQCoreObj,coffeeQCoreData,coffeeQUtilities,coffeeQProperties

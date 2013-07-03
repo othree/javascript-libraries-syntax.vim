@@ -6,9 +6,9 @@
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
-syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment,javascriptString jQuery $ nextgroup=javascriptjQuerydot,javascriptjQuerybracketsdot
-syntax match   javascriptjQuerydot       contained /\./ nextgroup=@javascriptQGlobals
-syntax match   javascriptjQuerydot       contained /([^)]*)\./ nextgroup=@javascriptQFunctions
+syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment,javascriptString jQuery $
+" syntax match   javascriptjQuerydot       contained /\./ nextgroup=@javascriptQGlobals
+" syntax match   javascriptjQuerydot       contained /([^)]*)\./ nextgroup=@javascriptQFunctions
 
 " jQuery.*
 syntax cluster javascriptQGlobals        contains=javascriptQCore,javascriptQCoreObj,javascriptQCoreData,javascriptQUtilities,javascriptQProperties
@@ -21,7 +21,7 @@ syntax keyword javascriptQUtilities      contained each extend globalEval grep i
 syntax match   javascriptQUtilities      contained /contains/
 
 " jqobj.*
-syntax cluster javascriptQFunctions      contains=javascriptQAjax,javascriptQAttributes,javascriptQCallbacks,javascriptQCore,javascriptQCSS,javascriptQData,javascriptQDeferred,javascriptQDimensions,javascriptQEffects,javascriptQEvents,javascriptQManipulation,javascriptQMiscellaneous,javascriptQOffset,javascriptQTraversing,javascriptQUtilities
+syntax cluster javascriptQFunctions      contains=@javascriptQGlobals,javascriptQAjax,javascriptQAttributes,javascriptQCallbacks,javascriptQCore,javascriptQCSS,javascriptQData,javascriptQDeferred,javascriptQDimensions,javascriptQEffects,javascriptQEvents,javascriptQManipulation,javascriptQMiscellaneous,javascriptQOffset,javascriptQTraversing,javascriptQUtilities
 syntax keyword javascriptQAjax           contained ajaxComplete ajaxError ajaxSend ajaxStart ajaxStop ajaxSuccess
 syntax keyword javascriptQAjax           contained serialize serializeArray ajaxTransport load
 syntax keyword javascriptQAttributes     contained addClass attr hasClass html prop removeAttr removeClass removeProp toggleClass val
