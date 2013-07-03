@@ -17,11 +17,6 @@ let s:libs = [
 let s:path = expand('<sfile>:p:h')
 
 function! jslibsyntax#load()
-  if exists('b:javascript_libraries_syntax')
-    return
-  endif
-  let b:javascript_libraries_syntax = 1
-
   if !exists('g:used_javascript_libs') 
     let g:used_javascript_libs = join(s:libs, ',')
   endif
