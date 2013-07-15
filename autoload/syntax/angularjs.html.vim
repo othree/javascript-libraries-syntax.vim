@@ -5,13 +5,15 @@
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-syntax match   htmlArg contained "\<ng-\(app\|bind\|bind-html-unsafe\|bind-template\|change\|checked\|class\)\>"
-syntax match   htmlArg contained "\<ng-\(class-even\|class-odd\|click\|cloak\|controller\|csp\|dblclick\)\>"
-syntax match   htmlArg contained "\<ng-\(disable\|form\|hide\|href\|include\|init\|keydown\|keypress\)\>"
-syntax match   htmlArg contained "\<ng-\(key-up\|list\|model\|mousedown\|mouseenter\|mouseleave\|mousemove\)\>"
-syntax match   htmlArg contained "\<ng-\(mouseover\|mouseup\|multiple\|non-bindable\|pluralize\|readonly\|\)\>"
-syntax match   htmlArg contained "\<ng-\(repeat\|selected\|show\|src\|style\|submit\|switch\|transclude\)\>"
-syntax keyword htmlArg contained expression
+setlocal iskeyword+=-
+
+syntax keyword  htmlArg contained ng-app ng-bind ng-bind-html-unsafe ng-bind-template ng-change ng-checked ng-class
+syntax keyword  htmlArg contained ng-class-even ng-class-odd ng-click ng-cloak ng-controller ng-csp ng-dblclick
+syntax keyword  htmlArg contained ng-disable ng-form ng-hide ng-href ng-include ng-init ng-keydown ng-keypress
+syntax keyword  htmlArg contained ng-key-up ng-list ng-model ng-mousedown ng-mouseenter ng-mouseleave ng-mousemove
+syntax keyword  htmlArg contained ng-mouseover ng-mouseup ng-multiple ng-non-bindable ng-pluralize ng-readonly
+syntax keyword  htmlArg contained ng-repeat ng-selected ng-show ng-src ng-style ng-submit ng-switch ng-transclude
+syntax keyword  htmlArg contained expression
 
 
 
