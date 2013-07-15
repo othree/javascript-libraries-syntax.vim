@@ -21,5 +21,6 @@ syntax keyword  htmlArg contained ng-switch-default ng-transclude ng-view
 syntax keyword  htmlArg contained expression autoscroll count when offset on
 
 
+syntax keyword  htmlTagName contained ng-change ng-form ng-view
 syntax keyword  htmlTagName contained ng-include ng-pluralize ng-switch 
 
