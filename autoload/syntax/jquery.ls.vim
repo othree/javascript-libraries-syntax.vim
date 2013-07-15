@@ -6,9 +6,9 @@
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
-syntax keyword lsjQuery          containedin=ALLBUT,lsComment,lsString jQuery $ nextgroup=lsjQuerydot,lsjQuerybracketsdot
-syntax match   lsjQuerydot       contained /\./ nextgroup=@lsQGlobals
-syntax match   lsjQuerydot       contained /([^)]*)\./ nextgroup=@lsQFunctions
+syntax keyword lsjQuery          containedin=ALLBUT,lsComment,lsString jQuery $
+" syntax match   lsjQuerydot       contained /\./ nextgroup=@lsQGlobals
+" syntax match   lsjQuerydot       contained /([^)]*)\./ nextgroup=@lsQFunctions
 
 " jQuery.*
 syntax cluster lsQGlobals        contains=lsQCore,lsQCoreObj,lsQCoreData,lsQUtilities,lsQProperties
@@ -21,7 +21,7 @@ syntax keyword lsQUtilities      contained each extend globalEval grep inArray i
 syntax match   lsQUtilities      contained /contains/
 
 " jqobj.*
-syntax cluster lsQFunctions      contains=lsQAjax,lsQAttributes,lsQCallbacks,lsQCore,lsQCSS,lsQData,lsQDeferred,lsQDimensions,lsQEffects,lsQEvents,lsQManipulation,lsQMiscellaneous,lsQOffset,lsQTraversing,lsQUtilities
+syntax cluster lsQFunctions      contains=@lsQGlobals,lsQAjax,lsQAttributes,lsQCallbacks,lsQCore,lsQCSS,lsQData,lsQDeferred,lsQDimensions,lsQEffects,lsQEvents,lsQManipulation,lsQMiscellaneous,lsQOffset,lsQTraversing,lsQUtilities
 syntax keyword lsQAjax           contained ajaxComplete ajaxError ajaxSend ajaxStart ajaxStop ajaxSuccess
 syntax keyword lsQAjax           contained serialize serializeArray ajaxTransport load
 syntax keyword lsQAttributes     contained addClass attr hasClass html prop removeAttr removeClass removeProp toggleClass val

@@ -6,7 +6,7 @@
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
-syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment,coffeeString jQuery $ nextgroup=coffeejQuerydot,coffeejQuerybracketsdot
+syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment,coffeeString jQuery $
 " syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals
 " syntax match   coffeejQuerydot       contained /([^)]*)\./ nextgroup=@coffeeQFunctions
 
@@ -21,7 +21,7 @@ syntax keyword coffeeQUtilities      contained each extend globalEval grep inArr
 syntax match   coffeeQUtilities      contained /contains/
 
 " jqobj.*
-syntax cluster coffeeQFunctions      contains=coffeeQAjax,coffeeQAttributes,coffeeQCallbacks,coffeeQCore,coffeeQCSS,coffeeQData,coffeeQDeferred,coffeeQDimensions,coffeeQEffects,coffeeQEvents,coffeeQManipulation,coffeeQMiscellaneous,coffeeQOffset,coffeeQTraversing,coffeeQUtilities
+syntax cluster coffeeQFunctions      contains=@coffeeQGlobals,coffeeQAjax,coffeeQAttributes,coffeeQCallbacks,coffeeQCore,coffeeQCSS,coffeeQData,coffeeQDeferred,coffeeQDimensions,coffeeQEffects,coffeeQEvents,coffeeQManipulation,coffeeQMiscellaneous,coffeeQOffset,coffeeQTraversing,coffeeQUtilities
 syntax keyword coffeeQAjax           contained ajaxComplete ajaxError ajaxSend ajaxStart ajaxStop ajaxSuccess
 syntax keyword coffeeQAjax           contained serialize serializeArray ajaxTransport load
 syntax keyword coffeeQAttributes     contained addClass attr hasClass html prop removeAttr removeClass removeProp toggleClass val
