@@ -39,8 +39,9 @@ function! jslibsyntax#load()
     endif
     let index = index + 1
   endwhile
-  if loaded > 0
-    exe('source '.s:path.'/syntax/postprocess.'.&filetype.'.vim')
+  let fn = s:path.'/syntax/postprocess.'.&filetype.'.vim'
+  if loaded > 0 && filereadable(fn)
+    exe('source '.fn)
   endif
 endfunction
 
