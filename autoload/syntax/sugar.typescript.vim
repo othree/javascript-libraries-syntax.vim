@@ -19,6 +19,29 @@ syntax keyword typescriptSFunction contained remove removeTags repeat reverse sh
 syntax keyword typescriptSFunction contained to toNumber trim trimLeft trimRight truncate underscore unescapeHTML unescapeURL words
 syntax keyword typescriptSFunction contained zenkaku
 
+" Number
+syntax keyword typescriptSFunction contained abbr bytes ceil chr downto duration floor format hex isEven
+syntax keyword typescriptSFunction contained isInteger isMultipleOf isOdd log abs sin asin cos acos tan
+syntax keyword typescriptSFunction contained atan sqrt exp pow metric ordinalize pad round times toNumber
+syntax keyword typescriptSFunction contained millisecond milliseconds second seconds minute minutes hour hours day days
+syntax keyword typescriptSFunction contained week weeks month months year years upto
+
+" Date
+syntax keyword typescriptSFunction contained addLocale create future getLocale now past range setLocale addMilliseconds addSeconds
+syntax keyword typescriptSFunction contained addMinutes addHours addDays addWeeks addMonths addYears advance beginningOfDay beginningOfWeek beginningOfMonth
+syntax keyword typescriptSFunction contained beginningOfYear clone daysInMonth endOfDay endOfWeek endOfMonth endOfYear format getISOWeek getUTCOffset
+syntax keyword typescriptSFunction contained getWeekday is isAfter isBefore isBetween isToday isYesterday isTomorrow isWeekday isWeekend
+syntax keyword typescriptSFunction contained isSunday isMonday isTuesday isWednesday isThursday isFriday isSaturday isFuture isLastWeek isLastMonth
+syntax keyword typescriptSFunction contained isLastYear isPast isThisWeek isThisMonth isThisYear isUTC isValid iso relative reset
+syntax keyword typescriptSFunction contained rewind set setISOWeek setWeekday toISOString toJSON millisecondsSince secondsSince minutesSince hoursSince
+syntax keyword typescriptSFunction contained daysSince weeksSince monthsSince yearsSince millisecondsUntil secondsUntil minutesUntil hoursUntil daysUntil weeksUntil
+syntax keyword typescriptSFunction contained monthsUntil yearsUntil millisecondAfter millisecondsAfter secondAfter secondsAfter minuteAfter minutesAfter hourAfter hoursAfter
+syntax keyword typescriptSFunction contained dayAfter daysAfter weekAfter weeksAfter monthAfter monthsAfter yearAfter yearsAfter millisecondAgo millisecondsAgo
+syntax keyword typescriptSFunction contained secondAgo secondsAgo minuteAgo minutesAgo hourAgo hoursAgo dayAgo daysAgo weekAgo weeksAgo
+syntax keyword typescriptSFunction contained monthAgo monthsAgo yearAgo yearsAgo millisecondBefore millisecondsBefore secondBefore secondsBefore minuteBefore minutesBefore
+syntax keyword typescriptSFunction contained hourBefore hoursBefore dayBefore daysBefore weekBefore weeksBefore monthBefore monthsBefore yearBefore yearsBefore
+syntax keyword typescriptSFunction contained millisecondFromNow millisecondsFromNow secondFromNow secondsFromNow minuteFromNow minutesFromNow hourFromNow hoursFromNow dayFromNow daysFromNow
+syntax keyword typescriptSFunction contained weekFromNow weeksFromNow monthFromNow monthsFromNow yearFromNow yearsFromNow utc
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already

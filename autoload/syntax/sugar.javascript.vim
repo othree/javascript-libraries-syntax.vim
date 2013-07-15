@@ -19,6 +19,29 @@ syntax keyword javascriptSFunction contained remove removeTags repeat reverse sh
 syntax keyword javascriptSFunction contained to toNumber trim trimLeft trimRight truncate underscore unescapeHTML unescapeURL words
 syntax keyword javascriptSFunction contained zenkaku
 
+" Number
+syntax keyword javascriptSFunction contained abbr bytes ceil chr downto duration floor format hex isEven
+syntax keyword javascriptSFunction contained isInteger isMultipleOf isOdd log abs sin asin cos acos tan
+syntax keyword javascriptSFunction contained atan sqrt exp pow metric ordinalize pad round times toNumber
+syntax keyword javascriptSFunction contained millisecond milliseconds second seconds minute minutes hour hours day days
+syntax keyword javascriptSFunction contained week weeks month months year years upto
+
+" Date
+syntax keyword javascriptSFunction contained addLocale create future getLocale now past range setLocale addMilliseconds addSeconds
+syntax keyword javascriptSFunction contained addMinutes addHours addDays addWeeks addMonths addYears advance beginningOfDay beginningOfWeek beginningOfMonth
+syntax keyword javascriptSFunction contained beginningOfYear clone daysInMonth endOfDay endOfWeek endOfMonth endOfYear format getISOWeek getUTCOffset
+syntax keyword javascriptSFunction contained getWeekday is isAfter isBefore isBetween isToday isYesterday isTomorrow isWeekday isWeekend
+syntax keyword javascriptSFunction contained isSunday isMonday isTuesday isWednesday isThursday isFriday isSaturday isFuture isLastWeek isLastMonth
+syntax keyword javascriptSFunction contained isLastYear isPast isThisWeek isThisMonth isThisYear isUTC isValid iso relative reset
+syntax keyword javascriptSFunction contained rewind set setISOWeek setWeekday toISOString toJSON millisecondsSince secondsSince minutesSince hoursSince
+syntax keyword javascriptSFunction contained daysSince weeksSince monthsSince yearsSince millisecondsUntil secondsUntil minutesUntil hoursUntil daysUntil weeksUntil
+syntax keyword javascriptSFunction contained monthsUntil yearsUntil millisecondAfter millisecondsAfter secondAfter secondsAfter minuteAfter minutesAfter hourAfter hoursAfter
+syntax keyword javascriptSFunction contained dayAfter daysAfter weekAfter weeksAfter monthAfter monthsAfter yearAfter yearsAfter millisecondAgo millisecondsAgo
+syntax keyword javascriptSFunction contained secondAgo secondsAgo minuteAgo minutesAgo hourAgo hoursAgo dayAgo daysAgo weekAgo weeksAgo
+syntax keyword javascriptSFunction contained monthAgo monthsAgo yearAgo yearsAgo millisecondBefore millisecondsBefore secondBefore secondsBefore minuteBefore minutesBefore
+syntax keyword javascriptSFunction contained hourBefore hoursBefore dayBefore daysBefore weekBefore weeksBefore monthBefore monthsBefore yearBefore yearsBefore
+syntax keyword javascriptSFunction contained millisecondFromNow millisecondsFromNow secondFromNow secondsFromNow minuteFromNow minutesFromNow hourFromNow hoursFromNow dayFromNow daysFromNow
+syntax keyword javascriptSFunction contained weekFromNow weeksFromNow monthFromNow monthsFromNow yearFromNow yearsFromNow utc
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already

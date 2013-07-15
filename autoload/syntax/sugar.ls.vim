@@ -19,6 +19,29 @@ syntax keyword lsSFunction contained remove removeTags repeat reverse shift sing
 syntax keyword lsSFunction contained to toNumber trim trimLeft trimRight truncate underscore unescapeHTML unescapeURL words
 syntax keyword lsSFunction contained zenkaku
 
+" Number
+syntax keyword lsSFunction contained abbr bytes ceil chr downto duration floor format hex isEven
+syntax keyword lsSFunction contained isInteger isMultipleOf isOdd log abs sin asin cos acos tan
+syntax keyword lsSFunction contained atan sqrt exp pow metric ordinalize pad round times toNumber
+syntax keyword lsSFunction contained millisecond milliseconds second seconds minute minutes hour hours day days
+syntax keyword lsSFunction contained week weeks month months year years upto
+
+" Date
+syntax keyword lsSFunction contained addLocale create future getLocale now past range setLocale addMilliseconds addSeconds
+syntax keyword lsSFunction contained addMinutes addHours addDays addWeeks addMonths addYears advance beginningOfDay beginningOfWeek beginningOfMonth
+syntax keyword lsSFunction contained beginningOfYear clone daysInMonth endOfDay endOfWeek endOfMonth endOfYear format getISOWeek getUTCOffset
+syntax keyword lsSFunction contained getWeekday is isAfter isBefore isBetween isToday isYesterday isTomorrow isWeekday isWeekend
+syntax keyword lsSFunction contained isSunday isMonday isTuesday isWednesday isThursday isFriday isSaturday isFuture isLastWeek isLastMonth
+syntax keyword lsSFunction contained isLastYear isPast isThisWeek isThisMonth isThisYear isUTC isValid iso relative reset
+syntax keyword lsSFunction contained rewind set setISOWeek setWeekday toISOString toJSON millisecondsSince secondsSince minutesSince hoursSince
+syntax keyword lsSFunction contained daysSince weeksSince monthsSince yearsSince millisecondsUntil secondsUntil minutesUntil hoursUntil daysUntil weeksUntil
+syntax keyword lsSFunction contained monthsUntil yearsUntil millisecondAfter millisecondsAfter secondAfter secondsAfter minuteAfter minutesAfter hourAfter hoursAfter
+syntax keyword lsSFunction contained dayAfter daysAfter weekAfter weeksAfter monthAfter monthsAfter yearAfter yearsAfter millisecondAgo millisecondsAgo
+syntax keyword lsSFunction contained secondAgo secondsAgo minuteAgo minutesAgo hourAgo hoursAgo dayAgo daysAgo weekAgo weeksAgo
+syntax keyword lsSFunction contained monthAgo monthsAgo yearAgo yearsAgo millisecondBefore millisecondsBefore secondBefore secondsBefore minuteBefore minutesBefore
+syntax keyword lsSFunction contained hourBefore hoursBefore dayBefore daysBefore weekBefore weeksBefore monthBefore monthsBefore yearBefore yearsBefore
+syntax keyword lsSFunction contained millisecondFromNow millisecondsFromNow secondFromNow secondsFromNow minuteFromNow minutesFromNow hourFromNow hoursFromNow dayFromNow daysFromNow
+syntax keyword lsSFunction contained weekFromNow weeksFromNow monthFromNow monthsFromNow yearFromNow yearsFromNow utc
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
