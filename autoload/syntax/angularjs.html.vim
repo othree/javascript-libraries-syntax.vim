@@ -13,7 +13,7 @@ syntax keyword  htmlArg contained ng-disable ng-form ng-hide ng-href ng-include 
 syntax keyword  htmlArg contained ng-key-up ng-list ng-model ng-mousedown ng-mouseenter ng-mouseleave ng-mousemove
 syntax keyword  htmlArg contained ng-mouseover ng-mouseup ng-multiple ng-non-bindable ng-pluralize ng-readonly
 syntax keyword  htmlArg contained ng-repeat ng-selected ng-show ng-src ng-style ng-submit ng-switch ng-switch-when
-syntax keyword  htmlArg contained ng-transclude ng-view
+syntax keyword  htmlArg contained ng-switch-default ng-transclude ng-view
 
 " http://docs.angularjs.org/api/ng.directive:ngInclude
 " http://docs.angularjs.org/api/ng.directive:ngPluralize
@@ -21,4 +21,5 @@ syntax keyword  htmlArg contained ng-transclude ng-view
 syntax keyword  htmlArg contained expression autoscroll count when offset on
 
 
+syntax keyword  htmlTagName contained ng-include ng-pluralize ng-switch 
 
