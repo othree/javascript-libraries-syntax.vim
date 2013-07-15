@@ -6,6 +6,6 @@
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 "
 
-syntax cluster coffeeLibraryFuncs contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions,@coffeepFunctions
+syntax cluster coffeeLibraryFuncs contains=@coffeeQFunctions,@coffee_Functions,@coffeeBFunctions,@coffeepFunctions,@coffeeSFunctions
 syntax cluster coffeeLibraryAttrs contains=@coffeeQAttrs,@coffee_Attrs,@coffeeBAttrs,@coffeepAttrs
 syntax match   coffeeLDot /\./   containedin=ALLBUT,coffeeComment,coffeeString nextgroup=@coffeeLibraryFuncs,@coffeeLibraryAttrs

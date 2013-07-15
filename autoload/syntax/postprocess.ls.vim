@@ -6,7 +6,7 @@
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 "
 
-syntax cluster lsLibraryFuncs contains=@lsQFunctions,@ls_Functions,@lsBFunctions,@lspFunctions
+syntax cluster lsLibraryFuncs contains=@lsQFunctions,@ls_Functions,@lsBFunctions,@lspFunctions,@lsSFunctions
 syntax cluster lsLibraryAttrs contains=@lsQAttrs,@ls_Attrs,@lsBAttrs,@lspAttrs
 " ).fun!
 " ).fun()
