@@ -15,6 +15,7 @@ syntax keyword  htmlArg contained ng-mouseover ng-mouseup ng-multiple ng-non-bin
 syntax keyword  htmlArg contained ng-repeat ng-selected ng-show ng-src ng-style ng-submit ng-switch ng-switch-when
 syntax keyword  htmlArg contained ng-switch-default ng-transclude ng-view
 
+" http://docs.angularjs.org/guide/directive
 syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(app\|bind\|bind-html-unsafe\|bind-template\|change\|checked\|class\)/
 syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(class-even\|class-odd\|click\|cloak\|controller\|csp\|dblclick\)/
 syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(disable\|form\|hide\|href\|include\|init\|keydown\|keypress\)/
