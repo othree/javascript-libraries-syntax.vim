@@ -6,6 +6,8 @@
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
+setlocal iskeyword+=$
+
 syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment,javascriptString jQuery $
 " syntax match   javascriptjQuerydot       contained /\./ nextgroup=@javascriptQGlobals
 " syntax match   javascriptjQuerydot       contained /([^)]*)\./ nextgroup=@javascriptQFunctions

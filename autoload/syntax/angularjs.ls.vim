@@ -5,6 +5,8 @@
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
+setlocal iskeyword+=$
+
 syntax keyword lsAngular angular containedin=ALLBUT,lsComment,lsString nextgroup=lsAngulardot
 syntax match   lsAngulardot contained /\./ nextgroup=lsAngularMethods
 syntax keyword lsAngularMethods contained bind bootstrap copy element equals
