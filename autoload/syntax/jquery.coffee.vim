@@ -2,13 +2,13 @@
 " Language:    jQuery for coffee
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/04/23
+" Last Change: 2013/07/26
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
 setlocal iskeyword+=$
 
-syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment,coffeeString jQuery $
+syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString jQuery $
 " syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals
 " syntax match   coffeejQuerydot       contained /([^)]*)\./ nextgroup=@coffeeQFunctions
 

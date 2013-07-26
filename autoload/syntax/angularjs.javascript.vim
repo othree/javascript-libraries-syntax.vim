@@ -1,13 +1,13 @@
 " Vim syntax file
 " Language:    AngularJS for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/04/21
+" Last Change: 2013/07/26
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
 setlocal iskeyword+=$
 
-syntax keyword javascriptAngular angular containedin=ALLBUT,javascriptComment,javascriptString nextgroup=javascriptAngulardot
+syntax keyword javascriptAngular angular containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=javascriptAngulardot
 syntax match   javascriptAngulardot contained /\./ nextgroup=javascriptAngularMethods
 syntax keyword javascriptAngularMethods contained bind bootstrap copy element equals
 syntax keyword javascriptAngularMethods contained extend forEach fromJson identity injector
@@ -15,45 +15,45 @@ syntax keyword javascriptAngularMethods contained isArray isDate isDefined isEle
 syntax keyword javascriptAngularMethods contained isNumber isObject isString isUndefined lowercase
 syntax keyword javascriptAngularMethods contained mock module noop toJson uppercase version
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $anchorScroll $cacheFactory $compile $controller $document
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $exceptionHandler $filter $httpBackend
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $locale $parse $rootElement
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $routeParams $templateCache $window 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $cookies $resource $sanitize
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $anchorScroll $cacheFactory $compile $controller $document
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $exceptionHandler $filter $httpBackend
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $locale $parse $rootElement
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $routeParams $templateCache $window 
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $cookies $resource $sanitize
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $http nextgroup=javascriptAShttpdot
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $http nextgroup=javascriptAShttpdot
 syntax match   javascriptAShttpdot contained /\./ nextgroup=javascriptAShttpMethods
 syntax keyword javascriptAShttpMethods contained get head post put delete jsonp defaults prendingRequests 
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $interpolate nextgroup=javascriptASinterpolatedot
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $interpolate nextgroup=javascriptASinterpolatedot
 syntax match   javascriptASinterpolatedot contained /\./ nextgroup=javascriptASinterpolateMethods
 syntax keyword javascriptASinterpolateMethods contained endSymbol startSymbol
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $location nextgroup=javascriptASlocationdot
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $location nextgroup=javascriptASlocationdot
 syntax match   javascriptASlocationdot contained /\./ nextgroup=javascriptASlocationMethods
 syntax keyword javascriptASlocationMethods contained absUrl hash host path port protocol replace search url
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $log nextgroup=javascriptASlogdot
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $log nextgroup=javascriptASlogdot
 syntax match   javascriptASlogdot contained /\./ nextgroup=javascriptASlogMethods
 syntax keyword javascriptASlogMethods contained error info log warn
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $q nextgroup=javascriptASqdot
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $q nextgroup=javascriptASqdot
 syntax match   javascriptASqdot contained /\./ nextgroup=javascriptASqMethods
 syntax keyword javascriptASqMethods contained all defer reject when
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $route nextgroup=javascriptASroutedot
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $route nextgroup=javascriptASroutedot
 syntax match   javascriptASroutedot contained /\./ nextgroup=javascriptASrouteMethods
 syntax keyword javascriptASrouteMethods contained reload current route
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $timeout nextgroup=javascriptAStimeoutdot
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $timeout nextgroup=javascriptAStimeoutdot
 syntax match   javascriptAStimeoutdot contained /\./ nextgroup=javascriptAStimeoutMethods
 syntax keyword javascriptAStimeoutMethods contained cancel
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $scope $rootScope nextgroup=javascriptASscopedot
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $scope $rootScope nextgroup=javascriptASscopedot
 syntax match   javascriptASscopedot contained /\./ nextgroup=javascriptASscopeMethods
 syntax keyword javascriptASscopeMethods contained $apply $broadcast $destroy $digest $emit $eval $evalAsync $new $on $watch $id
 
-syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptString $cookieStore nextgroup=javascriptAScookieStoredot
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $cookieStore nextgroup=javascriptAScookieStoredot
 syntax match   javascriptAScookieStoredot contained /\./ nextgroup=javascriptAScookieStoreMethods
 syntax keyword javascriptAScookieStoreMethods contained get put remove
 

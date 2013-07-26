@@ -1,11 +1,11 @@
 " Vim syntax file
 " Language:    Backbone.js for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/05
+" Last Change: 2013/07/26
 " Version:     0.9.10
 " URL:         http://backbonejs.org/
 
-syntax keyword javascriptBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,javascriptComment,javascriptString
+syntax keyword javascriptBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString
 
 syntax cluster javascriptBFunctions contains=javascriptBEvents,javascriptBModel,javascriptBCollection,javascriptBRouter,javascriptBHistory,javascriptBSync,javascriptBView,javascriptBUtility
 syntax cluster javascriptBAttrs contains=javascriptBModelAttrs,javascriptBCollectionAttrs,javascriptBRouterAttrs,javascriptBSyncAttrs,javascriptBViewAttrs

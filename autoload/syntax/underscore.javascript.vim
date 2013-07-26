@@ -1,13 +1,13 @@
 " Vim syntax file
 " Language:    underscore.js for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/04/23
+" Last Change: 2013/07/26
 " Version:     1.4.4.2
 " URL:         http://underscorejs.org/
 " LoDash:      1.2.0
 " URL:         http://lodash.com/
 
-syntax keyword javascriptunderscore containedin=ALLBUT,javascriptComment,javascriptString _
+syntax keyword javascriptunderscore containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString _
 " syntax match   javascriptunderscoredot contained /\./ nextgroup=@javascript_Functions
 " syntax match   javascriptunderscoredot contained /([^)]*)\./ nextgroup=@javascript_Functions
 

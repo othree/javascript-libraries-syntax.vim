@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    prelude.ls for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/05
+" Last Change: 2013/07/26
 " Version:     0.6.0
 " URL:         http://gkz.github.com/prelude-ls/
 

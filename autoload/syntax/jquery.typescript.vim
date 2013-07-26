@@ -2,13 +2,13 @@
 " Language:    jQuery for typescript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/04/23
+" Last Change: 2013/07/26
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
 setlocal iskeyword+=$
 
-syntax keyword typescriptjQuery          containedin=ALLBUT,typescriptComment,typescriptString jQuery $
+syntax keyword typescriptjQuery          containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString jQuery $
 " syntax match   typescriptjQuerydot       contained /\./ nextgroup=@typescriptQGlobals
 " syntax match   typescriptjQuerydot       contained /([^)]*)\./ nextgroup=@typescriptQFunctions
 

@@ -1,11 +1,11 @@
 " Vim syntax file
 " Language:    Backbone.js for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/05
+" Last Change: 2013/07/26
 " Version:     0.9.10
 " URL:         http://backbonejs.org/
 
-syntax keyword coffeeBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,coffeeComment,coffeeString
+syntax keyword coffeeBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString
 
 syntax cluster coffeeBFunctions contains=coffeeBEvents,coffeeBModel,coffeeBCollection,coffeeBRouter,coffeeBHistory,coffeeBSync,coffeeBView,coffeeBUtility
 syntax cluster coffeeBAttrs contains=coffeeBModelAttrs,coffeeBCollectionAttrs,coffeeBRouterAttrs,coffeeBSyncAttrs,coffeeBViewAttrs

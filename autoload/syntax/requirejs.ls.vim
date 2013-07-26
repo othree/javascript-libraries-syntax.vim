@@ -1,16 +1,16 @@
 " Vim syntax file
 " Language:    require.js for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/04/22
+" Last Change: 2013/07/26
 " Version:     2.1.4.1
 " URL:         http://requirejs.org/
 
 
-syntax keyword lsRequire require requirejs containedin=ALLBUT,lsComment,lsString nextgroup=lsRequiredot
+syntax keyword lsRequire require requirejs containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=lsRequiredot
 syntax match   lsRequiredot contained /\./ nextgroup=lsRequireMethods
 syntax keyword lsRequireMethods contained config
 
-syntax keyword lsRdefine define containedin=ALLBUT,lsComment,lsString nextgroup=lsRdefinedot
+syntax keyword lsRdefine define containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=lsRdefinedot
 syntax match   lsRdefinedot contained /\./ nextgroup=lsRdefineMethods
 syntax keyword lsRdefineMethods contained amd
 

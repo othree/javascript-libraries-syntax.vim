@@ -2,13 +2,13 @@
 " Language:    jQuery for ls
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/04/23
+" Last Change: 2013/07/26
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
 setlocal iskeyword+=$
 
-syntax keyword lsjQuery          containedin=ALLBUT,lsComment,lsString jQuery $
+syntax keyword lsjQuery          containedin=ALLBUT,lsComment,lsLineComment,lsString jQuery $
 " syntax match   lsjQuerydot       contained /\./ nextgroup=@lsQGlobals
 " syntax match   lsjQuerydot       contained /([^)]*)\./ nextgroup=@lsQFunctions
 

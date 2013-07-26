@@ -1,13 +1,13 @@
 " Vim syntax file
 " Language:    underscore.js for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/04/23
+" Last Change: 2013/07/26
 " Version:     1.4.4.2
 " URL:         http://underscorejs.org/
 " LoDash:      1.2.0
 " URL:         http://lodash.com/
 
-syntax keyword typescriptunderscore containedin=ALLBUT,typescriptComment,typescriptString _
+syntax keyword typescriptunderscore containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString _
 " syntax match   typescriptunderscoredot contained /\./ nextgroup=@typescript_Functions
 " syntax match   typescriptunderscoredot contained /([^)]*)\./ nextgroup=@typescript_Functions
 

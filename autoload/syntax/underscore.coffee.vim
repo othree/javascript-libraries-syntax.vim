@@ -1,13 +1,13 @@
 " Vim syntax file
 " Language:    underscore.js for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/04/23
+" Last Change: 2013/07/26
 " Version:     1.4.4.2
 " URL:         http://underscorejs.org/
 " LoDash:      1.2.0
 " URL:         http://lodash.com/
 
-syntax keyword coffeeunderscore containedin=ALLBUT,coffeeComment,coffeeString _
+syntax keyword coffeeunderscore containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString _
 " syntax match   coffeeunderscoredot contained /\./ nextgroup=@coffee_Functions
 " syntax match   coffeeunderscoredot contained /([^)]*)\./ nextgroup=@coffee_Functions
 

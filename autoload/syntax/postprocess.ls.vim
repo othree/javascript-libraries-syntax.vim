@@ -17,8 +17,8 @@ syntax cluster lsLibraryAttrs contains=@lsQAttrs,@ls_Attrs,@lsBAttrs,@lspAttrs
 " ).fun arg
 " !fun arg
 " obj.fun arg
-syntax match   lsLDot /\./   containedin=ALLBUT,lsComment,lsString contains=@lsLibraryFuncs,@lsLibraryAttrs
-syntax match   lsLExp /!/   containedin=ALLBUT,lsComment,lsString contains=@lsLibraryFuncs,@lsLibraryAttrs
+syntax match   lsLDot /\./   containedin=ALLBUT,lsComment,lsLineComment,lsString contains=@lsLibraryFuncs,@lsLibraryAttrs
+syntax match   lsLExp /!/   containedin=ALLBUT,lsComment,lsLineComment,lsString contains=@lsLibraryFuncs,@lsLibraryAttrs
 
-syntax match   lsLPipe /|>/ containedin=ALLBUT,lsComment,lsString skipwhite nextgroup=@lspFunctions
-syntax match   lsLCompose />>/ containedin=ALLBUT,lsComment,lsString skipwhite nextgroup=@lspFunctions
+syntax match   lsLPipe /|>/ containedin=ALLBUT,lsComment,lsLineComment,lsString skipwhite nextgroup=@lspFunctions
+syntax match   lsLCompose />>/ containedin=ALLBUT,lsComment,lsLineComment,lsString skipwhite nextgroup=@lspFunctions

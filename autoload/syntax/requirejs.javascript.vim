@@ -1,16 +1,16 @@
 " Vim syntax file
 " Language:    require.js for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/04/22
+" Last Change: 2013/07/26
 " Version:     2.1.4.1
 " URL:         http://requirejs.org/
 
 
-syntax keyword javascriptRequire require requirejs containedin=ALLBUT,javascriptComment,javascriptString nextgroup=javascriptRequiredot
+syntax keyword javascriptRequire require requirejs containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=javascriptRequiredot
 syntax match   javascriptRequiredot contained /\./ nextgroup=javascriptRequireMethods
 syntax keyword javascriptRequireMethods contained config
 
-syntax keyword javascriptRdefine define containedin=ALLBUT,javascriptComment,javascriptString nextgroup=javascriptRdefinedot
+syntax keyword javascriptRdefine define containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=javascriptRdefinedot
 syntax match   javascriptRdefinedot contained /\./ nextgroup=javascriptRdefineMethods
 syntax keyword javascriptRdefineMethods contained amd
 

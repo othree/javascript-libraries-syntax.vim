@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    prelude.ls for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/07/15
+" Last Change: 2013/07/26
 " Version:     1.3.9
 " URL:         http://sugarjs.com/
 "              http://sugarjs.com/api

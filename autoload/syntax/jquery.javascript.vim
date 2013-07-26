@@ -2,13 +2,13 @@
 " Language:    jQuery for javascript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/04/23
+" Last Change: 2013/07/26
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
 setlocal iskeyword+=$
 
-syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment,javascriptString jQuery $
+syntax keyword javascriptjQuery          containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString jQuery $
 " syntax match   javascriptjQuerydot       contained /\./ nextgroup=@javascriptQGlobals
 " syntax match   javascriptjQuerydot       contained /([^)]*)\./ nextgroup=@javascriptQFunctions
 

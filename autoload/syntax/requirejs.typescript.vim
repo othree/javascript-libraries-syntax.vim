@@ -1,16 +1,16 @@
 " Vim syntax file
 " Language:    require.js for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/04/22
+" Last Change: 2013/07/26
 " Version:     2.1.4.1
 " URL:         http://requirejs.org/
 
 
-syntax keyword typescriptRequire require requirejs containedin=ALLBUT,typescriptComment,typescriptString nextgroup=typescriptRequiredot
+syntax keyword typescriptRequire require requirejs containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=typescriptRequiredot
 syntax match   typescriptRequiredot contained /\./ nextgroup=typescriptRequireMethods
 syntax keyword typescriptRequireMethods contained config
 
-syntax keyword typescriptRdefine define containedin=ALLBUT,typescriptComment,typescriptString nextgroup=typescriptRdefinedot
+syntax keyword typescriptRdefine define containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=typescriptRdefinedot
 syntax match   typescriptRdefinedot contained /\./ nextgroup=typescriptRdefineMethods
 syntax keyword typescriptRdefineMethods contained amd
 
