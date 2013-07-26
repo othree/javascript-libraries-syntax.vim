@@ -82,6 +82,11 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 Changes
 -------
 
+### Version 0.3.4
+* Add $ to iskeyword for jQuery and angular (Issue #4)
+* Support linecomment (Issue #6)
+* Add augularjs HTML custom attribute support
+
 ### Version 0.3.3
 * No strict mode, better compatibility.
 
