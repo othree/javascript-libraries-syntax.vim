@@ -1,7 +1,7 @@
 javascript-libraries-syntax.vim
 ===============================
 
-Syntax file for JavaScript libraries. Supports JavaScript libraris I am using (patches welcome).
+Syntax file for JavaScript libraries. Supports JavaScript libraries I am using (patches welcome).
 Should works well with other JavaScript syntax file. [SyntaxComplete][] also works well on all 
 supported languages.
 
