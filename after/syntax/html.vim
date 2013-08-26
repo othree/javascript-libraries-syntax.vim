@@ -1,10 +1,10 @@
 " Vim plugin file
 " Language:    
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/07/15
-" Version:     0.5
+" Last Change: 2013/08/26
+" Version:     0.5.1
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 
-if &filetype == 'html'
+if b:current_syntax == 'html'
   call jslibsyntax#load()
 endif
