@@ -11,7 +11,8 @@ let s:libs = [
   \ 'backbone',
   \ 'prelude',
   \ 'angularjs',
-  \ 'requirejs'
+  \ 'requirejs',
+  \ 'sugar'
   \ ]
 
 let s:path = expand('<sfile>:p:h')
