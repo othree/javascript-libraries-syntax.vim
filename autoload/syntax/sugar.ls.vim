@@ -26,6 +26,30 @@ syntax keyword lsSFunction contained atan sqrt exp pow metric ordinalize pad rou
 syntax keyword lsSFunction contained millisecond milliseconds second seconds minute minutes hour hours day days
 syntax keyword lsSFunction contained week weeks month months year years upto
 
+" Array
+
+syntax keyword lsSFunction contained create add all any at average clone compact count each
+syntax keyword lsSFunction contained every exclude filter find findAll findFrom findIndex findIndexFrom first flatten
+syntax keyword lsSFunction contained forEach from groupBy inGroups inGroupsOf include indexOf insert intersect isEmpty
+syntax keyword lsSFunction contained last lastIndexOf least map max min most none randomize reduce
+syntax keyword lsSFunction contained reduceRight remove removeAt sample some sortBy subtract sum to union
+syntax keyword lsSFunction contained unique zip
+
+" Object
+
+syntax keyword lsSFunction contained extended fromQueryString isArray isObject isBoolean isDate isFunction isNaN isNumber isString
+syntax keyword lsSFunction contained isRegExp toQueryString clone each map any all none count find
+syntax keyword lsSFunction contained findAll reduce isEmpty sum average min max least most equal
+syntax keyword lsSFunction contained has keys merge reject select size tap values watch 
+
+" Function
+
+syntax keyword lsSFunction contained after bind cancel debounce delay everyfill lazyredrawonce throttle 
+
+" RegExp
+
+syntax keyword lsSFunction contained escape addFlag getFlags removeFlag setFlags
+
 " Date
 syntax keyword lsSFunction contained addLocale create future getLocale now past range setLocale addMilliseconds addSeconds
 syntax keyword lsSFunction contained addMinutes addHours addDays addWeeks addMonths addYears advance beginningOfDay beginningOfWeek beginningOfMonth
@@ -42,6 +66,10 @@ syntax keyword lsSFunction contained monthAgo monthsAgo yearAgo yearsAgo millise
 syntax keyword lsSFunction contained hourBefore hoursBefore dayBefore daysBefore weekBefore weeksBefore monthBefore monthsBefore yearBefore yearsBefore
 syntax keyword lsSFunction contained millisecondFromNow millisecondsFromNow secondFromNow secondsFromNow minuteFromNow minutesFromNow hourFromNow hoursFromNow dayFromNow daysFromNow
 syntax keyword lsSFunction contained weekFromNow weeksFromNow monthFromNow monthsFromNow yearFromNow yearsFromNow utc
+
+" Range
+
+syntax keyword lsSFunction contained clamp clone contains every intersect isValid span toString union
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already

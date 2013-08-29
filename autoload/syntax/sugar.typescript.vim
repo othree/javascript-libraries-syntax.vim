@@ -26,6 +26,30 @@ syntax keyword typescriptSFunction contained atan sqrt exp pow metric ordinalize
 syntax keyword typescriptSFunction contained millisecond milliseconds second seconds minute minutes hour hours day days
 syntax keyword typescriptSFunction contained week weeks month months year years upto
 
+" Array
+
+syntax keyword typescriptSFunction contained create add all any at average clone compact count each
+syntax keyword typescriptSFunction contained every exclude filter find findAll findFrom findIndex findIndexFrom first flatten
+syntax keyword typescriptSFunction contained forEach from groupBy inGroups inGroupsOf include indexOf insert intersect isEmpty
+syntax keyword typescriptSFunction contained last lastIndexOf least map max min most none randomize reduce
+syntax keyword typescriptSFunction contained reduceRight remove removeAt sample some sortBy subtract sum to union
+syntax keyword typescriptSFunction contained unique zip
+
+" Object
+
+syntax keyword typescriptSFunction contained extended fromQueryString isArray isObject isBoolean isDate isFunction isNaN isNumber isString
+syntax keyword typescriptSFunction contained isRegExp toQueryString clone each map any all none count find
+syntax keyword typescriptSFunction contained findAll reduce isEmpty sum average min max least most equal
+syntax keyword typescriptSFunction contained has keys merge reject select size tap values watch 
+
+" Function
+
+syntax keyword typescriptSFunction contained after bind cancel debounce delay everyfill lazyredrawonce throttle 
+
+" RegExp
+
+syntax keyword typescriptSFunction contained escape addFlag getFlags removeFlag setFlags
+
 " Date
 syntax keyword typescriptSFunction contained addLocale create future getLocale now past range setLocale addMilliseconds addSeconds
 syntax keyword typescriptSFunction contained addMinutes addHours addDays addWeeks addMonths addYears advance beginningOfDay beginningOfWeek beginningOfMonth
@@ -42,6 +66,10 @@ syntax keyword typescriptSFunction contained monthAgo monthsAgo yearAgo yearsAgo
 syntax keyword typescriptSFunction contained hourBefore hoursBefore dayBefore daysBefore weekBefore weeksBefore monthBefore monthsBefore yearBefore yearsBefore
 syntax keyword typescriptSFunction contained millisecondFromNow millisecondsFromNow secondFromNow secondsFromNow minuteFromNow minutesFromNow hourFromNow hoursFromNow dayFromNow daysFromNow
 syntax keyword typescriptSFunction contained weekFromNow weeksFromNow monthFromNow monthsFromNow yearFromNow yearsFromNow utc
+
+" Range
+
+syntax keyword typescriptSFunction contained clamp clone contains every intersect isValid span toString union
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
