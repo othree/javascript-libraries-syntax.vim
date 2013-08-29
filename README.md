@@ -17,6 +17,7 @@ Libraries
 * [prelude.ls](http://gkz.github.com/prelude-ls/)
 * [AngularJS](http://angularjs.org/)
 * [RequireJS](http://requirejs.org/)
+* [Sugar.js](http://sugarjs.com/)
 
 File Types
 ----------
@@ -52,6 +53,7 @@ Support libs id:
 * prelude.ls: prelude
 * AngularJS: angularjs
 * RequireJS: requirejs
+* Sugar.js: sugar
 
 You can use [local vimrc][] to setup libraries used in project. Sample code for local vimrc:
 
