@@ -26,6 +26,30 @@ syntax keyword javascriptSFunction contained atan sqrt exp pow metric ordinalize
 syntax keyword javascriptSFunction contained millisecond milliseconds second seconds minute minutes hour hours day days
 syntax keyword javascriptSFunction contained week weeks month months year years upto
 
+" Array
+
+syntax keyword javascriptSFunction contained create add all any at average clone compact count each
+syntax keyword javascriptSFunction contained every exclude filter find findAll findFrom findIndex findIndexFrom first flatten
+syntax keyword javascriptSFunction contained forEach from groupBy inGroups inGroupsOf include indexOf insert intersect isEmpty
+syntax keyword javascriptSFunction contained last lastIndexOf least map max min most none randomize reduce
+syntax keyword javascriptSFunction contained reduceRight remove removeAt sample some sortBy subtract sum to union
+syntax keyword javascriptSFunction contained unique zip
+
+" Object
+
+syntax keyword javascriptSFunction contained extended fromQueryString isArray isObject isBoolean isDate isFunction isNaN isNumber isString
+syntax keyword javascriptSFunction contained isRegExp toQueryString clone each map any all none count find
+syntax keyword javascriptSFunction contained findAll reduce isEmpty sum average min max least most equal
+syntax keyword javascriptSFunction contained has keys merge reject select size tap values watch 
+
+" Function
+
+syntax keyword javascriptSFunction contained after bind cancel debounce delay everyfill lazyredrawonce throttle 
+
+" RegExp
+
+syntax keyword javascriptSFunction contained escape addFlag getFlags removeFlag setFlags
+
 " Date
 syntax keyword javascriptSFunction contained addLocale create future getLocale now past range setLocale addMilliseconds addSeconds
 syntax keyword javascriptSFunction contained addMinutes addHours addDays addWeeks addMonths addYears advance beginningOfDay beginningOfWeek beginningOfMonth
@@ -42,6 +66,10 @@ syntax keyword javascriptSFunction contained monthAgo monthsAgo yearAgo yearsAgo
 syntax keyword javascriptSFunction contained hourBefore hoursBefore dayBefore daysBefore weekBefore weeksBefore monthBefore monthsBefore yearBefore yearsBefore
 syntax keyword javascriptSFunction contained millisecondFromNow millisecondsFromNow secondFromNow secondsFromNow minuteFromNow minutesFromNow hourFromNow hoursFromNow dayFromNow daysFromNow
 syntax keyword javascriptSFunction contained weekFromNow weeksFromNow monthFromNow monthsFromNow yearFromNow yearsFromNow utc
+
+" Range
+
+syntax keyword javascriptSFunction contained clamp clone contains every intersect isValid span toString union
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
