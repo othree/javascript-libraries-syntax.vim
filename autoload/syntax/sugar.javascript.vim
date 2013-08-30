@@ -70,7 +70,7 @@ syntax keyword javascriptSFunction contained weekFromNow weeksFromNow monthFromN
 " Range
 
 syntax keyword javascriptSFunction contained clamp clone every intersect isValid span toString union
-syntax match   javascriptSFunction contained /contains/
+syntax keyword javascriptSFunction contained contain[s]
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
