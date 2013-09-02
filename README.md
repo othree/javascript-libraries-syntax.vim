@@ -69,7 +69,6 @@ Todo
 ----
 
 * Support future version of SyntaxComplete
-* Use `b:current_syntax` instead of `&filetype`
 
 Known Issue
 -----------
@@ -83,6 +82,10 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 Changes
 -------
+
+### Version 0.3.5
+* Add sugar.js support
+* b:current_syntax to detect current syntax
 
 ### Version 0.3.4
 * Add $ to iskeyword for jQuery and angular (Issue #4)
