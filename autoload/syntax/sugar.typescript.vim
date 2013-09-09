@@ -69,7 +69,8 @@ syntax keyword typescriptSFunction contained weekFromNow weeksFromNow monthFromN
 
 " Range
 
-syntax keyword typescriptSFunction contained clamp clone contains every intersect isValid span toString union
+syntax keyword typescriptSFunction contained clamp clone every intersect isValid span toString union
+syntax keyword typescriptSFunction contained contain[s]
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already

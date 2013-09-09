@@ -69,7 +69,8 @@ syntax keyword lsSFunction contained weekFromNow weeksFromNow monthFromNow month
 
 " Range
 
-syntax keyword lsSFunction contained clamp clone contains every intersect isValid span toString union
+syntax keyword lsSFunction contained clamp clone every intersect isValid span toString union
+syntax keyword lsSFunction contained contain[s]
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already

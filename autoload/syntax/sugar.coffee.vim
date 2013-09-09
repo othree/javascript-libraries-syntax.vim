@@ -69,7 +69,8 @@ syntax keyword coffeeSFunction contained weekFromNow weeksFromNow monthFromNow m
 
 " Range
 
-syntax keyword coffeeSFunction contained clamp clone contains every intersect isValid span toString union
+syntax keyword coffeeSFunction contained clamp clone every intersect isValid span toString union
+syntax keyword coffeeSFunction contained contain[s]
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
