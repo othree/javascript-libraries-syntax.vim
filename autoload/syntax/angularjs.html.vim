@@ -13,7 +13,7 @@ syntax keyword  htmlArg contained ng-disable ng-form ng-hide ng-href ng-include 
 syntax keyword  htmlArg contained ng-key-up ng-list ng-model ng-mousedown ng-mouseenter ng-mouseleave ng-mousemove
 syntax keyword  htmlArg contained ng-mouseover ng-mouseup ng-multiple ng-non-bindable ng-pluralize ng-readonly
 syntax keyword  htmlArg contained ng-repeat ng-selected ng-show ng-src ng-style ng-submit ng-switch ng-switch-when
-syntax keyword  htmlArg contained ng-switch-default ng-transclude ng-view
+syntax keyword  htmlArg contained ng-switch-default ng-transclude ng-view ng-if
 
 " http://docs.angularjs.org/guide/directive
 syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(app\|bind\|bind-html-unsafe\|bind-template\|change\|checked\|class\)/
@@ -22,7 +22,7 @@ syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(disable\|form\|hide\|hre
 syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(key-up\|list\|model\|mousedown\|mouseenter\|mouseleave\|mousemove\)/
 syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(mouseover\|mouseup\|multiple\|non-bindable\|pluralize\|readonly\)/
 syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(repeat\|selected\|show\|src\|style\|submit\|switch\|switch-when\)/
-syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(switch-default\|transclude\|view\)/
+syntax match    htmlArg contained /\(ng_\|ng:\|x-ng-\)\(switch-default\|transclude\|view\|if\)/
 
 " http://docs.angularjs.org/api/ng.directive:ngInclude
 " http://docs.angularjs.org/api/ng.directive:ngPluralize
