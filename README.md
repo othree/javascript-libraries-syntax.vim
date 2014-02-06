@@ -18,6 +18,7 @@ Libraries
 * [AngularJS](http://angularjs.org/)
 * [RequireJS](http://requirejs.org/)
 * [Sugar.js](http://sugarjs.com/)
+* [Jasmine](http://pivotal.github.io/jasmine/)
 
 File Types
 ----------
@@ -54,6 +55,7 @@ Support libs id:
 * AngularJS: angularjs
 * RequireJS: requirejs
 * Sugar.js: sugar
+* Jasmine: jasmine
 
 You can use [local vimrc][] to setup libraries used in project. Sample code for local vimrc:
 
