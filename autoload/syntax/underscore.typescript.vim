@@ -1,10 +1,10 @@
 " Vim syntax file
 " Language:    underscore.js for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/07/26
-" Version:     1.4.4.2
+" Last Change: 2014/02/06
+" Version:     1.5.2
 " URL:         http://underscorejs.org/
-" LoDash:      1.2.0
+" LoDash:      2.5.0
 " URL:         http://lodash.com/
 
 syntax keyword typescriptunderscore containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString _
@@ -16,7 +16,7 @@ syntax cluster typescript_Functions contains=typescript_collections,typescript_a
 syntax match   typescript_collections contained /contains/
 syntax keyword typescript_collections contained each map reduce reduceRight find filter where findWhere
 syntax keyword typescript_collections contained reject every some invoke pluck max min sortBy
-syntax keyword typescript_collections contained groupBy countBy shuffle toArray size
+syntax keyword typescript_collections contained groupBy indexBy countBy shuffle toArray size
 syntax keyword typescript_arrays contained first initial last rest compact flatten without union
 syntax keyword typescript_arrays contained intersection difference uniq zip object indextOf
 syntax keyword typescript_arrays contained lastIndexOf sortedIndex range
@@ -34,6 +34,9 @@ syntax keyword typescript_chaining contained chain value
 syntax keyword typescript_lodash contained at bindKey cloneDeep createCallback findIndex findKey
 syntax keyword typescript_lodash contained forEach forIn forOwn isPlainObject merge parseInt partial
 syntax keyword typescript_lodash contained partialRight runInContext support unzip where 
+syntax keyword typescript_lodash contained capitalize match slice trim trimLeft trimRight
+syntax keyword typescript_lodash contained constant mapValues now property xor
+syntax keyword typescript_lodash contained create noop transform 
 
 
 " Define the default highlighting.
@@ -55,6 +58,7 @@ if version >= 508 || !exists("did_underscore_typescript_syntax_inits")
   HiLink typescript_objects        PreProc
   HiLink typescript_utility        PreProc
   HiLink typescript_chaining       PreProc
+  HiLink typescript_lodash         PreProc
 
 
   delcommand HiLink

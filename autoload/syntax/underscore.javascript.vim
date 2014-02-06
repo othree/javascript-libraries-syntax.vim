@@ -1,10 +1,10 @@
 " Vim syntax file
 " Language:    underscore.js for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/07/26
-" Version:     1.4.4.2
+" Last Change: 2014/02/06
+" Version:     1.5.2
 " URL:         http://underscorejs.org/
-" LoDash:      1.2.0
+" LoDash:      2.5.0
 " URL:         http://lodash.com/
 
 syntax keyword javascriptunderscore containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString _
@@ -16,7 +16,7 @@ syntax cluster javascript_Functions contains=javascript_collections,javascript_a
 syntax match   javascript_collections contained /contains/
 syntax keyword javascript_collections contained each map reduce reduceRight find filter where findWhere
 syntax keyword javascript_collections contained reject every some invoke pluck max min sortBy
-syntax keyword javascript_collections contained groupBy countBy shuffle toArray size
+syntax keyword javascript_collections contained groupBy indexBy countBy shuffle toArray size
 syntax keyword javascript_arrays contained first initial last rest compact flatten without union
 syntax keyword javascript_arrays contained intersection difference uniq zip object indextOf
 syntax keyword javascript_arrays contained lastIndexOf sortedIndex range
@@ -34,6 +34,9 @@ syntax keyword javascript_chaining contained chain value
 syntax keyword javascript_lodash contained at bindKey cloneDeep createCallback findIndex findKey
 syntax keyword javascript_lodash contained forEach forIn forOwn isPlainObject merge parseInt partial
 syntax keyword javascript_lodash contained partialRight runInContext support unzip where 
+syntax keyword javascript_lodash contained capitalize match slice trim trimLeft trimRight
+syntax keyword javascript_lodash contained constant mapValues now property xor
+syntax keyword javascript_lodash contained create noop transform 
 
 
 " Define the default highlighting.
@@ -55,6 +58,7 @@ if version >= 508 || !exists("did_underscore_javascript_syntax_inits")
   HiLink javascript_objects        PreProc
   HiLink javascript_utility        PreProc
   HiLink javascript_chaining       PreProc
+  HiLink javascript_lodash         PreProc
 
 
   delcommand HiLink
