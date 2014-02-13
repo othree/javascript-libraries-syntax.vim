@@ -2,7 +2,7 @@
 " Language:    jQuery for coffee
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/07/26
+" Last Change: 2014/02/13
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
@@ -33,7 +33,7 @@ syntax keyword coffeeQData           contained clearQueue data dequeue queue rem
 syntax keyword coffeeQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
 syntax keyword coffeeQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword coffeeQEffects        contained hide show toggle
-syntax keyword coffeeQEffects        contained animate delay stop
+syntax keyword coffeeQEffects        contained animate delay stop finish
 syntax keyword coffeeQEffects        contained fadeIn fadeOut fadeTo fadeToggle
 syntax keyword coffeeQEffects        contained slideDown slideToggle slideUp
 syntax keyword coffeeQEvents         contained error resize scroll

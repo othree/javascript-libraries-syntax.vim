@@ -2,7 +2,7 @@
 " Language:    jQuery for ls
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/07/26
+" Last Change: 2014/02/13
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
@@ -33,7 +33,7 @@ syntax keyword lsQData           contained clearQueue data dequeue queue removeD
 syntax keyword lsQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
 syntax keyword lsQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword lsQEffects        contained hide show toggle
-syntax keyword lsQEffects        contained animate delay stop
+syntax keyword lsQEffects        contained animate delay stop finish
 syntax keyword lsQEffects        contained fadeIn fadeOut fadeTo fadeToggle
 syntax keyword lsQEffects        contained slideDown slideToggle slideUp
 syntax keyword lsQEvents         contained error resize scroll

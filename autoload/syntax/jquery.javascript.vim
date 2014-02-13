@@ -2,7 +2,7 @@
 " Language:    jQuery for javascript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2013/07/26
+" Last Change: 2014/02/13
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
@@ -33,7 +33,7 @@ syntax keyword javascriptQData           contained clearQueue data dequeue queue
 syntax keyword javascriptQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
 syntax keyword javascriptQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword javascriptQEffects        contained hide show toggle
-syntax keyword javascriptQEffects        contained animate delay stop
+syntax keyword javascriptQEffects        contained animate delay stop finish
 syntax keyword javascriptQEffects        contained fadeIn fadeOut fadeTo fadeToggle
 syntax keyword javascriptQEffects        contained slideDown slideToggle slideUp
 syntax keyword javascriptQEvents         contained error resize scroll
