@@ -54,6 +54,7 @@ Support libs id:
 * Backbone.js: backbone
 * prelude.ls: prelude
 * AngularJS: angularjs
+* AngularUI: angularui
 * RequireJS: requirejs
 * Sugar.js: sugar
 * Jasmine: jasmine
