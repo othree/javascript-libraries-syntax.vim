@@ -83,6 +83,10 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 Changes
 -------
 
+### Version 0.3.6
+* Add Jasmine, AngularUI
+* Update underscore, jQuery
+
 ### Version 0.3.5
 * Add sugar.js support
 * b:current_syntax to detect current syntax
