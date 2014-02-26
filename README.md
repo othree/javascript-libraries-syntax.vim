@@ -16,8 +16,10 @@ Libraries
 * [Backbone.js](http://backbonejs.org/)
 * [prelude.ls](http://gkz.github.com/prelude-ls/)
 * [AngularJS](http://angularjs.org/)
+* [AngularUI](http://angular-ui.github.io)
 * [RequireJS](http://requirejs.org/)
 * [Sugar.js](http://sugarjs.com/)
+* [Jasmine](http://pivotal.github.io/jasmine/)
 
 File Types
 ----------
@@ -52,8 +54,10 @@ Support libs id:
 * Backbone.js: backbone
 * prelude.ls: prelude
 * AngularJS: angularjs
+* AngularUI: angularui
 * RequireJS: requirejs
 * Sugar.js: sugar
+* Jasmine: jasmine
 
 You can use [local vimrc][] to setup libraries used in project. Sample code for local vimrc:
 

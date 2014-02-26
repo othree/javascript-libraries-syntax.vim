@@ -11,6 +11,7 @@ let s:libs = [
   \ 'backbone',
   \ 'prelude',
   \ 'angularjs',
+  \ 'angularui',
   \ 'requirejs',
   \ 'sugar',
   \ 'jasmine'
