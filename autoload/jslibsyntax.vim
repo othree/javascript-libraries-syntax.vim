@@ -15,6 +15,7 @@ let s:libs = [
   \ 'requirejs',
   \ 'sugar',
   \ 'jasmine',
+  \ 'chai',
   \ 'react',
   \ 'flux'
   \ ]
