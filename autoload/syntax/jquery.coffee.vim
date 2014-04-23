@@ -30,7 +30,7 @@ syntax keyword coffeeQAttributes     contained addClass attr hasClass html prop 
 syntax keyword coffeeQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
 syntax keyword coffeeQCSS            contained css
 syntax keyword coffeeQData           contained clearQueue data dequeue queue removeData
-syntax keyword coffeeQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
+syntax keyword coffeeQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then finally catch all defer when
 syntax keyword coffeeQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword coffeeQEffects        contained hide show toggle
 syntax keyword coffeeQEffects        contained animate delay stop finish

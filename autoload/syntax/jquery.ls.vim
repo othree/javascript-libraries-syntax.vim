@@ -30,7 +30,7 @@ syntax keyword lsQAttributes     contained addClass attr hasClass html prop remo
 syntax keyword lsQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
 syntax keyword lsQCSS            contained css
 syntax keyword lsQData           contained clearQueue data dequeue queue removeData
-syntax keyword lsQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
+syntax keyword lsQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then finally catch all defer when
 syntax keyword lsQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword lsQEffects        contained hide show toggle
 syntax keyword lsQEffects        contained animate delay stop finish
