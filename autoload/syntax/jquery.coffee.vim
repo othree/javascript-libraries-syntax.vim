@@ -8,7 +8,7 @@
 
 setlocal iskeyword+=$
 
-syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString jQuery $
+syntax keyword coffeejQuery          containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateVar jQuery $
 " syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals
 " syntax match   coffeejQuerydot       contained /([^)]*)\./ nextgroup=@coffeeQFunctions
 
