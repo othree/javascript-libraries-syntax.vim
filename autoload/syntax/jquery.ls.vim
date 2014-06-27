@@ -8,7 +8,7 @@
 
 setlocal iskeyword+=$
 
-syntax keyword lsjQuery          containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateVar jQuery $
+syntax keyword lsjQuery jQuery $ containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution
 " syntax match   lsjQuerydot       contained /\./ nextgroup=@lsQGlobals
 " syntax match   lsjQuerydot       contained /([^)]*)\./ nextgroup=@lsQFunctions
 

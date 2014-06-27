@@ -6,7 +6,7 @@
 " URL:         http://jasmine.github.io/
 
 
-syntax keyword javascriptJasmine jasmine containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=javascriptJdot
+syntax keyword javascriptJasmine jasmine containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptJdot
 syntax match   javascriptJdot contained /\./ nextgroup=javascriptJMethods
 syntax keyword javascriptJMethods contained any createSpy createSpyObj HtmlReporter Clock getEnv
 

@@ -6,7 +6,7 @@
 " URL:         http://requirejs.org/
 
 
-syntax keyword lsRequire require requirejs containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=lsRequiredot
+syntax keyword lsRequire require requirejs containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRequiredot
 syntax match   lsRequiredot contained /\./ nextgroup=lsRequireMethods
 syntax keyword lsRequireMethods contained config
 

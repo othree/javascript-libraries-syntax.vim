@@ -7,7 +7,7 @@
 " LoDash:      2.5.0
 " URL:         http://lodash.com/
 
-syntax keyword coffeeunderscore containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString _
+syntax keyword coffeeunderscore _ containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
 " syntax match   coffeeunderscoredot contained /\./ nextgroup=@coffee_Functions
 " syntax match   coffeeunderscoredot contained /([^)]*)\./ nextgroup=@coffee_Functions
 

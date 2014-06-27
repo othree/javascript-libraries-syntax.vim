@@ -5,7 +5,7 @@
 " Version:     0.9.10
 " URL:         http://backbonejs.org/
 
-syntax keyword coffeeBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString
+syntax keyword coffeeBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
 
 syntax cluster coffeeBFunctions contains=coffeeBEvents,coffeeBModel,coffeeBCollection,coffeeBRouter,coffeeBHistory,coffeeBSync,coffeeBView,coffeeBUtility
 syntax cluster coffeeBAttrs contains=coffeeBModelAttrs,coffeeBCollectionAttrs,coffeeBRouterAttrs,coffeeBSyncAttrs,coffeeBViewAttrs

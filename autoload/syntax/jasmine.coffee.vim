@@ -6,7 +6,7 @@
 " URL:         http://jasmine.github.io/
 
 
-syntax keyword coffeeJasmine jasmine containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=coffeeJdot
+syntax keyword coffeeJasmine jasmine containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeJdot
 syntax match   coffeeJdot contained /\./ nextgroup=coffeeJMethods
 syntax keyword coffeeJMethods contained any createSpy createSpyObj HtmlReporter Clock getEnv
 

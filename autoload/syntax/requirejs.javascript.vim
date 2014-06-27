@@ -6,7 +6,7 @@
 " URL:         http://requirejs.org/
 
 
-syntax keyword javascriptRequire require requirejs containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=javascriptRequiredot
+syntax keyword javascriptRequire require requirejs containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRequiredot
 syntax match   javascriptRequiredot contained /\./ nextgroup=javascriptRequireMethods
 syntax keyword javascriptRequireMethods contained config
 

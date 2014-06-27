@@ -6,7 +6,7 @@
 " URL:         http://requirejs.org/
 
 
-syntax keyword coffeeRequire require requirejs containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=coffeeRequiredot
+syntax keyword coffeeRequire require requirejs containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRequiredot
 syntax match   coffeeRequiredot contained /\./ nextgroup=coffeeRequireMethods
 syntax keyword coffeeRequireMethods contained config
 

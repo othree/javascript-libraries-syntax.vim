@@ -7,7 +7,7 @@
 
 setlocal iskeyword+=$
 
-syntax keyword typescriptAngular angular containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=typescriptAngulardot
+syntax keyword typescriptAngular angular containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptAngulardot
 syntax match   typescriptAngulardot contained /\./ nextgroup=typescriptAngularMethods
 syntax keyword typescriptAngularMethods contained bind bootstrap copy element equals
 syntax keyword typescriptAngularMethods contained extend forEach fromJson identity injector

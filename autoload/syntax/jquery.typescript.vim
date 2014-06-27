@@ -8,7 +8,7 @@
 
 setlocal iskeyword+=$
 
-syntax keyword typescriptjQuery          containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateVar jQuery $
+syntax keyword typescriptjQuery jQuery $ containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
 " syntax match   typescriptjQuerydot       contained /\./ nextgroup=@typescriptQGlobals
 " syntax match   typescriptjQuerydot       contained /([^)]*)\./ nextgroup=@typescriptQFunctions
 
