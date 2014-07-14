@@ -57,8 +57,9 @@ syntax keyword typescriptQTraversing     contained children closest find next ne
 
 
 " selector
-syntax region  typescriptString           start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=typescriptSpecial,@htmlPreproc,@jSelectors
-syntax region  typescriptString           start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=typescriptSpecial,@htmlPreproc,@jSelectors
+syntax match   typescriptASCII                 contained /\\\d\d\d/
+syntax region  typescriptString                start=/"/  skip=/\\\\\|\\"/  end=/"\|$/ contains=typescriptASCII,@jSelectors
+syntax region  typescriptString                start=/'/  skip=/\\\\\|\\'/  end=/'\|$/ contains=typescriptASCII,@jSelectors
 
 syntax cluster jSelectors      contains=jId,jClass,jOperators,jBasicFilters,jContentFilters,jVisibility,jChildFilters,jForms,jFormFilters
 syntax match   jId             contained /#[0-9A-Za-z_\-]\+/

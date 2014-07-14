@@ -57,8 +57,9 @@ syntax keyword coffeeQTraversing     contained children closest find next nextAl
 
 
 " selector
-syntax region  coffeeString           start=+"+  skip=+\\\\\|\\"+  end=+"\|$+  contains=coffeeSpecial,@htmlPreproc,@jSelectors
-syntax region  coffeeString           start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  contains=coffeeSpecial,@htmlPreproc,@jSelectors
+syntax match   coffeeASCII                 contained /\\\d\d\d/
+syntax region  coffeeString                start=/"/  skip=/\\\\\|\\"/  end=/"\|$/ contains=coffeeASCII,@jSelectors
+syntax region  coffeeString                start=/'/  skip=/\\\\\|\\'/  end=/'\|$/ contains=coffeeASCII,@jSelectors
 
 syntax cluster jSelectors      contains=jId,jClass,jOperators,jBasicFilters,jContentFilters,jVisibility,jChildFilters,jForms,jFormFilters
 syntax match   jId             contained /#[0-9A-Za-z_\-]\+/
