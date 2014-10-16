@@ -11,6 +11,6 @@ syntax cluster coffeeIdentifier add=@coffeeQFunctions,@coffee_Functions,@coffeeB
 syntax cluster coffeeIdentifier add=@coffeeQAttrs,@coffee_Attrs,@coffeeBAttrs,@coffeepAttrs
 " syntax match   coffeeLDot /\./   containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeLibraryFuncs,@coffeeLibraryAttrs
 "
-syntax region  coffeeString                start=/"/  skip=/\\\\\|\\"/  end=/"/ contains=@coffeeInterpString,@jSelectors
-syntax region  coffeeString                start=/'/  skip=/\\\\\|\\'/  end=/'/ contains=@coffeeBasicString,@jSelectors
+syntax region  coffeeString     start=/"/  skip=/\\\\\|\\"/  end=/"/ contains=@coffeeInterpString,@jSelectors
+syntax region  coffeeString     start=/'/  skip=/\\\\\|\\'/  end=/'/ contains=@coffeeBasicString,@jSelectors
 

@@ -22,3 +22,6 @@ syntax match   lsLExp /!/   containedin=ALLBUT,lsComment,lsLineComment,lsString 
 
 syntax match   lsLPipe /|>/ containedin=ALLBUT,lsComment,lsLineComment,lsString skipwhite nextgroup=@lspFunctions
 syntax match   lsLCompose />>/ containedin=ALLBUT,lsComment,lsLineComment,lsString skipwhite nextgroup=@lspFunctions
+
+syntax region  lsString start=/"/ skip=/\\\\\|\\"/ end=/"/ contains=@lsInterpString,@jSelectors
+syntax region  lsString start=/'/ skip=/\\\\\|\\'/ end=/'/ contains=@lsSimpleString,@jSelectors
