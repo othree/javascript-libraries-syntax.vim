@@ -1,7 +1,7 @@
 " Vim plugin file
 " Language:    JS Lib syntax loader
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/02/24
+" Last Change: 2014/10/29
 " Version:     0.3
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 
@@ -17,11 +17,17 @@ let s:libs = [
   \ 'jasmine'
   \ ]
 
+let s:default_libs = [
+  \ 'jquery',
+  \ 'underscore',
+  \ 'backbone'
+  \ ]
+
 let s:path = expand('<sfile>:p:h')
 
 function! jslibsyntax#load()
   if !exists('g:used_javascript_libs') 
-    let g:used_javascript_libs = join(s:libs, ',')
+    let g:used_javascript_libs = join(s:default_libs, ',')
   endif
 
   let index = 0
