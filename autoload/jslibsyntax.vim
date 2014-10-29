@@ -14,13 +14,15 @@ let s:libs = [
   \ 'angularui',
   \ 'requirejs',
   \ 'sugar',
-  \ 'jasmine'
+  \ 'jasmine',
+  \ 'react'
   \ ]
 
 let s:default_libs = [
   \ 'jquery',
   \ 'underscore',
-  \ 'backbone'
+  \ 'backbone',
+  \ 'react'
   \ ]
 
 let s:path = expand('<sfile>:p:h')
