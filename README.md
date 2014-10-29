@@ -17,6 +17,7 @@ Libraries
 * [prelude.ls](http://gkz.github.com/prelude-ls/)
 * [AngularJS](http://angularjs.org/)
 * [AngularUI](http://angular-ui.github.io)
+* [React](https://facebook.github.io/react/index.html)
 * [RequireJS](http://requirejs.org/)
 * [Sugar.js](http://sugarjs.com/)
 * [Jasmine](http://pivotal.github.io/jasmine/)
@@ -55,6 +56,7 @@ Support libs id:
 * prelude.ls: prelude
 * AngularJS: angularjs
 * AngularUI: angularui
+* React: react
 * RequireJS: requirejs
 * Sugar.js: sugar
 * Jasmine: jasmine
