@@ -2,7 +2,7 @@
 " Language:    jQuery for coffee
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2014/02/13
+" Last Change: 2014/10/29
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
@@ -57,20 +57,20 @@ syntax keyword coffeeQTraversing     contained children closest find next nextAl
 
 
 " selector
-syntax match   coffeeASCII                 contained /\\\d\d\d/
-syntax region  coffeeString                start=/"/  skip=/\\\\\|\\"/  end=/"\|$/ contains=coffeeASCII,@jSelectors
-syntax region  coffeeString                start=/'/  skip=/\\\\\|\\'/  end=/'\|$/ contains=coffeeASCII,@jSelectors
+" syntax match   coffeeASCII                 contained /\\\d\d\d/
+" syntax region  coffeeString                start=/"/  skip=/\\\\\|\\"\|\\\n/  end=/"\|$/ contains=coffeeASCII,@jSelectors
+" syntax region  coffeeString                start=/'/  skip=/\\\\\|\\'\|\\\n/  end=/'\|$/ contains=coffeeASCII,@jSelectors
 
-syntax cluster jSelectors      contains=jId,jClass,jOperators,jBasicFilters,jContentFilters,jVisibility,jChildFilters,jForms,jFormFilters
-syntax match   jId             contained /#[0-9A-Za-z_\-]\+/
-syntax match   jClass          contained /\.[0-9A-Za-z_\-]\+/
-syntax match   jOperators      contained /*\|>\|+\|-\|\~/
-syntax match   jBasicFilters   contained /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lang\|lt\|not\|odd\|root\|target\)/
-syntax match   jChildFilters   contained /:\(first\|last\|nth\|only\|nth-last\)-child/
-syntax match   jChildFilters   contained /:\(first\|last\|nth\|only\|nth-last\)-of-type/
-syntax match   jContentFilters contained /:\(contains\|empty\|has\|parent\)/
-syntax match   jForms          contained /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
-syntax match   jVisibility     contained /:\(hidden\|visible\)/
+syntax cluster cssSelectors              containedin=coffeeString contains=cssId,cssClass,cssOperators,cssBasicFilters,cssContentFilters,cssVisibility,cssChildFilters,cssForms,cssFormFilters
+syntax match   cssId                     contained /#[0-9A-Za-z_\-]\+/
+syntax match   cssClass                  contained /\.[0-9A-Za-z_\-]\+/
+syntax match   cssOperators              contained /*\|>\|+\|-\|\~/
+syntax match   cssBasicFilters           contained /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lang\|lt\|not\|odd\|root\|target\)/
+syntax match   cssChildFilters           contained /:\(first\|last\|nth\|only\|nth-last\)-child/
+syntax match   cssChildFilters           contained /:\(first\|last\|nth\|only\|nth-last\)-of-type/
+syntax match   cssContentFilters         contained /:\(contains\|empty\|has\|parent\)/
+syntax match   cssForms                  contained /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
+syntax match   cssVisibility             contained /:\(hidden\|visible\)/
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
@@ -105,15 +105,15 @@ if version >= 508 || !exists("did_jquery_coffee_syntax_inits")
   HiLink coffeeQTraversing     PreProc
   HiLink coffeeQUtilities      PreProc
 
-  HiLink jId             Identifier
-  HiLink jClass          Constant
-  HiLink jOperators      Special
-  HiLink jBasicFilters   Statement
-  HiLink jContentFilters Statement
-  HiLink jVisibility     Statement
-  HiLink jChildFilters   Statement
-  HiLink jForms          Statement
-  HiLink jFormFilters    Statement
+  HiLink cssId                     Identifier
+  HiLink cssClass                  Constant
+  HiLink cssOperators              Special
+  HiLink cssBasicFilters           Statement
+  HiLink cssContentFilters         Statement
+  HiLink cssVisibility             Statement
+  HiLink cssChildFilters           Statement
+  HiLink cssForms                  Statement
+  HiLink cssFormFilters            Statement
 
 
   delcommand HiLink
