@@ -61,6 +61,8 @@ Support libs id:
 * Sugar.js: sugar
 * Jasmine: jasmine
 
+Default lib set is: `jquery,underscore,backbone`
+
 You can use [local vimrc][] to setup libraries used in project. Sample code for local vimrc:
 
     autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
