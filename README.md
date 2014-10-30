@@ -17,9 +17,12 @@ Libraries
 * [prelude.ls](http://gkz.github.com/prelude-ls/)
 * [AngularJS](http://angularjs.org/)
 * [AngularUI](http://angular-ui.github.io)
+* [React](https://facebook.github.io/react/)
+* [Flux](https://facebook.github.io/flux/)
 * [RequireJS](http://requirejs.org/)
 * [Sugar.js](http://sugarjs.com/)
 * [Jasmine](http://pivotal.github.io/jasmine/)
+* [Chai](http://chaijs.com/)
 
 File Types
 ----------
@@ -55,9 +58,14 @@ Support libs id:
 * prelude.ls: prelude
 * AngularJS: angularjs
 * AngularUI: angularui
+* React: react
+* Flux: flux
 * RequireJS: requirejs
 * Sugar.js: sugar
 * Jasmine: jasmine
+* Chai: chai
+
+Default lib set is: `jquery,underscore,backbone`
 
 You can use [local vimrc][] to setup libraries used in project. Sample code for local vimrc:
 
@@ -86,6 +94,11 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 Changes
 -------
+
+### Version 0.4
+* Add React, Flux, Chai
+* Default lib set
+* Bug fix
 
 ### Version 0.3.6
 * Add Jasmine, AngularUI
