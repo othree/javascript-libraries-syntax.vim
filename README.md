@@ -57,6 +57,7 @@ Support libs id:
 * AngularJS: angularjs
 * AngularUI: angularui
 * React: react
+* Flux: flux
 * RequireJS: requirejs
 * Sugar.js: sugar
 * Jasmine: jasmine
@@ -90,6 +91,11 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 Changes
 -------
+
+### Version 0.4
+* Add React, Flux
+* Default lib set
+* Bug fix
 
 ### Version 0.3.6
 * Add Jasmine, AngularUI

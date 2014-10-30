@@ -1,8 +1,8 @@
 " Vim plugin file
 " Language:    JS Lib syntax loader
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/10/29
-" Version:     0.3
+" Last Change: 2014/10/30
+" Version:     0.4
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 
 let s:libs = [
@@ -15,7 +15,8 @@ let s:libs = [
   \ 'requirejs',
   \ 'sugar',
   \ 'jasmine',
-  \ 'react'
+  \ 'react',
+  \ 'flux'
   \ ]
 
 let s:default_libs = [

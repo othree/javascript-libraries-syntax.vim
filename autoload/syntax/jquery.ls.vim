@@ -61,16 +61,16 @@ syntax keyword lsQTraversing     contained children closest find next nextAll ne
 " syntax region  lsString                start=/"/  skip=/\\\\\|\\"\|\\\n/  end=/"\|$/ contains=lsASCII,@jSelectors
 " syntax region  lsString                start=/'/  skip=/\\\\\|\\'\|\\\n/  end=/'\|$/ contains=lsASCII,@jSelectors
 
-syntax cluster cssSelectors              containedin=lsString contains=cssId,cssClass,cssOperators,cssBasicFilters,cssContentFilters,cssVisibility,cssChildFilters,cssForms,cssFormFilters
-syntax match   cssId                     contained /#[0-9A-Za-z_\-]\+/
-syntax match   cssClass                  contained /\.[0-9A-Za-z_\-]\+/
-syntax match   cssOperators              contained /*\|>\|+\|-\|\~/
-syntax match   cssBasicFilters           contained /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lang\|lt\|not\|odd\|root\|target\)/
-syntax match   cssChildFilters           contained /:\(first\|last\|nth\|only\|nth-last\)-child/
-syntax match   cssChildFilters           contained /:\(first\|last\|nth\|only\|nth-last\)-of-type/
-syntax match   cssContentFilters         contained /:\(contains\|empty\|has\|parent\)/
-syntax match   cssForms                  contained /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
-syntax match   cssVisibility             contained /:\(hidden\|visible\)/
+syntax cluster cssSelectors              contains=cssId,cssClass,cssOperators,cssBasicFilters,cssContentFilters,cssVisibility,cssChildFilters,cssForms,cssFormFilters
+syntax match   cssId                     contained containedin=lsString /#[0-9A-Za-z_\-]\+/
+syntax match   cssClass                  contained containedin=lsString /\.[0-9A-Za-z_\-]\+/
+syntax match   cssOperators              contained containedin=lsString /*\|>\|+\|-\|\~/
+syntax match   cssBasicFilters           contained containedin=lsString /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lang\|lt\|not\|odd\|root\|target\)/
+syntax match   cssChildFilters           contained containedin=lsString /:\(first\|last\|nth\|only\|nth-last\)-child/
+syntax match   cssChildFilters           contained containedin=lsString /:\(first\|last\|nth\|only\|nth-last\)-of-type/
+syntax match   cssContentFilters         contained containedin=lsString /:\(contains\|empty\|has\|parent\)/
+syntax match   cssForms                  contained containedin=lsString /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
+syntax match   cssVisibility             contained containedin=lsString /:\(hidden\|visible\)/
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
