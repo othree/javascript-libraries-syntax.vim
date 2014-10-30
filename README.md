@@ -22,6 +22,7 @@ Libraries
 * [RequireJS](http://requirejs.org/)
 * [Sugar.js](http://sugarjs.com/)
 * [Jasmine](http://pivotal.github.io/jasmine/)
+* [Chai](http://chaijs.com/)
 
 File Types
 ----------
@@ -62,6 +63,7 @@ Support libs id:
 * RequireJS: requirejs
 * Sugar.js: sugar
 * Jasmine: jasmine
+* Chai: chai
 
 Default lib set is: `jquery,underscore,backbone`
 
