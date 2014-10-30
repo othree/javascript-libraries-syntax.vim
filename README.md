@@ -96,7 +96,7 @@ Changes
 -------
 
 ### Version 0.4
-* Add React, Flux
+* Add React, Flux, Chai
 * Default lib set
 * Bug fix
 
