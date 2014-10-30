@@ -33,7 +33,7 @@ function! jslibsyntax#load()
       exec('let use = b:javascript_lib_use_'.lib)
     endif
     if use
-      let fn = s:path.'/syntax/'.lib.'.'.&filetype.'.vim'
+      let fn = s:path.'/syntax/'.lib.'.'.b:current_syntax.'.vim'
       if filereadable(fn)
         exe('source '.fnameescape(fn))
         let loaded = loaded + 1
@@ -41,7 +41,7 @@ function! jslibsyntax#load()
     endif
     let index = index + 1
   endwhile
-  let fn = s:path.'/syntax/postprocess.'.&filetype.'.vim'
+  let fn = s:path.'/syntax/postprocess.'.b:current_syntax.'.vim'
   if loaded > 0 && filereadable(fn)
     exe('source '.fnameescape(fn))
   endif
