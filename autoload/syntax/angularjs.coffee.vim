@@ -5,8 +5,6 @@
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-setlocal iskeyword+=$
-
 syntax keyword coffeeAngular angular containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeAngulardot
 syntax match   coffeeAngulardot contained /\./ nextgroup=coffeeAngularMethods
 syntax keyword coffeeAngularMethods contained bind bootstrap copy element equals

@@ -6,7 +6,10 @@
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
-setlocal iskeyword+=$
+setlocal iskeyword-=$
+if exists("b:current_syntax") && b:current_syntax == 'ls'
+  setlocal iskeyword+=$
+endif
 
 syntax keyword lsjQuery jQuery $ containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution
 " syntax match   lsjQuerydot       contained /\./ nextgroup=@lsQGlobals

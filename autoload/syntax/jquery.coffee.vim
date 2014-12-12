@@ -6,7 +6,10 @@
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
-setlocal iskeyword+=$
+setlocal iskeyword-=$
+if exists("b:current_syntax") && b:current_syntax == 'coffee'
+  setlocal iskeyword+=$
+endif
 
 syntax keyword coffeejQuery jQuery $ containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
 " syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals

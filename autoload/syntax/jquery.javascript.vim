@@ -6,7 +6,10 @@
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
-setlocal iskeyword+=$
+setlocal iskeyword-=$
+if exists("b:current_syntax") && b:current_syntax == 'javascript'
+  setlocal iskeyword+=$
+endif
 
 syntax keyword javascriptjQuery jQuery $ containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution
 " syntax match   javascriptjQuerydot       contained /\./ nextgroup=@javascriptQGlobals

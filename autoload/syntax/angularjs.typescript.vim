@@ -5,8 +5,6 @@
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-setlocal iskeyword+=$
-
 syntax keyword typescriptAngular angular containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptAngulardot
 syntax match   typescriptAngulardot contained /\./ nextgroup=typescriptAngularMethods
 syntax keyword typescriptAngularMethods contained bind bootstrap copy element equals
