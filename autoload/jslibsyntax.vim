@@ -17,7 +17,8 @@ let s:libs = [
   \ 'jasmine',
   \ 'chai',
   \ 'react',
-  \ 'flux'
+  \ 'flux',
+  \ 'handlebars'
   \ ]
 
 let s:default_libs = [

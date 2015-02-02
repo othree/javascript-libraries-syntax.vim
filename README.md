@@ -23,6 +23,7 @@ Libraries
 * [Sugar.js](http://sugarjs.com/)
 * [Jasmine](http://pivotal.github.io/jasmine/)
 * [Chai](http://chaijs.com/)
+* [Handlebars](http://handlebarsjs.com/)
 
 File Types
 ----------
@@ -64,6 +65,7 @@ Support libs id:
 * Sugar.js: sugar
 * Jasmine: jasmine
 * Chai: chai
+* Handlebars: handlebars
 
 Default lib set is: `jquery,underscore,backbone`
 
