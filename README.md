@@ -98,7 +98,7 @@ Changes
 -------
 
 ### Version 0.4
-* Add React, Flux, Chai
+* Add React, Flux, Chai, Handlbars
 * Default lib set
 * Bug fix
 
