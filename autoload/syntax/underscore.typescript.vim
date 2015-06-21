@@ -33,40 +33,40 @@ syntax keyword typescript_arrays contained lastIndexOf sortedIndex range
 " lodash 3.0.0
 syntax keyword typescript_arrays contained chunk dropRight dropRightWhile dropWhile flattenDeep
 syntax keyword typescript_arrays contained pullAt slice sortedLastIndex takeRight takeRightWhile
-syntax keyword typescript_arrays contained takeWhile 
-"
+syntax keyword typescript_arrays contained takeWhile
+
 syntax keyword typescript_functions contained bind bindAll partial memoize delay throttle debounce
 syntax keyword typescript_functions contained once after before wrap negate compose flow flowRight
 " lodash 3.0.0
 syntax keyword typescript_functions contained ary before curryRight negate rearg
 syntax keyword typescript_functions contained backflow compose partial cancel
-"
 
 syntax keyword typescript_objects contained keys values pairs invert functions extend pick omit
 syntax keyword typescript_objects contained defaults clone tap has isEqual isEmpty isElement isArray
 syntax keyword typescript_objects contained isObject isArguments isFunction isString isNumber
-syntax keyword typescript_objects contained isFinite isBoolean isDate isRegExp isNaN isNull 
+syntax keyword typescript_objects contained isFinite isBoolean isDate isRegExp isNaN isNull
 syntax keyword typescript_objects contained isUndefined property matches
 " lodash 3.0.0
-syntax keyword typescript_objects contained keysIn valuesIn
+syntax keyword typescript_objects contained keysIn valuesIn assign get set
+syntax keyword typescript_objects contained mapKeys
 "
 syntax keyword typescript_utility contained noConflict identify times random mixin uniqueId
 syntax keyword typescript_utility contained escape unescape result template iteratee noop
 " lodash 3.0.0
-syntax keyword typescript_utility contained attempt matches propertyOf constant now
-"
+syntax keyword typescript_utility contained attempt matches matchesProperty propertyOf constant now
+syntax keyword typescript_utility contained attempt matches matchesProperty propertyOf constant now
+
 syntax keyword typescript_chaining contained chain value thru
 
 syntax keyword typescript_lodash contained at bindKey cloneDeep createCallback findIndex findKey
 syntax keyword typescript_lodash contained forEach forIn forOwn isPlainObject merge parseInt partial
-syntax keyword typescript_lodash contained partialRight runInContext support unzip where 
+syntax keyword typescript_lodash contained partialRight runInContext support unzip where
 syntax keyword typescript_lodash contained capitalize match slice trim trimLeft trimRight
 syntax keyword typescript_lodash contained constant mapValues now property xor
-syntax keyword typescript_lodash contained create noop transform 
+syntax keyword typescript_lodash contained create noop transform
 " lodash 3.0.0
 syntax keyword typescript_lodash contained isError isMatch isNative isTypedArray toPlainObject
 "
-
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
@@ -89,7 +89,6 @@ if version >= 508 || !exists("did_underscore_typescript_syntax_inits")
   HiLink typescript_utility        PreProc
   HiLink typescript_chaining       PreProc
   HiLink typescript_lodash         PreProc
-
 
   delcommand HiLink
 endif
