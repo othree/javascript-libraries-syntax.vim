@@ -33,40 +33,40 @@ syntax keyword ls_arrays contained lastIndexOf sortedIndex range
 " lodash 3.0.0
 syntax keyword ls_arrays contained chunk dropRight dropRightWhile dropWhile flattenDeep
 syntax keyword ls_arrays contained pullAt slice sortedLastIndex takeRight takeRightWhile
-syntax keyword ls_arrays contained takeWhile 
-"
+syntax keyword ls_arrays contained takeWhile
+
 syntax keyword ls_functions contained bind bindAll partial memoize delay throttle debounce
 syntax keyword ls_functions contained once after before wrap negate compose flow flowRight
 " lodash 3.0.0
 syntax keyword ls_functions contained ary before curryRight negate rearg
 syntax keyword ls_functions contained backflow compose partial cancel
-"
 
 syntax keyword ls_objects contained keys values pairs invert functions extend pick omit
 syntax keyword ls_objects contained defaults clone tap has isEqual isEmpty isElement isArray
 syntax keyword ls_objects contained isObject isArguments isFunction isString isNumber
-syntax keyword ls_objects contained isFinite isBoolean isDate isRegExp isNaN isNull 
+syntax keyword ls_objects contained isFinite isBoolean isDate isRegExp isNaN isNull
 syntax keyword ls_objects contained isUndefined property matches
 " lodash 3.0.0
-syntax keyword ls_objects contained keysIn valuesIn
+syntax keyword ls_objects contained keysIn valuesIn assign get set
+syntax keyword ls_objects contained mapKeys
 "
 syntax keyword ls_utility contained noConflict identify times random mixin uniqueId
 syntax keyword ls_utility contained escape unescape result template iteratee noop
 " lodash 3.0.0
-syntax keyword ls_utility contained attempt matches propertyOf constant now
-"
+syntax keyword ls_utility contained attempt matches matchesProperty propertyOf constant now
+syntax keyword ls_utility contained attempt matches matchesProperty propertyOf constant now
+
 syntax keyword ls_chaining contained chain value thru
 
 syntax keyword ls_lodash contained at bindKey cloneDeep createCallback findIndex findKey
 syntax keyword ls_lodash contained forEach forIn forOwn isPlainObject merge parseInt partial
-syntax keyword ls_lodash contained partialRight runInContext support unzip where 
+syntax keyword ls_lodash contained partialRight runInContext support unzip where
 syntax keyword ls_lodash contained capitalize match slice trim trimLeft trimRight
 syntax keyword ls_lodash contained constant mapValues now property xor
-syntax keyword ls_lodash contained create noop transform 
+syntax keyword ls_lodash contained create noop transform
 " lodash 3.0.0
 syntax keyword ls_lodash contained isError isMatch isNative isTypedArray toPlainObject
 "
-
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
@@ -89,7 +89,6 @@ if version >= 508 || !exists("did_underscore_ls_syntax_inits")
   HiLink ls_utility        PreProc
   HiLink ls_chaining       PreProc
   HiLink ls_lodash         PreProc
-
 
   delcommand HiLink
 endif
