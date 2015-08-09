@@ -12,6 +12,7 @@ let s:libs = [
   \ 'prelude',
   \ 'angularjs',
   \ 'angularui',
+  \ 'angularui-router',
   \ 'requirejs',
   \ 'sugar',
   \ 'jasmine',
