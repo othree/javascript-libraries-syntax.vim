@@ -60,7 +60,7 @@ Support libs id:
 * prelude.ls: prelude
 * AngularJS: angularjs
 * AngularUI: angularui
-* AngularUI Router: angularui-router
+* AngularUI Router: angularuirouter
 * React: react
 * Flux: flux
 * RequireJS: requirejs
