@@ -1,33 +1,36 @@
 " Vim syntax file
 " Language:    Backbone.js for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/07/26
-" Version:     0.9.10
+" Last Change: 2016/01/07
+" Version:     1.2.3
 " URL:         http://backbonejs.org/
 
-syntax keyword typescriptBackbone Backbone Collection Model View Events Router History Sync Utility containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
+syntax keyword typescriptBackbone Backbone containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution,typescriptBDot
+syntax match   typescriptBDot     contained /\./ nextgroup=typescriptBObjects
+syntax keyword typescriptBObjects contained Collection Model View Events Router History Utility sync ajax emulateHTTP emulateJSON
 
 syntax cluster typescriptBFunctions contains=typescriptBEvents,typescriptBModel,typescriptBCollection,typescriptBRouter,typescriptBHistory,typescriptBSync,typescriptBView,typescriptBUtility
 syntax cluster typescriptBAttrs contains=typescriptBModelAttrs,typescriptBCollectionAttrs,typescriptBRouterAttrs,typescriptBSyncAttrs,typescriptBViewAttrs
 
-syntax keyword typescriptBEvents contained on off trigger once listenTo stopListening
+syntax keyword typescriptBEvents contained on off trigger once listenTo stopListening listenToOnce
 syntax keyword typescriptBModel contained extend constructor initialize get set escape has unset clear
 syntax keyword typescriptBModel contained toJSON sync fetch save destroy validate validationError url parse
 syntax keyword typescriptBModel contained clone isNew hasChanged changedAttributes previous previousAttributes
-syntax keyword typescriptBCollection contained extend constructor initialize toJSON sync add remove reset update get at 
-syntax keyword typescriptBCollection contained push pop unshift shift length comparator sort pluck where url parse clone fetch create
-syntax keyword typescriptBRouter contained extend constructor initialize route navigate
+syntax keyword typescriptBCollection contained extend constructor initialize toJSON sync add remove reset set get at 
+syntax keyword typescriptBCollection contained push pop unshift shift slice length comparator sort pluck where 
+syntax keyword typescriptBCollection contained findWhere url parse clone fetch create
+syntax keyword typescriptBRouter contained extend constructor initialize route navigate execute
 syntax keyword typescriptBHistory contained start
 syntax keyword typescriptBSync contained ajax 
 syntax keyword typescriptBView contained extend constructor initialize setElement render remove delegateEvents undelegateEvents
 syntax keyword typescriptBUtility contained noConflict 
 
 syntax keyword typescriptBModelAttrs contained id idAttribute cid attributes changed defaults urlRoot
-syntax keyword typescriptBCollectionAttrs contained model models length comparator url
+syntax keyword typescriptBCollectionAttrs contained model modelId models length comparator url
 syntax keyword typescriptBRouterAttrs contained routes
-syntax keyword typescriptBSyncAttrs contained emulateHTTP emulateJSON
-syntax keyword typescriptBViewAttrs contained el attributes
+syntax keyword typescriptBViewAttrs contained el attributes events
 syntax keyword typescriptBViewAttrs match /$el/
+syntax keyword typescriptBViewAttrs match /$/
 
 
 " Define the default highlighting.
@@ -42,6 +45,7 @@ if version >= 508 || !exists("did_backbone_typescript_syntax_inits")
   endif
 
   HiLink typescriptBackbone         Constant
+  HiLink typescriptBObjects         Constant
 
   HiLink typescriptBEvents          PreProc
   HiLink typescriptBModel           PreProc
