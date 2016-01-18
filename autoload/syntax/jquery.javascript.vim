@@ -48,7 +48,7 @@ syntax keyword javascriptQEvents         contained focusin focusout keydown keyp
 syntax keyword javascriptQEvents         contained click dblclick hover mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup
 syntax keyword javascriptQManipulation   contained clone
 syntax keyword javascriptQManipulation   contained unwrap wrap wrapAll wrapInner
-syntax keyword javascriptQManipulation   contained append appendTo html preprend prependTo text
+syntax keyword javascriptQManipulation   contained append appendTo html prepend prependTo text
 syntax keyword javascriptQManipulation   contained after before insertAfter insertBefore
 syntax keyword javascriptQManipulation   contained detach empty remove
 syntax keyword javascriptQManipulation   contained replaceAll replaceWith

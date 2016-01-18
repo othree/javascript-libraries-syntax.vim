@@ -48,7 +48,7 @@ syntax keyword lsQEvents         contained focusin focusout keydown keypress key
 syntax keyword lsQEvents         contained click dblclick hover mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup
 syntax keyword lsQManipulation   contained clone
 syntax keyword lsQManipulation   contained unwrap wrap wrapAll wrapInner
-syntax keyword lsQManipulation   contained append appendTo html preprend prependTo text
+syntax keyword lsQManipulation   contained append appendTo html prepend prependTo text
 syntax keyword lsQManipulation   contained after before insertAfter insertBefore
 syntax keyword lsQManipulation   contained detach empty remove
 syntax keyword lsQManipulation   contained replaceAll replaceWith

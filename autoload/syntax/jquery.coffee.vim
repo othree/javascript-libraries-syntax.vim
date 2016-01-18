@@ -48,7 +48,7 @@ syntax keyword coffeeQEvents         contained focusin focusout keydown keypress
 syntax keyword coffeeQEvents         contained click dblclick hover mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup
 syntax keyword coffeeQManipulation   contained clone
 syntax keyword coffeeQManipulation   contained unwrap wrap wrapAll wrapInner
-syntax keyword coffeeQManipulation   contained append appendTo html preprend prependTo text
+syntax keyword coffeeQManipulation   contained append appendTo html prepend prependTo text
 syntax keyword coffeeQManipulation   contained after before insertAfter insertBefore
 syntax keyword coffeeQManipulation   contained detach empty remove
 syntax keyword coffeeQManipulation   contained replaceAll replaceWith
