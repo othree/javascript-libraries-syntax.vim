@@ -48,7 +48,7 @@ syntax keyword typescriptQEvents         contained focusin focusout keydown keyp
 syntax keyword typescriptQEvents         contained click dblclick hover mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup
 syntax keyword typescriptQManipulation   contained clone
 syntax keyword typescriptQManipulation   contained unwrap wrap wrapAll wrapInner
-syntax keyword typescriptQManipulation   contained append appendTo html preprend prependTo text
+syntax keyword typescriptQManipulation   contained append appendTo html prepend prependTo text
 syntax keyword typescriptQManipulation   contained after before insertAfter insertBefore
 syntax keyword typescriptQManipulation   contained detach empty remove
 syntax keyword typescriptQManipulation   contained replaceAll replaceWith
