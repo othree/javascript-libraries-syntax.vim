@@ -65,6 +65,7 @@ syntax keyword typescriptQTraversing     contained children closest find next ne
 " syntax region  typescriptString                start=/'/  skip=/\\\\\|\\'\|\\\n/  end=/'\|$/ contains=typescriptASCII,@jSelectors
 
 syntax cluster cssSelectors              contains=cssId,cssClass,cssOperators,cssBasicFilters,cssContentFilters,cssVisibility,cssChildFilters,cssForms,cssFormFilters
+syntax cluster typescriptNoReserved      add=@cssSelectors
 syntax match   cssId                     contained containedin=typescriptString /#[0-9A-Za-z_\-]\+/
 syntax match   cssClass                  contained containedin=typescriptString /\.[0-9A-Za-z_\-]\+/
 syntax match   cssOperators              contained containedin=typescriptString /*\|>\|+\|-\|\~/

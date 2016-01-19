@@ -65,6 +65,7 @@ syntax keyword lsQTraversing     contained children closest find next nextAll ne
 " syntax region  lsString                start=/'/  skip=/\\\\\|\\'\|\\\n/  end=/'\|$/ contains=lsASCII,@jSelectors
 
 syntax cluster cssSelectors              contains=cssId,cssClass,cssOperators,cssBasicFilters,cssContentFilters,cssVisibility,cssChildFilters,cssForms,cssFormFilters
+syntax cluster lsNoReserved      add=@cssSelectors
 syntax match   cssId                     contained containedin=lsString /#[0-9A-Za-z_\-]\+/
 syntax match   cssClass                  contained containedin=lsString /\.[0-9A-Za-z_\-]\+/
 syntax match   cssOperators              contained containedin=lsString /*\|>\|+\|-\|\~/

@@ -65,6 +65,7 @@ syntax keyword coffeeQTraversing     contained children closest find next nextAl
 " syntax region  coffeeString                start=/'/  skip=/\\\\\|\\'\|\\\n/  end=/'\|$/ contains=coffeeASCII,@jSelectors
 
 syntax cluster cssSelectors              contains=cssId,cssClass,cssOperators,cssBasicFilters,cssContentFilters,cssVisibility,cssChildFilters,cssForms,cssFormFilters
+syntax cluster coffeeNoReserved      add=@cssSelectors
 syntax match   cssId                     contained containedin=coffeeString /#[0-9A-Za-z_\-]\+/
 syntax match   cssClass                  contained containedin=coffeeString /\.[0-9A-Za-z_\-]\+/
 syntax match   cssOperators              contained containedin=coffeeString /*\|>\|+\|-\|\~/
