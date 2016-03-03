@@ -6,7 +6,7 @@
 " URL:         https://facebook.github.io/react/docs/top-level-api.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword javascriptReact React containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution
+syntax keyword javascriptReact React ReactDOM containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution
 
 syntax keyword javascriptRTop contained createClass render unmountComponentAtNode renderToString
 syntax keyword javascriptRTop contained renderToStaticMarkup isValidElement DOM PropTypes

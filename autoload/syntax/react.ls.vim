@@ -6,7 +6,7 @@
 " URL:         https://facebook.github.io/react/docs/top-level-api.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword lsReact React containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution
+syntax keyword lsReact React ReactDOM containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution
 
 syntax keyword lsRTop contained createClass render unmountComponentAtNode renderToString
 syntax keyword lsRTop contained renderToStaticMarkup isValidElement DOM PropTypes

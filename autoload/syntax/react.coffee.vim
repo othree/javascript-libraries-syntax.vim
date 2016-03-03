@@ -6,7 +6,7 @@
 " URL:         https://facebook.github.io/react/docs/top-level-api.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword coffeeReact React containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
+syntax keyword coffeeReact React ReactDOM containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
 
 syntax keyword coffeeRTop contained createClass render unmountComponentAtNode renderToString
 syntax keyword coffeeRTop contained renderToStaticMarkup isValidElement DOM PropTypes
