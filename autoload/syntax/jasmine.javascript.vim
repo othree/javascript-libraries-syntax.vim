@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    jasmine for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/01/31
+" Last Change: 2016/04/19
 " Version:     2.0
 " URL:         http://jasmine.github.io/
 
@@ -16,11 +16,11 @@ syntax keyword javascriptJMethods contained addReporter specFilter
 syntax cluster javascriptJFunctions      contains=javascriptJMethods,javascriptJEnvMethods,javascriptJEnvMethods,javascriptJExpectMethods,javascriptJSpyMethods,javascriptJSpyAndMethods,javascriptJSpyCallsMethods
 syntax cluster javascriptJAttrs      contains=javascriptJExpectNot,javascriptJSpyAnd,javascriptJSpyCalls
 
-syntax keyword javascriptJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString
+syntax keyword javascriptJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
 
-syntax keyword javascriptJGlobalMethod xdescribe xit containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString
+syntax keyword javascriptJGlobalMethod xdescribe xit containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
 
-syntax keyword javascriptJGlobalMethod spyOn containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString
+syntax keyword javascriptJGlobalMethod spyOn containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
 
 syntax keyword javascriptJSpyAnd and contained
 syntax keyword javascriptJSpyAndMethods returnValue callFake throwError stub contained
@@ -28,7 +28,7 @@ syntax keyword javascriptJSpyCalls calls contained
 syntax keyword javascriptJSpyMethods andReturn andCallThrough callThrough contained
 syntax keyword javascriptJCallsMethods any count argsFor allArgs all mostRecent first reset contained
 
-syntax keyword javascriptJGlobalMethod expect containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString
+syntax keyword javascriptJGlobalMethod expect containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
 syntax keyword javascriptJExpectNot not contained nextgroup=javascriptJExpectNotdot
 
 syntax keyword javascriptJExpectMethods toHaveBeenCalled toHaveBeenCalledWith toEqual toBe toMatch contained

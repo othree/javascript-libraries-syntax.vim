@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    jasmine for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/01/31
+" Last Change: 2016/04/19
 " Version:     2.0
 " URL:         http://jasmine.github.io/
 
@@ -16,11 +16,11 @@ syntax keyword lsJMethods contained addReporter specFilter
 syntax cluster lsJFunctions      contains=lsJMethods,lsJEnvMethods,lsJEnvMethods,lsJExpectMethods,lsJSpyMethods,lsJSpyAndMethods,lsJSpyCallsMethods
 syntax cluster lsJAttrs      contains=lsJExpectNot,lsJSpyAnd,lsJSpyCalls
 
-syntax keyword lsJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,lsComment,lsLineComment,lsString
+syntax keyword lsJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
 
-syntax keyword lsJGlobalMethod xdescribe xit containedin=ALLBUT,lsComment,lsLineComment,lsString
+syntax keyword lsJGlobalMethod xdescribe xit containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
 
-syntax keyword lsJGlobalMethod spyOn containedin=ALLBUT,lsComment,lsLineComment,lsString
+syntax keyword lsJGlobalMethod spyOn containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
 
 syntax keyword lsJSpyAnd and contained
 syntax keyword lsJSpyAndMethods returnValue callFake throwError stub contained
@@ -28,7 +28,7 @@ syntax keyword lsJSpyCalls calls contained
 syntax keyword lsJSpyMethods andReturn andCallThrough callThrough contained
 syntax keyword lsJCallsMethods any count argsFor allArgs all mostRecent first reset contained
 
-syntax keyword lsJGlobalMethod expect containedin=ALLBUT,lsComment,lsLineComment,lsString
+syntax keyword lsJGlobalMethod expect containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
 syntax keyword lsJExpectNot not contained nextgroup=lsJExpectNotdot
 
 syntax keyword lsJExpectMethods toHaveBeenCalled toHaveBeenCalledWith toEqual toBe toMatch contained

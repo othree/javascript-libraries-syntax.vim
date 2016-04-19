@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    jasmine for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/01/31
+" Last Change: 2016/04/19
 " Version:     2.0
 " URL:         http://jasmine.github.io/
 
@@ -16,11 +16,11 @@ syntax keyword coffeeJMethods contained addReporter specFilter
 syntax cluster coffeeJFunctions      contains=coffeeJMethods,coffeeJEnvMethods,coffeeJEnvMethods,coffeeJExpectMethods,coffeeJSpyMethods,coffeeJSpyAndMethods,coffeeJSpyCallsMethods
 syntax cluster coffeeJAttrs      contains=coffeeJExpectNot,coffeeJSpyAnd,coffeeJSpyCalls
 
-syntax keyword coffeeJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString
+syntax keyword coffeeJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
 
-syntax keyword coffeeJGlobalMethod xdescribe xit containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString
+syntax keyword coffeeJGlobalMethod xdescribe xit containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
 
-syntax keyword coffeeJGlobalMethod spyOn containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString
+syntax keyword coffeeJGlobalMethod spyOn containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
 
 syntax keyword coffeeJSpyAnd and contained
 syntax keyword coffeeJSpyAndMethods returnValue callFake throwError stub contained
@@ -28,7 +28,7 @@ syntax keyword coffeeJSpyCalls calls contained
 syntax keyword coffeeJSpyMethods andReturn andCallThrough callThrough contained
 syntax keyword coffeeJCallsMethods any count argsFor allArgs all mostRecent first reset contained
 
-syntax keyword coffeeJGlobalMethod expect containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString
+syntax keyword coffeeJGlobalMethod expect containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
 syntax keyword coffeeJExpectNot not contained nextgroup=coffeeJExpectNotdot
 
 syntax keyword coffeeJExpectMethods toHaveBeenCalled toHaveBeenCalledWith toEqual toBe toMatch contained

@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    jasmine for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/01/31
+" Last Change: 2016/04/19
 " Version:     2.0
 " URL:         http://jasmine.github.io/
 
@@ -16,11 +16,11 @@ syntax keyword typescriptJMethods contained addReporter specFilter
 syntax cluster typescriptJFunctions      contains=typescriptJMethods,typescriptJEnvMethods,typescriptJEnvMethods,typescriptJExpectMethods,typescriptJSpyMethods,typescriptJSpyAndMethods,typescriptJSpyCallsMethods
 syntax cluster typescriptJAttrs      contains=typescriptJExpectNot,typescriptJSpyAnd,typescriptJSpyCalls
 
-syntax keyword typescriptJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString
+syntax keyword typescriptJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
 
-syntax keyword typescriptJGlobalMethod xdescribe xit containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString
+syntax keyword typescriptJGlobalMethod xdescribe xit containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
 
-syntax keyword typescriptJGlobalMethod spyOn containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString
+syntax keyword typescriptJGlobalMethod spyOn containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
 
 syntax keyword typescriptJSpyAnd and contained
 syntax keyword typescriptJSpyAndMethods returnValue callFake throwError stub contained
@@ -28,7 +28,7 @@ syntax keyword typescriptJSpyCalls calls contained
 syntax keyword typescriptJSpyMethods andReturn andCallThrough callThrough contained
 syntax keyword typescriptJCallsMethods any count argsFor allArgs all mostRecent first reset contained
 
-syntax keyword typescriptJGlobalMethod expect containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString
+syntax keyword typescriptJGlobalMethod expect containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
 syntax keyword typescriptJExpectNot not contained nextgroup=typescriptJExpectNotdot
 
 syntax keyword typescriptJExpectMethods toHaveBeenCalled toHaveBeenCalledWith toEqual toBe toMatch contained
