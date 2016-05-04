@@ -64,17 +64,17 @@ syntax keyword coffeeQTraversing     contained children closest find next nextAl
 " syntax region  coffeeString                start=/"/  skip=/\\\\\|\\"\|\\\n/  end=/"\|$/ contains=coffeeASCII,@jSelectors
 " syntax region  coffeeString                start=/'/  skip=/\\\\\|\\'\|\\\n/  end=/'\|$/ contains=coffeeASCII,@jSelectors
 
-syntax cluster cssSelectors              contains=cssId,cssClass,cssOperators,cssBasicFilters,cssContentFilters,cssVisibility,cssChildFilters,cssForms,cssFormFilters
-syntax cluster coffeeNoReserved      add=@cssSelectors
-syntax match   cssId                     contained containedin=coffeeString /#[0-9A-Za-z_\-]\+/
-syntax match   cssClass                  contained containedin=coffeeString /\.[0-9A-Za-z_\-]\+/
-syntax match   cssOperators              contained containedin=coffeeString /*\|>\|+\|-\|\~/
-syntax match   cssBasicFilters           contained containedin=coffeeString /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lang\|lt\|not\|odd\|root\|target\)/
-syntax match   cssChildFilters           contained containedin=coffeeString /:\(first\|last\|nth\|only\|nth-last\)-child/
-syntax match   cssChildFilters           contained containedin=coffeeString /:\(first\|last\|nth\|only\|nth-last\)-of-type/
-syntax match   cssContentFilters         contained containedin=coffeeString /:\(contains\|empty\|has\|parent\)/
-syntax match   cssForms                  contained containedin=coffeeString /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
-syntax match   cssVisibility             contained containedin=coffeeString /:\(hidden\|visible\)/
+" syntax cluster cssSelectors              contains=cssId,cssClass,cssOperators,cssBasicFilters,cssContentFilters,cssVisibility,cssChildFilters,cssForms,cssFormFilters
+" syntax cluster coffeeNoReserved      add=@cssSelectors
+" syntax match   cssId                     contained containedin=coffeeString /#[0-9A-Za-z_\-]\+/
+" syntax match   cssClass                  contained containedin=coffeeString /\.[0-9A-Za-z_\-]\+/
+" syntax match   cssOperators              contained containedin=coffeeString /*\|>\|+\|-\|\~/
+" syntax match   cssBasicFilters           contained containedin=coffeeString /:\(animated\|eq\|even\|first\|focus\|gt\|header\|last\|lang\|lt\|not\|odd\|root\|target\)/
+" syntax match   cssChildFilters           contained containedin=coffeeString /:\(first\|last\|nth\|only\|nth-last\)-child/
+" syntax match   cssChildFilters           contained containedin=coffeeString /:\(first\|last\|nth\|only\|nth-last\)-of-type/
+" syntax match   cssContentFilters         contained containedin=coffeeString /:\(contains\|empty\|has\|parent\)/
+" syntax match   cssForms                  contained containedin=coffeeString /:\(button\|checkbox\|checked\|disabled\|enabled\|file\|image\|input\|password\|radio\|reset\|selected\|submit\|text\)/
+" syntax match   cssVisibility             contained containedin=coffeeString /:\(hidden\|visible\)/
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
@@ -109,15 +109,15 @@ if version >= 508 || !exists("did_jquery_coffee_syntax_inits")
   HiLink coffeeQTraversing     PreProc
   HiLink coffeeQUtilities      PreProc
 
-  HiLink cssId                     Identifier
-  HiLink cssClass                  Constant
-  HiLink cssOperators              Special
-  HiLink cssBasicFilters           Statement
-  HiLink cssContentFilters         Statement
-  HiLink cssVisibility             Statement
-  HiLink cssChildFilters           Statement
-  HiLink cssForms                  Statement
-  HiLink cssFormFilters            Statement
+  " HiLink cssId                     Identifier
+  " HiLink cssClass                  Constant
+  " HiLink cssOperators              Special
+  " HiLink cssBasicFilters           Statement
+  " HiLink cssContentFilters         Statement
+  " HiLink cssVisibility             Statement
+  " HiLink cssChildFilters           Statement
+  " HiLink cssForms                  Statement
+  " HiLink cssFormFilters            Statement
 
 
   delcommand HiLink
