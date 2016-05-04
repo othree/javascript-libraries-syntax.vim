@@ -25,6 +25,7 @@ Libraries
 * [Jasmine](http://pivotal.github.io/jasmine/)
 * [Chai](http://chaijs.com/)
 * [Handlebars](http://handlebarsjs.com/)
+* [Ramda](http://ramdajs.com/)
 
 File Types
 ----------
@@ -33,8 +34,6 @@ File Types
 * [CoffeeScript](http://coffeescript.org/)
 * [LiveScript](http://livescript.net/)
 * [TypeScript](http://www.typescriptlang.org/)
-
-Will be more when SyntaxComplete has new version.
 
 Install
 -------
@@ -70,6 +69,7 @@ Support libs id:
 * Jasmine: jasmine
 * Chai: chai
 * Handlebars: handlebars
+* Ramda: ramda
 
 Default lib set is: `jquery,underscore,backbone`
 
@@ -102,6 +102,9 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 Changes
 -------
+
+### Version 0.5
+* Add Ramda
 
 ### Version 0.4
 * Add React, Flux, Chai, Handlbars
@@ -151,10 +154,13 @@ Credits
 
 * Bruno Michel, [jQuery : Syntax file for jQuery][jquery.vim]
 * [Peter Renström][], for [summarize and explain AngularJS stuff][issue1].
+* [Benedict Aas][], for [summarize Ramda stuff][issue34]
 
 [jquery.vim]:http://www.vim.org/scripts/script.php?script_id=2416
 [Peter Renström]:https://github.com/renstrom
 [issue1]:https://github.com/othree/javascript-libraries-syntax.vim/issues/1
+[Benedict Aas]:https://github.com/Shou
+[issue34]:https://github.com/othree/javascript-libraries-syntax.vim/issues/34#issuecomment-216404353
 
 License
 -------
