@@ -58,8 +58,8 @@ syntax keyword lsAScookieStoreMethods contained get put remove
 syntax cluster lsAFunctions contains=lsAMFunctions
 syntax cluster lsAAttrs contains=lsAMAttrs
 
-syntax keyword lsAMFunctions contained config constant controller directive factory
-syntax keyword lsAMFunctions contained filter provider run service value
+syntax keyword lsAMFunctions contained config constant controller component directive
+syntax keyword lsAMFunctions contained factory filter provider run service value
 syntax keyword lsAMAttrs contained name requires
 
 

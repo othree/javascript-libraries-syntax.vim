@@ -58,8 +58,8 @@ syntax keyword javascriptAScookieStoreMethods contained get put remove
 syntax cluster javascriptAFunctions contains=javascriptAMFunctions
 syntax cluster javascriptAAttrs contains=javascriptAMAttrs
 
-syntax keyword javascriptAMFunctions contained config constant controller directive factory
-syntax keyword javascriptAMFunctions contained filter provider run service value
+syntax keyword javascriptAMFunctions contained config constant controller component directive
+syntax keyword javascriptAMFunctions contained factory filter provider run service value
 syntax keyword javascriptAMAttrs contained name requires
 
 

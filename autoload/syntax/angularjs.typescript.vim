@@ -58,8 +58,8 @@ syntax keyword typescriptAScookieStoreMethods contained get put remove
 syntax cluster typescriptAFunctions contains=typescriptAMFunctions
 syntax cluster typescriptAAttrs contains=typescriptAMAttrs
 
-syntax keyword typescriptAMFunctions contained config constant controller directive factory
-syntax keyword typescriptAMFunctions contained filter provider run service value
+syntax keyword typescriptAMFunctions contained config constant controller component directive
+syntax keyword typescriptAMFunctions contained factory filter provider run service value
 syntax keyword typescriptAMAttrs contained name requires
 
 
