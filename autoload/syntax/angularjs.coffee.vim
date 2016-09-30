@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    AngularJS for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/07/26
+" Last Change: 2016/10/11
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
@@ -63,8 +63,8 @@ syntax keyword coffeeAScookieStoreMethods contained get put remove
 syntax cluster coffeeAFunctions contains=coffeeAMFunctions
 syntax cluster coffeeAAttrs contains=coffeeAMAttrs
 
-syntax keyword coffeeAMFunctions contained config constant controller directive factory
-syntax keyword coffeeAMFunctions contained filter provider run service value
+syntax keyword coffeeAMFunctions contained config constant controller component directive
+syntax keyword coffeeAMFunctions contained factory filter provider run service value
 syntax keyword coffeeAMAttrs contained name requires
 
 

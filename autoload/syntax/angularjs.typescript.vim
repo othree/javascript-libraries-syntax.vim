@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    AngularJS for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/07/26
+" Last Change: 2016/10/11
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
