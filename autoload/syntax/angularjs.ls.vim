@@ -18,6 +18,11 @@ syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $
 syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $locale $parse $rootElement
 syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $routeParams $templateCache $window 
 syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $cookies $resource $sanitize
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $element
+
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $attributes nextgroup=lsASattributesdot
+syntax match   lsASattributesdot contained /\./ nextgroup=lsASattributesMethods
+syntax keyword lsASattributesMethods contained $normalize $addClass $removeClass $updateClass $observe $set $attr
 
 syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $http nextgroup=lsAShttpdot
 syntax match   lsAShttpdot contained /\./ nextgroup=lsAShttpMethods
@@ -81,6 +86,7 @@ if version >= 508 || !exists("did_angularjs_ls_syntax_inits")
   HiLink lsAMFunctions     PreProc
   HiLink lsAMAttrs         PreProc
 
+  HiLink lsASattributesMethods  PreProc
   HiLink lsAShttpMethods        PreProc
   HiLink lsASinterpolateMethods PreProc
   HiLink lsASlocationMethods    PreProc

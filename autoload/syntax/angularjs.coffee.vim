@@ -18,6 +18,11 @@ syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment,coffeeLineCommen
 syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $locale $parse $rootElement
 syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $routeParams $templateCache $window 
 syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $cookies $resource $sanitize
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $element
+
+syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $attributes nextgroup=coffeeASattributesdot
+syntax match   coffeeASattributesdot contained /\./ nextgroup=coffeeASattributesMethods
+syntax keyword coffeeASattributesMethods contained $normalize $addClass $removeClass $updateClass $observe $set $attr
 
 syntax keyword coffeeAServices containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $http nextgroup=coffeeAShttpdot
 syntax match   coffeeAShttpdot contained /\./ nextgroup=coffeeAShttpMethods
@@ -81,6 +86,7 @@ if version >= 508 || !exists("did_angularjs_coffee_syntax_inits")
   HiLink coffeeAMFunctions     PreProc
   HiLink coffeeAMAttrs         PreProc
 
+  HiLink coffeeASattributesMethods  PreProc
   HiLink coffeeAShttpMethods        PreProc
   HiLink coffeeASinterpolateMethods PreProc
   HiLink coffeeASlocationMethods    PreProc

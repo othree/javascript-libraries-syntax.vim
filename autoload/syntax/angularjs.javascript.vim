@@ -18,6 +18,11 @@ syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascri
 syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $locale $parse $rootElement
 syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $routeParams $templateCache $window 
 syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $cookies $resource $sanitize
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $element
+
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $attributes nextgroup=javascriptASattributesdot
+syntax match   javascriptASattributesdot contained /\./ nextgroup=javascriptASattributesMethods
+syntax keyword javascriptASattributesMethods contained $normalize $addClass $removeClass $updateClass $observe $set $attr
 
 syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $http nextgroup=javascriptAShttpdot
 syntax match   javascriptAShttpdot contained /\./ nextgroup=javascriptAShttpMethods
@@ -81,6 +86,7 @@ if version >= 508 || !exists("did_angularjs_javascript_syntax_inits")
   HiLink javascriptAMFunctions     PreProc
   HiLink javascriptAMAttrs         PreProc
 
+  HiLink javascriptASattributesMethods  PreProc
   HiLink javascriptAShttpMethods        PreProc
   HiLink javascriptASinterpolateMethods PreProc
   HiLink javascriptASlocationMethods    PreProc
