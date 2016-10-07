@@ -26,6 +26,7 @@ Libraries
 * [Chai](http://chaijs.com/)
 * [Handlebars](http://handlebarsjs.com/)
 * [Ramda](http://ramdajs.com/)
+* [Vue](https://vuejs.org/)
 
 File Types
 ----------
@@ -70,6 +71,7 @@ Support libs id:
 * Chai: chai
 * Handlebars: handlebars
 * Ramda: ramda
+* Vue.js: vue
 
 Default lib set is: `jquery,underscore,backbone`
 
@@ -102,6 +104,9 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 
 Changes
 -------
+
+### Version 0.6
+* Add Vue.js
 
 ### Version 0.5
 * Add Ramda

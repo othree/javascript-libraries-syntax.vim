@@ -20,7 +20,8 @@ let s:libs = [
   \ 'ramda',
   \ 'react',
   \ 'flux',
-  \ 'handlebars'
+  \ 'handlebars',
+  \ 'vue'
   \ ]
 
 let s:default_libs = [
