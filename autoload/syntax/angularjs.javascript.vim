@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    AngularJS for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/07/26
+" Last Change: 2016/10/11
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
@@ -18,6 +18,11 @@ syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascri
 syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $locale $parse $rootElement
 syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $routeParams $templateCache $window 
 syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $cookies $resource $sanitize
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $element
+
+syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $attributes nextgroup=javascriptASattributesdot
+syntax match   javascriptASattributesdot contained /\./ nextgroup=javascriptASattributesMethods
+syntax keyword javascriptASattributesMethods contained $normalize $addClass $removeClass $updateClass $observe $set $attr
 
 syntax keyword javascriptAServices containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $http nextgroup=javascriptAShttpdot
 syntax match   javascriptAShttpdot contained /\./ nextgroup=javascriptAShttpMethods
@@ -58,8 +63,8 @@ syntax keyword javascriptAScookieStoreMethods contained get put remove
 syntax cluster javascriptAFunctions contains=javascriptAMFunctions
 syntax cluster javascriptAAttrs contains=javascriptAMAttrs
 
-syntax keyword javascriptAMFunctions contained config constant controller directive factory
-syntax keyword javascriptAMFunctions contained filter provider run service value
+syntax keyword javascriptAMFunctions contained config constant controller component directive
+syntax keyword javascriptAMFunctions contained factory filter provider run service value
 syntax keyword javascriptAMAttrs contained name requires
 
 
@@ -81,6 +86,7 @@ if version >= 508 || !exists("did_angularjs_javascript_syntax_inits")
   HiLink javascriptAMFunctions     PreProc
   HiLink javascriptAMAttrs         PreProc
 
+  HiLink javascriptASattributesMethods  PreProc
   HiLink javascriptAShttpMethods        PreProc
   HiLink javascriptASinterpolateMethods PreProc
   HiLink javascriptASlocationMethods    PreProc

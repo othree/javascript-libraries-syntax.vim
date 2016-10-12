@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    AngularJS for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2013/07/26
+" Last Change: 2016/10/11
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
@@ -18,6 +18,11 @@ syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $
 syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $locale $parse $rootElement
 syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $routeParams $templateCache $window 
 syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $cookies $resource $sanitize
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $element
+
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $attributes nextgroup=lsASattributesdot
+syntax match   lsASattributesdot contained /\./ nextgroup=lsASattributesMethods
+syntax keyword lsASattributesMethods contained $normalize $addClass $removeClass $updateClass $observe $set $attr
 
 syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $http nextgroup=lsAShttpdot
 syntax match   lsAShttpdot contained /\./ nextgroup=lsAShttpMethods
@@ -58,8 +63,8 @@ syntax keyword lsAScookieStoreMethods contained get put remove
 syntax cluster lsAFunctions contains=lsAMFunctions
 syntax cluster lsAAttrs contains=lsAMAttrs
 
-syntax keyword lsAMFunctions contained config constant controller directive factory
-syntax keyword lsAMFunctions contained filter provider run service value
+syntax keyword lsAMFunctions contained config constant controller component directive
+syntax keyword lsAMFunctions contained factory filter provider run service value
 syntax keyword lsAMAttrs contained name requires
 
 
@@ -81,6 +86,7 @@ if version >= 508 || !exists("did_angularjs_ls_syntax_inits")
   HiLink lsAMFunctions     PreProc
   HiLink lsAMAttrs         PreProc
 
+  HiLink lsASattributesMethods  PreProc
   HiLink lsAShttpMethods        PreProc
   HiLink lsASinterpolateMethods PreProc
   HiLink lsASlocationMethods    PreProc
