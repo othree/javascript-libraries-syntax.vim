@@ -22,7 +22,7 @@ Libraries
 * [Flux](https://facebook.github.io/flux/)
 * [RequireJS](http://requirejs.org/)
 * [Sugar.js](http://sugarjs.com/)
-* [Jasmine](http://pivotal.github.io/jasmine/)
+* [Jasmine](https://jasmine.github.io/)
 * [Chai](http://chaijs.com/)
 * [Handlebars](http://handlebarsjs.com/)
 * [Ramda](http://ramdajs.com/)
