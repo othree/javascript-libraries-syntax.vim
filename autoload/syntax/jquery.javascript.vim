@@ -56,7 +56,7 @@ syntax keyword javascriptQMiscellaneous  contained index toArray
 syntax keyword javascriptQOffset         contained offset offsetParent position scrollTop scrollLeft
 syntax keyword javascriptQTraversing     contained eq filter first has is last map not slice
 syntax keyword javascriptQTraversing     contained add andBack contents end
-syntax keyword javascriptQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings andSelf
+syntax keyword javascriptQTraversing     contained children closest find next nextAll nextUntil parent parents parentsUntil prev prevAll prevUntil siblings
 
 
 " selector
