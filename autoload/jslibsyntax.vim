@@ -1,7 +1,7 @@
 " Vim plugin file
 " Language:    JS Lib syntax loader
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/10/30
+" Last Change: 2016/11/11
 " Version:     0.4
 " URL:         https://github.com/othree/javascript-libraries-syntax.vim
 
@@ -21,6 +21,7 @@ let s:libs = [
   \ 'react',
   \ 'flux',
   \ 'handlebars',
+  \ 'd3',
   \ 'vue'
   \ ]
 
