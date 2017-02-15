@@ -2,7 +2,7 @@
 " Language:    jQuery for typescript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2014/10/29
+" Last Change: 2017/02/15
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
@@ -11,7 +11,7 @@ if exists("b:current_syntax") && b:current_syntax == 'typescript'
   setlocal iskeyword+=$
 endif
 
-syntax keyword typescriptjQuery jQuery $ containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
+syntax keyword typescriptjQuery jQuery $ containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=@typescriptAfterIdentifier
 " syntax match   typescriptjQuerydot       contained /\./ nextgroup=@typescriptQGlobals
 " syntax match   typescriptjQuerydot       contained /([^)]*)\./ nextgroup=@typescriptQFunctions
 

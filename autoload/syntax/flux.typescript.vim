@@ -1,15 +1,16 @@
 " Vim syntax file
 " Language:    Flux for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/10/30
+" Last Change: 2017/02/15
 " Version:     2.0.2
 " URL:         https://facebook.github.io/flux/docs/dispatcher.html
 
-syntax keyword typescriptFlux Dispatcher containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
+syntax keyword typescriptFlux Dispatcher containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptFDot
+syntax match   typescriptFDot contained /\./ nextgroup=typescriptFFunctions
 
 syntax keyword typescriptFDispatcher contained register unregister waitFor dispatch isDispatching
 
-syntax cluster typescriptFFunction      contains=typescriptFDispatcher
+syntax cluster typescriptFFunctions  contains=typescriptFDispatcher
 
 
 " Define the default highlighting.

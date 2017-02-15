@@ -1,15 +1,16 @@
 " Vim syntax file
 " Language:    Flux for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/10/30
+" Last Change: 2017/02/15
 " Version:     2.0.2
 " URL:         https://facebook.github.io/flux/docs/dispatcher.html
 
-syntax keyword javascriptFlux Dispatcher containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution
+syntax keyword javascriptFlux Dispatcher containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptFDot
+syntax match   javascriptFDot contained /\./ nextgroup=javascriptFFunctions
 
 syntax keyword javascriptFDispatcher contained register unregister waitFor dispatch isDispatching
 
-syntax cluster javascriptFFunction      contains=javascriptFDispatcher
+syntax cluster javascriptFFunctions  contains=javascriptFDispatcher
 
 
 " Define the default highlighting.

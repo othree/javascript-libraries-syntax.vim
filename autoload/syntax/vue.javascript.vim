@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    vue.js for JavaScript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/10/07
+" Last Change: 2017/02/15
 " Version:     2.0
 " URL:         https://vuejs.org
 
@@ -10,7 +10,8 @@ if exists("b:current_syntax") && b:current_syntax == 'javascript'
   setlocal iskeyword+=$
 endif
 
-syntax keyword javascriptVue             Vue vm containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution
+syntax keyword javascriptVue             Vue vm containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptVDot
+syntax match   javascriptVDot            contained /\./ nextgroup=javascriptVFunctions,javascriptVAttrs
 
 " Vue.*
 syntax cluster javascriptVFunctions      contains=javascriptVAPI,javascriptVMethods

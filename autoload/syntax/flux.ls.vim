@@ -1,15 +1,16 @@
 " Vim syntax file
 " Language:    Flux for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/10/30
+" Last Change: 2017/02/15
 " Version:     2.0.2
 " URL:         https://facebook.github.io/flux/docs/dispatcher.html
 
-syntax keyword lsFlux Dispatcher containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution
+syntax keyword lsFlux Dispatcher containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsFDot
+syntax match   lsFDot contained /\./ nextgroup=lsFFunctions
 
 syntax keyword lsFDispatcher contained register unregister waitFor dispatch isDispatching
 
-syntax cluster lsFFunction      contains=lsFDispatcher
+syntax cluster lsFFunctions  contains=lsFDispatcher
 
 
 " Define the default highlighting.

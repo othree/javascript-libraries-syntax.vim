@@ -1,11 +1,11 @@
 " Vim syntax file
 " Language:    Ramda for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/05/04
+" Last Change: 2017/02/15
 " Version:     0.21.0
 " URL:         http://ramdajs.com/
 
-syntax keyword typescriptRamda       R containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution,typescriptRDot
+syntax keyword typescriptRamda       R containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
 syntax match   typescriptRaDot       contained /\./ nextgroup=typescriptRaFunctions
 
 syntax cluster typescriptRaFunctions contains=typescriptRaFunction,typescriptRaMath,typescriptRaList,typescriptRaLogic,typescriptRaObject,typescriptRaRelation,typescriptRaType,typescriptRaString

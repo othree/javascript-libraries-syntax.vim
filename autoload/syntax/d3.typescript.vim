@@ -2,12 +2,13 @@
 " Language:    d3.v4 for typescript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Sfinktah <sfinktah@othree.spamtrak.org>
-" Last Change: 2016/11/11
+" Last Change: 2017/02/15
 " Version:     4.2.8.0
 " URL:         https://github.com/d3/d3/blob/master/API.md
 
-syntax keyword typescriptD3 d3                      containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
-syntax cluster typescript_Functions                 contains=@typescriptD3Arrays,typescriptD3Axes,typescriptD3Brushes,typescriptD3Chords,@typescriptD3Collections,typescriptD3Colors,typescriptD3Dispatches,typescriptD3Dragging,typescriptD3DelimiterSeparatedValues,typescriptD3Easings,typescriptD3Forces,typescriptD3NumberFormats,typescriptD3Geographies,typescriptD3GeographiesStreams,typescriptD3GeographiesTransforms,typescriptD3Hierarchies,typescriptD3Interpolators,typescriptD3Paths,typescriptD3Polygons,typescriptD3Quadtrees,typescriptD3Queues,typescriptD3RandomNumbers,typescriptD3Requests,typescriptD3Scales,typescriptD3Selections,typescriptD3Shapes,typescriptD3TimeFormats,typescriptD3TimeIntervals,typescriptD3Timers,typescriptD3Transitions,typescriptD3VoronoiDiagrams,typescriptD3Zooming
+syntax keyword typescriptD3 d3                      containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptD3Dot
+syntax match   typescriptD3Dot contained /\./ nextgroup=typescriptD3Functions
+syntax cluster typescriptD3Functions                 contains=@typescriptD3Arrays,typescriptD3Axes,typescriptD3Brushes,typescriptD3Chords,@typescriptD3Collections,typescriptD3Colors,typescriptD3Dispatches,typescriptD3Dragging,typescriptD3DelimiterSeparatedValues,typescriptD3Easings,typescriptD3Forces,typescriptD3NumberFormats,typescriptD3Geographies,typescriptD3GeographiesStreams,typescriptD3GeographiesTransforms,typescriptD3Hierarchies,typescriptD3Interpolators,typescriptD3Paths,typescriptD3Polygons,typescriptD3Quadtrees,typescriptD3Queues,typescriptD3RandomNumbers,typescriptD3Requests,typescriptD3Scales,typescriptD3Selections,typescriptD3Shapes,typescriptD3TimeFormats,typescriptD3TimeIntervals,typescriptD3Timers,typescriptD3Transitions,typescriptD3VoronoiDiagrams,typescriptD3Zooming
 
 syntax cluster typescriptD3Arrays	                  contains=typescriptD3ArraysStatistics,typescriptD3ArraysSearch,typescriptD3ArraysTransformations,typescriptD3ArraysHistograms,typescriptD3Axes,typescriptD3Arrays
 syntax keyword typescriptD3ArraysStatistics         contained min max extent sum mean median quantile variance deviation

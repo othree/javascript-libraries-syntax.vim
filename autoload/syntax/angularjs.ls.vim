@@ -1,12 +1,12 @@
 " Vim syntax file
 " Language:    AngularJS for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/10/11
+" Last Change: 2017/02/15
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-syntax keyword lsAngular angular containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsAngulardot
-syntax match   lsAngulardot contained /\./ nextgroup=lsAngularMethods
+syntax keyword lsAngular angular containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsAngularDot
+syntax match   lsAngularDot contained /\./ nextgroup=lsAngularMethods
 syntax keyword lsAngularMethods contained bind bootstrap copy element equals
 syntax keyword lsAngularMethods contained extend forEach fromJson identity injector
 syntax keyword lsAngularMethods contained isArray isDate isDefined isElement isFunction

@@ -1,12 +1,13 @@
 " Vim syntax file
 " Language:    React for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/10/29
+" Last Change: 2017/02/15
 " Version:     0.12.0
 " URL:         https://facebook.github.io/react/docs/top-level-api.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword typescriptReact React ReactDOM containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
+syntax keyword typescriptReact React ReactDOM containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
+syntax match   typescriptRDot       contained /\./ nextgroup=typescriptRProp
 
 syntax keyword typescriptRTop contained createClass render unmountComponentAtNode renderToString
 syntax keyword typescriptRTop contained renderToStaticMarkup isValidElement DOM PropTypes

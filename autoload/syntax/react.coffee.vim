@@ -1,12 +1,13 @@
 " Vim syntax file
 " Language:    React for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/10/29
+" Last Change: 2017/02/15
 " Version:     0.12.0
 " URL:         https://facebook.github.io/react/docs/top-level-api.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword coffeeReact React ReactDOM containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
+syntax keyword coffeeReact React ReactDOM containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDot
+syntax match   coffeeRDot       contained /\./ nextgroup=coffeeRProp
 
 syntax keyword coffeeRTop contained createClass render unmountComponentAtNode renderToString
 syntax keyword coffeeRTop contained renderToStaticMarkup isValidElement DOM PropTypes

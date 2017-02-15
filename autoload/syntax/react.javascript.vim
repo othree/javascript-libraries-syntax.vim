@@ -1,12 +1,13 @@
 " Vim syntax file
 " Language:    React for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/10/29
+" Last Change: 2017/02/15
 " Version:     0.12.0
 " URL:         https://facebook.github.io/react/docs/top-level-api.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword javascriptReact React ReactDOM containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution
+syntax keyword javascriptReact React ReactDOM containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDot
+syntax match   javascriptRDot       contained /\./ nextgroup=javascriptRProp
 
 syntax keyword javascriptRTop contained createClass render unmountComponentAtNode renderToString
 syntax keyword javascriptRTop contained renderToStaticMarkup isValidElement DOM PropTypes

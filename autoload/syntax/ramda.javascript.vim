@@ -1,11 +1,11 @@
 " Vim syntax file
 " Language:    Ramda for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/05/04
+" Last Change: 2017/02/15
 " Version:     0.21.0
 " URL:         http://ramdajs.com/
 
-syntax keyword javascriptRamda       R containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution,javascriptRDot
+syntax keyword javascriptRamda       R containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDot
 syntax match   javascriptRaDot       contained /\./ nextgroup=javascriptRaFunctions
 
 syntax cluster javascriptRaFunctions contains=javascriptRaFunction,javascriptRaMath,javascriptRaList,javascriptRaLogic,javascriptRaObject,javascriptRaRelation,javascriptRaType,javascriptRaString

@@ -2,12 +2,13 @@
 " Language:    d3.v4 for coffee
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Sfinktah <sfinktah@othree.spamtrak.org>
-" Last Change: 2016/11/11
+" Last Change: 2017/02/15
 " Version:     4.2.8.0
 " URL:         https://github.com/d3/d3/blob/master/API.md
 
-syntax keyword coffeeD3 d3                      containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
-syntax cluster coffee_Functions                 contains=@coffeeD3Arrays,coffeeD3Axes,coffeeD3Brushes,coffeeD3Chords,@coffeeD3Collections,coffeeD3Colors,coffeeD3Dispatches,coffeeD3Dragging,coffeeD3DelimiterSeparatedValues,coffeeD3Easings,coffeeD3Forces,coffeeD3NumberFormats,coffeeD3Geographies,coffeeD3GeographiesStreams,coffeeD3GeographiesTransforms,coffeeD3Hierarchies,coffeeD3Interpolators,coffeeD3Paths,coffeeD3Polygons,coffeeD3Quadtrees,coffeeD3Queues,coffeeD3RandomNumbers,coffeeD3Requests,coffeeD3Scales,coffeeD3Selections,coffeeD3Shapes,coffeeD3TimeFormats,coffeeD3TimeIntervals,coffeeD3Timers,coffeeD3Transitions,coffeeD3VoronoiDiagrams,coffeeD3Zooming
+syntax keyword coffeeD3 d3                      containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeD3Dot
+syntax match   coffeeD3Dot contained /\./ nextgroup=coffeeD3Functions
+syntax cluster coffeeD3Functions                 contains=@coffeeD3Arrays,coffeeD3Axes,coffeeD3Brushes,coffeeD3Chords,@coffeeD3Collections,coffeeD3Colors,coffeeD3Dispatches,coffeeD3Dragging,coffeeD3DelimiterSeparatedValues,coffeeD3Easings,coffeeD3Forces,coffeeD3NumberFormats,coffeeD3Geographies,coffeeD3GeographiesStreams,coffeeD3GeographiesTransforms,coffeeD3Hierarchies,coffeeD3Interpolators,coffeeD3Paths,coffeeD3Polygons,coffeeD3Quadtrees,coffeeD3Queues,coffeeD3RandomNumbers,coffeeD3Requests,coffeeD3Scales,coffeeD3Selections,coffeeD3Shapes,coffeeD3TimeFormats,coffeeD3TimeIntervals,coffeeD3Timers,coffeeD3Transitions,coffeeD3VoronoiDiagrams,coffeeD3Zooming
 
 syntax cluster coffeeD3Arrays	                  contains=coffeeD3ArraysStatistics,coffeeD3ArraysSearch,coffeeD3ArraysTransformations,coffeeD3ArraysHistograms,coffeeD3Axes,coffeeD3Arrays
 syntax keyword coffeeD3ArraysStatistics         contained min max extent sum mean median quantile variance deviation

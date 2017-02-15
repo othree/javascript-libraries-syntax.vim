@@ -1,12 +1,12 @@
 " Vim syntax file
 " Language:    handlebars for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2015/02/02
+" Last Change: 2017/02/15
 " Version:     2.0.0
 " URL:         http://handlebarsjs.com/
 
-syntax keyword lsHandlebars Handlebars containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution
-" syntax match   lsunderscoredot contained /\./ nextgroup=@ls_Functions
+syntax keyword lsHandlebars Handlebars containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsHDot,lsHutility
+syntax match   lsHDot       contained /\./ nextgroup=@lsHmethods
 " syntax match   lsunderscoredot contained /([^)]*)\./ nextgroup=@ls_Functions
 
 syntax cluster lsHFunctions contains=lsHmethods,lsHutilityMethod
@@ -15,9 +15,10 @@ syntax keyword lsHmethods   contained compile precompile template unregisterPart
 syntax keyword lsHmethods   contained registerHelper unregisterHelper SafeString escapeExpression
 syntax keyword lsHmethods   contained createFrame create log
 
-syntax keyword lsHutility   contained Utils
+syntax keyword lsHutility   contained Utils nextgroup=lsHUDot
+syntax match   lsHUDot      contained /\./ nextgroup=@lsHutilityMethods
 
-syntax keyword lsHutilityMethod   contained isEmpty extend toString isArray isFunction appendContextPath
+syntax keyword lsHutilityMethods   contained isEmpty extend toString isArray isFunction appendContextPath
 
 
 " Define the default highlighting.

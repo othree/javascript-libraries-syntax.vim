@@ -2,12 +2,13 @@
 " Language:    d3.v4 for javascript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Sfinktah <sfinktah@othree.spamtrak.org>
-" Last Change: 2016/11/11
+" Last Change: 2017/02/15
 " Version:     4.2.8.0
 " URL:         https://github.com/d3/d3/blob/master/API.md
 
-syntax keyword javascriptD3 d3                      containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution
-syntax cluster javascript_Functions                 contains=@javascriptD3Arrays,javascriptD3Axes,javascriptD3Brushes,javascriptD3Chords,@javascriptD3Collections,javascriptD3Colors,javascriptD3Dispatches,javascriptD3Dragging,javascriptD3DelimiterSeparatedValues,javascriptD3Easings,javascriptD3Forces,javascriptD3NumberFormats,javascriptD3Geographies,javascriptD3GeographiesStreams,javascriptD3GeographiesTransforms,javascriptD3Hierarchies,javascriptD3Interpolators,javascriptD3Paths,javascriptD3Polygons,javascriptD3Quadtrees,javascriptD3Queues,javascriptD3RandomNumbers,javascriptD3Requests,javascriptD3Scales,javascriptD3Selections,javascriptD3Shapes,javascriptD3TimeFormats,javascriptD3TimeIntervals,javascriptD3Timers,javascriptD3Transitions,javascriptD3VoronoiDiagrams,javascriptD3Zooming
+syntax keyword javascriptD3 d3                      containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptD3Dot
+syntax match   javascriptD3Dot contained /\./ nextgroup=javascriptD3Functions
+syntax cluster javascriptD3Functions                 contains=@javascriptD3Arrays,javascriptD3Axes,javascriptD3Brushes,javascriptD3Chords,@javascriptD3Collections,javascriptD3Colors,javascriptD3Dispatches,javascriptD3Dragging,javascriptD3DelimiterSeparatedValues,javascriptD3Easings,javascriptD3Forces,javascriptD3NumberFormats,javascriptD3Geographies,javascriptD3GeographiesStreams,javascriptD3GeographiesTransforms,javascriptD3Hierarchies,javascriptD3Interpolators,javascriptD3Paths,javascriptD3Polygons,javascriptD3Quadtrees,javascriptD3Queues,javascriptD3RandomNumbers,javascriptD3Requests,javascriptD3Scales,javascriptD3Selections,javascriptD3Shapes,javascriptD3TimeFormats,javascriptD3TimeIntervals,javascriptD3Timers,javascriptD3Transitions,javascriptD3VoronoiDiagrams,javascriptD3Zooming
 
 syntax cluster javascriptD3Arrays	                  contains=javascriptD3ArraysStatistics,javascriptD3ArraysSearch,javascriptD3ArraysTransformations,javascriptD3ArraysHistograms,javascriptD3Axes,javascriptD3Arrays
 syntax keyword javascriptD3ArraysStatistics         contained min max extent sum mean median quantile variance deviation

@@ -1,11 +1,11 @@
 " Vim syntax file
 " Language:    Ramda for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/05/04
+" Last Change: 2017/02/15
 " Version:     0.21.0
 " URL:         http://ramdajs.com/
 
-syntax keyword coffeeRamda       R containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution,coffeeRDot
+syntax keyword coffeeRamda       R containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDot
 syntax match   coffeeRaDot       contained /\./ nextgroup=coffeeRaFunctions
 
 syntax cluster coffeeRaFunctions contains=coffeeRaFunction,coffeeRaMath,coffeeRaList,coffeeRaLogic,coffeeRaObject,coffeeRaRelation,coffeeRaType,coffeeRaString

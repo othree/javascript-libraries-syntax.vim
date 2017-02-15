@@ -1,11 +1,11 @@
 " Vim syntax file
 " Language:    Ramda for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/05/04
+" Last Change: 2017/02/15
 " Version:     0.21.0
 " URL:         http://ramdajs.com/
 
-syntax keyword lsRamda       R containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution,lsRDot
+syntax keyword lsRamda       R containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDot
 syntax match   lsRaDot       contained /\./ nextgroup=lsRaFunctions
 
 syntax cluster lsRaFunctions contains=lsRaFunction,lsRaMath,lsRaList,lsRaLogic,lsRaObject,lsRaRelation,lsRaType,lsRaString

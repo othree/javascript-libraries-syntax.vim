@@ -1,11 +1,11 @@
 " Vim syntax file
 " Language:    Backbone.js for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/01/07
+" Last Change: 2017/02/15
 " Version:     1.2.3
 " URL:         http://backbonejs.org/
 
-syntax keyword lsBackbone Backbone containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution,lsBDot
+syntax keyword lsBackbone Backbone containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsBDot
 syntax match   lsBDot     contained /\./ nextgroup=lsBObjects
 syntax keyword lsBObjects contained Collection Model View Events Router History Utility sync ajax emulateHTTP emulateJSON
 

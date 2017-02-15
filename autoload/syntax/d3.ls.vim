@@ -2,12 +2,13 @@
 " Language:    d3.v4 for ls
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Sfinktah <sfinktah@othree.spamtrak.org>
-" Last Change: 2016/11/11
+" Last Change: 2017/02/15
 " Version:     4.2.8.0
 " URL:         https://github.com/d3/d3/blob/master/API.md
 
-syntax keyword lsD3 d3                      containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution
-syntax cluster ls_Functions                 contains=@lsD3Arrays,lsD3Axes,lsD3Brushes,lsD3Chords,@lsD3Collections,lsD3Colors,lsD3Dispatches,lsD3Dragging,lsD3DelimiterSeparatedValues,lsD3Easings,lsD3Forces,lsD3NumberFormats,lsD3Geographies,lsD3GeographiesStreams,lsD3GeographiesTransforms,lsD3Hierarchies,lsD3Interpolators,lsD3Paths,lsD3Polygons,lsD3Quadtrees,lsD3Queues,lsD3RandomNumbers,lsD3Requests,lsD3Scales,lsD3Selections,lsD3Shapes,lsD3TimeFormats,lsD3TimeIntervals,lsD3Timers,lsD3Transitions,lsD3VoronoiDiagrams,lsD3Zooming
+syntax keyword lsD3 d3                      containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsD3Dot
+syntax match   lsD3Dot contained /\./ nextgroup=lsD3Functions
+syntax cluster lsD3Functions                 contains=@lsD3Arrays,lsD3Axes,lsD3Brushes,lsD3Chords,@lsD3Collections,lsD3Colors,lsD3Dispatches,lsD3Dragging,lsD3DelimiterSeparatedValues,lsD3Easings,lsD3Forces,lsD3NumberFormats,lsD3Geographies,lsD3GeographiesStreams,lsD3GeographiesTransforms,lsD3Hierarchies,lsD3Interpolators,lsD3Paths,lsD3Polygons,lsD3Quadtrees,lsD3Queues,lsD3RandomNumbers,lsD3Requests,lsD3Scales,lsD3Selections,lsD3Shapes,lsD3TimeFormats,lsD3TimeIntervals,lsD3Timers,lsD3Transitions,lsD3VoronoiDiagrams,lsD3Zooming
 
 syntax cluster lsD3Arrays	                  contains=lsD3ArraysStatistics,lsD3ArraysSearch,lsD3ArraysTransformations,lsD3ArraysHistograms,lsD3Axes,lsD3Arrays
 syntax keyword lsD3ArraysStatistics         contained min max extent sum mean median quantile variance deviation

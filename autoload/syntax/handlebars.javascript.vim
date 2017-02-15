@@ -1,12 +1,12 @@
 " Vim syntax file
 " Language:    handlebars for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2015/02/02
+" Last Change: 2017/02/15
 " Version:     2.0.0
 " URL:         http://handlebarsjs.com/
 
-syntax keyword javascriptHandlebars Handlebars containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution
-" syntax match   javascriptunderscoredot contained /\./ nextgroup=@javascript_Functions
+syntax keyword javascriptHandlebars Handlebars containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptHDot,javascriptHutility
+syntax match   javascriptHDot       contained /\./ nextgroup=@javascriptHmethods
 " syntax match   javascriptunderscoredot contained /([^)]*)\./ nextgroup=@javascript_Functions
 
 syntax cluster javascriptHFunctions contains=javascriptHmethods,javascriptHutilityMethod
@@ -15,9 +15,10 @@ syntax keyword javascriptHmethods   contained compile precompile template unregi
 syntax keyword javascriptHmethods   contained registerHelper unregisterHelper SafeString escapeExpression
 syntax keyword javascriptHmethods   contained createFrame create log
 
-syntax keyword javascriptHutility   contained Utils
+syntax keyword javascriptHutility   contained Utils nextgroup=javascriptHUDot
+syntax match   javascriptHUDot      contained /\./ nextgroup=@javascriptHutilityMethods
 
-syntax keyword javascriptHutilityMethod   contained isEmpty extend toString isArray isFunction appendContextPath
+syntax keyword javascriptHutilityMethods   contained isEmpty extend toString isArray isFunction appendContextPath
 
 
 " Define the default highlighting.

@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    vue.js for JavaScript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/10/07
+" Last Change: 2017/02/15
 " Version:     2.0
 " URL:         https://vuejs.org
 
@@ -10,7 +10,8 @@ if exists("b:current_syntax") && b:current_syntax == 'coffee'
   setlocal iskeyword+=$
 endif
 
-syntax keyword coffeeVue             Vue vm containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
+syntax keyword coffeeVue             Vue vm containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeVDot
+syntax match   coffeeVDot            contained /\./ nextgroup=coffeeVFunctions,coffeeVAttrs
 
 " Vue.*
 syntax cluster coffeeVFunctions      contains=coffeeVAPI,coffeeVMethods

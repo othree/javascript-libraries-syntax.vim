@@ -1,15 +1,16 @@
 " Vim syntax file
 " Language:    Flux for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2014/10/30
+" Last Change: 2017/02/15
 " Version:     2.0.2
 " URL:         https://facebook.github.io/flux/docs/dispatcher.html
 
-syntax keyword coffeeFlux Dispatcher containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
+syntax keyword coffeeFlux Dispatcher containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeFDot
+syntax match   coffeeFDot contained /\./ nextgroup=coffeeFFunctions
 
 syntax keyword coffeeFDispatcher contained register unregister waitFor dispatch isDispatching
 
-syntax cluster coffeeFFunction      contains=coffeeFDispatcher
+syntax cluster coffeeFFunctions  contains=coffeeFDispatcher
 
 
 " Define the default highlighting.

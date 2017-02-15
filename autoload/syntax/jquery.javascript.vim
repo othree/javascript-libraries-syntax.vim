@@ -2,7 +2,7 @@
 " Language:    jQuery for javascript
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2014/10/29
+" Last Change: 2017/02/15
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
@@ -11,7 +11,7 @@ if exists("b:current_syntax") && b:current_syntax == 'javascript'
   setlocal iskeyword+=$
 endif
 
-syntax keyword javascriptjQuery jQuery $ containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution
+syntax keyword javascriptjQuery jQuery $ containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=@javascriptAfterIdentifier
 " syntax match   javascriptjQuerydot       contained /\./ nextgroup=@javascriptQGlobals
 " syntax match   javascriptjQuerydot       contained /([^)]*)\./ nextgroup=@javascriptQFunctions
 

@@ -2,7 +2,7 @@
 " Language:    jQuery for coffee
 " Maintainer:  othree <othree@gmail.com>
 " Maintainer:  Bruno Michel <brmichel@free.fr>
-" Last Change: 2014/10/29
+" Last Change: 2017/02/15
 " Version:     1.9.0.2
 " URL:         http://api.jquery.com/
 
@@ -11,7 +11,7 @@ if exists("b:current_syntax") && b:current_syntax == 'coffee'
   setlocal iskeyword+=$
 endif
 
-syntax keyword coffeejQuery jQuery $ containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
+syntax keyword coffeejQuery jQuery $ containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=@coffeeAfterIdentifier
 " syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals
 " syntax match   coffeejQuerydot       contained /([^)]*)\./ nextgroup=@coffeeQFunctions
 

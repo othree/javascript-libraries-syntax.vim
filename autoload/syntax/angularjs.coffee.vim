@@ -1,12 +1,12 @@
 " Vim syntax file
 " Language:    AngularJS for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/10/11
+" Last Change: 2017/02/15
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-syntax keyword coffeeAngular angular containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeAngulardot
-syntax match   coffeeAngulardot contained /\./ nextgroup=coffeeAngularMethods
+syntax keyword coffeeAngular angular containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeAngularDot
+syntax match   coffeeAngularDot contained /\./ nextgroup=coffeeAngularMethods
 syntax keyword coffeeAngularMethods contained bind bootstrap copy element equals
 syntax keyword coffeeAngularMethods contained extend forEach fromJson identity injector
 syntax keyword coffeeAngularMethods contained isArray isDate isDefined isElement isFunction

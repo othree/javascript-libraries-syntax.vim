@@ -1,12 +1,12 @@
 " Vim syntax file
 " Language:    handlebars for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2015/02/02
+" Last Change: 2017/02/15
 " Version:     2.0.0
 " URL:         http://handlebarsjs.com/
 
-syntax keyword coffeeHandlebars Handlebars containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
-" syntax match   coffeeunderscoredot contained /\./ nextgroup=@coffee_Functions
+syntax keyword coffeeHandlebars Handlebars containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeHDot,coffeeHutility
+syntax match   coffeeHDot       contained /\./ nextgroup=@coffeeHmethods
 " syntax match   coffeeunderscoredot contained /([^)]*)\./ nextgroup=@coffee_Functions
 
 syntax cluster coffeeHFunctions contains=coffeeHmethods,coffeeHutilityMethod
@@ -15,9 +15,10 @@ syntax keyword coffeeHmethods   contained compile precompile template unregister
 syntax keyword coffeeHmethods   contained registerHelper unregisterHelper SafeString escapeExpression
 syntax keyword coffeeHmethods   contained createFrame create log
 
-syntax keyword coffeeHutility   contained Utils
+syntax keyword coffeeHutility   contained Utils nextgroup=coffeeHUDot
+syntax match   coffeeHUDot      contained /\./ nextgroup=@coffeeHutilityMethods
 
-syntax keyword coffeeHutilityMethod   contained isEmpty extend toString isArray isFunction appendContextPath
+syntax keyword coffeeHutilityMethods   contained isEmpty extend toString isArray isFunction appendContextPath
 
 
 " Define the default highlighting.

@@ -1,11 +1,11 @@
 " Vim syntax file
 " Language:    Backbone.js for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/01/07
+" Last Change: 2017/02/15
 " Version:     1.2.3
 " URL:         http://backbonejs.org/
 
-syntax keyword typescriptBackbone Backbone containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution,typescriptBDot
+syntax keyword typescriptBackbone Backbone containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptBDot
 syntax match   typescriptBDot     contained /\./ nextgroup=typescriptBObjects
 syntax keyword typescriptBObjects contained Collection Model View Events Router History Utility sync ajax emulateHTTP emulateJSON
 

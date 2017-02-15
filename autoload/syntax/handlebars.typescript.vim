@@ -1,12 +1,12 @@
 " Vim syntax file
 " Language:    handlebars for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2015/02/02
+" Last Change: 2017/02/15
 " Version:     2.0.0
 " URL:         http://handlebarsjs.com/
 
-syntax keyword typescriptHandlebars Handlebars containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
-" syntax match   typescriptunderscoredot contained /\./ nextgroup=@typescript_Functions
+syntax keyword typescriptHandlebars Handlebars containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptHDot,typescriptHutility
+syntax match   typescriptHDot       contained /\./ nextgroup=@typescriptHmethods
 " syntax match   typescriptunderscoredot contained /([^)]*)\./ nextgroup=@typescript_Functions
 
 syntax cluster typescriptHFunctions contains=typescriptHmethods,typescriptHutilityMethod
@@ -15,9 +15,10 @@ syntax keyword typescriptHmethods   contained compile precompile template unregi
 syntax keyword typescriptHmethods   contained registerHelper unregisterHelper SafeString escapeExpression
 syntax keyword typescriptHmethods   contained createFrame create log
 
-syntax keyword typescriptHutility   contained Utils
+syntax keyword typescriptHutility   contained Utils nextgroup=typescriptHUDot
+syntax match   typescriptHUDot      contained /\./ nextgroup=@typescriptHutilityMethods
 
-syntax keyword typescriptHutilityMethod   contained isEmpty extend toString isArray isFunction appendContextPath
+syntax keyword typescriptHutilityMethods   contained isEmpty extend toString isArray isFunction appendContextPath
 
 
 " Define the default highlighting.

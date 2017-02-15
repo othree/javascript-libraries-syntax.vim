@@ -1,12 +1,12 @@
 " Vim syntax file
 " Language:    AngularJS for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/10/11
+" Last Change: 2017/02/15
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-syntax keyword typescriptAngular angular containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptAngulardot
-syntax match   typescriptAngulardot contained /\./ nextgroup=typescriptAngularMethods
+syntax keyword typescriptAngular angular containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptAngularDot
+syntax match   typescriptAngularDot contained /\./ nextgroup=typescriptAngularMethods
 syntax keyword typescriptAngularMethods contained bind bootstrap copy element equals
 syntax keyword typescriptAngularMethods contained extend forEach fromJson identity injector
 syntax keyword typescriptAngularMethods contained isArray isDate isDefined isElement isFunction
