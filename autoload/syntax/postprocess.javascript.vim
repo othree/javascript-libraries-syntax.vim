@@ -10,7 +10,7 @@ syntax cluster props add=@javascriptQFunctions,@javascript_Functions,@javascript
 syntax cluster props add=@javascriptpFunctions,@javascriptAFunctions,@javascriptSFunctions,@javascriptJFunctions
 syntax cluster props add=@javascriptRaFunctions
 syntax cluster props add=@javascriptQAttrs,@javascript_Attrs,@javascriptBAttrs,@javascriptpAttrs,@javascriptAAttrs,@javascriptJAttrs
-syntax cluster props add=@javascriptRProp
+syntax cluster props add=@javascriptRFunctions,@gavascriptRAttrs
 syntax cluster props add=@javascriptVFunctions,javascriptVAttrs
 
 if !exists("javascript_props")

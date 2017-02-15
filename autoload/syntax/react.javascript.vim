@@ -2,20 +2,49 @@
 " Language:    React for javascript
 " Maintainer:  othree <othree@gmail.com>
 " Last Change: 2017/02/15
-" Version:     0.12.0
-" URL:         https://facebook.github.io/react/docs/top-level-api.html
+" Version:     15.4.2
+" URL:         https://facebook.github.io/react/docs/react-api.html
+" URL:         https://facebook.github.io/react/docs/react-component.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword javascriptReact React ReactDOM containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDot
-syntax match   javascriptRDot       contained /\./ nextgroup=javascriptRProp
+syntax keyword javascriptReact React containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDot
+syntax match   javascriptRDot       contained /\./ nextgroup=javascriptRProps,javascriptRMethods
 
-syntax keyword javascriptRTop contained createClass render unmountComponentAtNode renderToString
-syntax keyword javascriptRTop contained renderToStaticMarkup isValidElement DOM PropTypes
-syntax keyword javascriptRTop contained initializeTouchEvents Children map forEach count only
-syntax keyword javascriptRComponent contained setState replaceState forceUpdate getDOMNode
-syntax keyword javascriptRComponent contained isMounted setProps replaceProps
+syntax keyword javascriptReact ReactDOM containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDDot
+syntax match   javascriptRDDot      contained /\./ nextgroup=javascriptRDMethods
 
-syntax cluster javascriptRProp      contains=javascriptRTop,javascriptRComponent
+syntax keyword javascriptReact ReactDOMServer containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDSDot
+syntax match   javascriptRDSDot     contained /\./ nextgroup=javascriptRDSMethods
+
+" React
+syntax keyword javascriptRProps     contained Component nextgroup=javascriptRCompMethods
+syntax keyword javascriptRProps     contained PureComponent Children addons
+syntax keyword javascriptRProps     contained PropTypes nextgroup=javascriptRPropDot
+syntax match   javascriptRPropDot   contained /\./ nextgroup=javascriptRPropProps,javascriptRPropMethods
+
+syntax keyword javascriptRMethods   contained createClass createElement createFactory
+syntax keyword javascriptRMethods   contained cloneElement isValidElement
+
+" ReactDOM
+syntax keyword javascriptRDMethods  contained render unmountComponentAtNode findDOMNode
+
+" ReactDOMServer
+syntax keyword javascriptRDMethods  contained renderToString renderToStaticMarkup 
+
+" React.Component
+syntax keyword javascriptRCompMethods contained componentWillMount render componentDidMount
+syntax keyword javascriptRCompMethods contained componentWillReceiveProps shouldComponentUpdate componentWillUpdate render componentDidUpdate
+syntax keyword javascriptRCompMethods contained componentWillUnmount
+syntax keyword javascriptRCompMethods contained setState forceUpdate
+syntax keyword javascriptRCompProps   contained defaultProps displayName propTypes
+
+" React.PropTypes
+syntax keyword javascriptRPropProps   contained array bool func number object string symbol node element isRequired
+syntax keyword javascriptRPropMethods contained instanceOf oneOf oneOfType arrayOf objectOf shape any
+
+
+syntax cluster javascriptRFunctions   contains=javascriptRMethods,javascriptRDMethods,javascriptRCompMethods,javascriptRPropMethods
+syntax cluster javascriptRAttrs       contains=javascriptRProps,javascriptRCompProps,javascriptRPropProps
 
 
 " Define the default highlighting.
@@ -31,8 +60,13 @@ if version >= 508 || !exists("did_jquery_javascript_syntax_inits")
 
   HiLink javascriptReact           Constant
 
-  HiLink javascriptRTop            PreProc
-  HiLink javascriptRComponent      PreProc
+  HiLink javascriptRProps          PreProc
+  HiLink javascriptRDMethods       PreProc
+  HiLink javascriptRCompMethods    PreProc
+  HiLink javascriptRPropMethods    PreProc
+  HiLink javascriptRProps          PreProc
+  HiLink javascriptRCompProps      PreProc
+  HiLink javascriptRPropProps      PreProc
 
   delcommand HiLink
 endif

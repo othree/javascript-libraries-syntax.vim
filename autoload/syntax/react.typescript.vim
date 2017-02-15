@@ -2,20 +2,49 @@
 " Language:    React for typescript
 " Maintainer:  othree <othree@gmail.com>
 " Last Change: 2017/02/15
-" Version:     0.12.0
-" URL:         https://facebook.github.io/react/docs/top-level-api.html
+" Version:     15.4.2
+" URL:         https://facebook.github.io/react/docs/react-api.html
+" URL:         https://facebook.github.io/react/docs/react-component.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword typescriptReact React ReactDOM containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
-syntax match   typescriptRDot       contained /\./ nextgroup=typescriptRProp
+syntax keyword typescriptReact React containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
+syntax match   typescriptRDot       contained /\./ nextgroup=typescriptRProps,typescriptRMethods
 
-syntax keyword typescriptRTop contained createClass render unmountComponentAtNode renderToString
-syntax keyword typescriptRTop contained renderToStaticMarkup isValidElement DOM PropTypes
-syntax keyword typescriptRTop contained initializeTouchEvents Children map forEach count only
-syntax keyword typescriptRComponent contained setState replaceState forceUpdate getDOMNode
-syntax keyword typescriptRComponent contained isMounted setProps replaceProps
+syntax keyword typescriptReact ReactDOM containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDDot
+syntax match   typescriptRDDot      contained /\./ nextgroup=typescriptRDMethods
 
-syntax cluster typescriptRProp      contains=typescriptRTop,typescriptRComponent
+syntax keyword typescriptReact ReactDOMServer containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDSDot
+syntax match   typescriptRDSDot     contained /\./ nextgroup=typescriptRDSMethods
+
+" React
+syntax keyword typescriptRProps     contained Component nextgroup=typescriptRCompMethods
+syntax keyword typescriptRProps     contained PureComponent Children addons
+syntax keyword typescriptRProps     contained PropTypes nextgroup=typescriptRPropDot
+syntax match   typescriptRPropDot   contained /\./ nextgroup=typescriptRPropProps,typescriptRPropMethods
+
+syntax keyword typescriptRMethods   contained createClass createElement createFactory
+syntax keyword typescriptRMethods   contained cloneElement isValidElement
+
+" ReactDOM
+syntax keyword typescriptRDMethods  contained render unmountComponentAtNode findDOMNode
+
+" ReactDOMServer
+syntax keyword typescriptRDMethods  contained renderToString renderToStaticMarkup 
+
+" React.Component
+syntax keyword typescriptRCompMethods contained componentWillMount render componentDidMount
+syntax keyword typescriptRCompMethods contained componentWillReceiveProps shouldComponentUpdate componentWillUpdate render componentDidUpdate
+syntax keyword typescriptRCompMethods contained componentWillUnmount
+syntax keyword typescriptRCompMethods contained setState forceUpdate
+syntax keyword typescriptRCompProps   contained defaultProps displayName propTypes
+
+" React.PropTypes
+syntax keyword typescriptRPropProps   contained array bool func number object string symbol node element isRequired
+syntax keyword typescriptRPropMethods contained instanceOf oneOf oneOfType arrayOf objectOf shape any
+
+
+syntax cluster typescriptRFunctions   contains=typescriptRMethods,typescriptRDMethods,typescriptRCompMethods,typescriptRPropMethods
+syntax cluster typescriptRAttrs       contains=typescriptRProps,typescriptRCompProps,typescriptRPropProps
 
 
 " Define the default highlighting.
@@ -31,8 +60,13 @@ if version >= 508 || !exists("did_jquery_typescript_syntax_inits")
 
   HiLink typescriptReact           Constant
 
-  HiLink typescriptRTop            PreProc
-  HiLink typescriptRComponent      PreProc
+  HiLink typescriptRProps          PreProc
+  HiLink typescriptRDMethods       PreProc
+  HiLink typescriptRCompMethods    PreProc
+  HiLink typescriptRPropMethods    PreProc
+  HiLink typescriptRProps          PreProc
+  HiLink typescriptRCompProps      PreProc
+  HiLink typescriptRPropProps      PreProc
 
   delcommand HiLink
 endif
