@@ -1,40 +1,38 @@
 " Vim syntax file
 " Language:    jasmine for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/04/19
-" Version:     2.0
+" Last Change: 2017/03/29
+" Version:     2.5
 " URL:         http://jasmine.github.io/
 
 
 syntax keyword typescriptJasmine jasmine containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptJdot
-syntax match   typescriptJdot contained /\./ nextgroup=typescriptJMethods
-syntax keyword typescriptJMethods contained any createSpy createSpyObj HtmlReporter Clock getEnv
+syntax match   typescriptJdot            contained /\./ nextgroup=typescriptJMethods
+syntax keyword typescriptJMethods        contained any anything createSpy createSpyObj HtmlReporter clock mockDate getEnv objectContaining arrayContaining stringMatching
 
-syntax keyword typescriptJMethods contained tick useMock
-syntax keyword typescriptJMethods contained addReporter specFilter
+syntax keyword typescriptJMethods        contained tick useMock
+syntax keyword typescriptJMethods        contained addReporter specFilter
 
 syntax cluster typescriptJFunctions      contains=typescriptJMethods,typescriptJEnvMethods,typescriptJEnvMethods,typescriptJExpectMethods,typescriptJSpyMethods,typescriptJSpyAndMethods,typescriptJSpyCallsMethods
-syntax cluster typescriptJAttrs      contains=typescriptJExpectNot,typescriptJSpyAnd,typescriptJSpyCalls
+syntax cluster typescriptJAttrs          contains=typescriptJExpectNot,typescriptJSpyAnd,typescriptJSpyCalls
 
-syntax keyword typescriptJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
+syntax keyword typescriptJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
 
-syntax keyword typescriptJGlobalMethod xdescribe xit containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
+syntax keyword typescriptJGlobalMethod   xdescribe xit containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
 
-syntax keyword typescriptJGlobalMethod spyOn containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
+syntax keyword typescriptJGlobalMethod   spyOn containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
 
-syntax keyword typescriptJSpyAnd and contained
-syntax keyword typescriptJSpyAndMethods returnValue callFake throwError stub contained
-syntax keyword typescriptJSpyCalls calls contained
-syntax keyword typescriptJSpyMethods andReturn andCallThrough callThrough contained
-syntax keyword typescriptJCallsMethods any count argsFor allArgs all mostRecent first reset contained
+syntax keyword typescriptJSpyAnd         contained and 
+syntax keyword typescriptJSpyAndMethods  contained callThrough returnValue returnValues callFake throwError stub 
+syntax keyword typescriptJSpyCalls       contained calls 
+syntax keyword typescriptJCallsMethods   contained any count argsFor allArgs all mostRecent first reset 
 
-syntax keyword typescriptJGlobalMethod expect containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
-syntax keyword typescriptJExpectNot not contained nextgroup=typescriptJExpectNotdot
+syntax keyword typescriptJGlobalMethod   expect fail pending containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
+syntax keyword typescriptJExpectNot      contained not contained nextgroup=typescriptJExpectNotdot
 
-syntax keyword typescriptJExpectMethods toHaveBeenCalled toHaveBeenCalledWith toEqual toBe toMatch contained
-syntax keyword typescriptJExpectMethods toBeDefined toBeUndefined toBeNull toBeTruthy toBeFalsy contained
-syntax keyword typescriptJExpectMethods toContain toBeCloseTo toBeLessThan toBeGreaterThan toThrow contained
-
+syntax keyword typescriptJExpectMethods  contained toHaveBeenCalled toHaveBeenCalledTimes toHaveBeenCalledWith toEqual toBe toMatch 
+syntax keyword typescriptJExpectMethods  contained toBeDefined toBeUndefined toBeNull toBeTruthy toBeFalsy 
+syntax keyword typescriptJExpectMethods  contained toContain toBeCloseTo toBeLessThan toBeGreaterThan toThrow 
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already

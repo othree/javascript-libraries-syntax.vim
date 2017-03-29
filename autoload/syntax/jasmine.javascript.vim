@@ -1,40 +1,38 @@
 " Vim syntax file
 " Language:    jasmine for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/04/19
-" Version:     2.0
+" Last Change: 2017/03/29
+" Version:     2.5
 " URL:         http://jasmine.github.io/
 
 
 syntax keyword javascriptJasmine jasmine containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptJdot
-syntax match   javascriptJdot contained /\./ nextgroup=javascriptJMethods
-syntax keyword javascriptJMethods contained any createSpy createSpyObj HtmlReporter Clock getEnv
+syntax match   javascriptJdot            contained /\./ nextgroup=javascriptJMethods
+syntax keyword javascriptJMethods        contained any anything createSpy createSpyObj HtmlReporter clock mockDate getEnv objectContaining arrayContaining stringMatching
 
-syntax keyword javascriptJMethods contained tick useMock
-syntax keyword javascriptJMethods contained addReporter specFilter
+syntax keyword javascriptJMethods        contained tick useMock
+syntax keyword javascriptJMethods        contained addReporter specFilter
 
 syntax cluster javascriptJFunctions      contains=javascriptJMethods,javascriptJEnvMethods,javascriptJEnvMethods,javascriptJExpectMethods,javascriptJSpyMethods,javascriptJSpyAndMethods,javascriptJSpyCallsMethods
-syntax cluster javascriptJAttrs      contains=javascriptJExpectNot,javascriptJSpyAnd,javascriptJSpyCalls
+syntax cluster javascriptJAttrs          contains=javascriptJExpectNot,javascriptJSpyAnd,javascriptJSpyCalls
 
-syntax keyword javascriptJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
+syntax keyword javascriptJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
 
-syntax keyword javascriptJGlobalMethod xdescribe xit containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
+syntax keyword javascriptJGlobalMethod   xdescribe xit containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
 
-syntax keyword javascriptJGlobalMethod spyOn containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
+syntax keyword javascriptJGlobalMethod   spyOn containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
 
-syntax keyword javascriptJSpyAnd and contained
-syntax keyword javascriptJSpyAndMethods returnValue callFake throwError stub contained
-syntax keyword javascriptJSpyCalls calls contained
-syntax keyword javascriptJSpyMethods andReturn andCallThrough callThrough contained
-syntax keyword javascriptJCallsMethods any count argsFor allArgs all mostRecent first reset contained
+syntax keyword javascriptJSpyAnd         contained and 
+syntax keyword javascriptJSpyAndMethods  contained callThrough returnValue returnValues callFake throwError stub 
+syntax keyword javascriptJSpyCalls       contained calls 
+syntax keyword javascriptJCallsMethods   contained any count argsFor allArgs all mostRecent first reset 
 
-syntax keyword javascriptJGlobalMethod expect containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
-syntax keyword javascriptJExpectNot not contained nextgroup=javascriptJExpectNotdot
+syntax keyword javascriptJGlobalMethod   expect fail pending containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=@javascriptAfterIdentifier
+syntax keyword javascriptJExpectNot      contained not contained nextgroup=javascriptJExpectNotdot
 
-syntax keyword javascriptJExpectMethods toHaveBeenCalled toHaveBeenCalledWith toEqual toBe toMatch contained
-syntax keyword javascriptJExpectMethods toBeDefined toBeUndefined toBeNull toBeTruthy toBeFalsy contained
-syntax keyword javascriptJExpectMethods toContain toBeCloseTo toBeLessThan toBeGreaterThan toThrow contained
-
+syntax keyword javascriptJExpectMethods  contained toHaveBeenCalled toHaveBeenCalledTimes toHaveBeenCalledWith toEqual toBe toMatch 
+syntax keyword javascriptJExpectMethods  contained toBeDefined toBeUndefined toBeNull toBeTruthy toBeFalsy 
+syntax keyword javascriptJExpectMethods  contained toContain toBeCloseTo toBeLessThan toBeGreaterThan toThrow 
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already

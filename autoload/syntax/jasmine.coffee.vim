@@ -1,40 +1,38 @@
 " Vim syntax file
 " Language:    jasmine for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/04/19
-" Version:     2.0
+" Last Change: 2017/03/29
+" Version:     2.5
 " URL:         http://jasmine.github.io/
 
 
 syntax keyword coffeeJasmine jasmine containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeJdot
-syntax match   coffeeJdot contained /\./ nextgroup=coffeeJMethods
-syntax keyword coffeeJMethods contained any createSpy createSpyObj HtmlReporter Clock getEnv
+syntax match   coffeeJdot            contained /\./ nextgroup=coffeeJMethods
+syntax keyword coffeeJMethods        contained any anything createSpy createSpyObj HtmlReporter clock mockDate getEnv objectContaining arrayContaining stringMatching
 
-syntax keyword coffeeJMethods contained tick useMock
-syntax keyword coffeeJMethods contained addReporter specFilter
+syntax keyword coffeeJMethods        contained tick useMock
+syntax keyword coffeeJMethods        contained addReporter specFilter
 
 syntax cluster coffeeJFunctions      contains=coffeeJMethods,coffeeJEnvMethods,coffeeJEnvMethods,coffeeJExpectMethods,coffeeJSpyMethods,coffeeJSpyAndMethods,coffeeJSpyCallsMethods
-syntax cluster coffeeJAttrs      contains=coffeeJExpectNot,coffeeJSpyAnd,coffeeJSpyCalls
+syntax cluster coffeeJAttrs          contains=coffeeJExpectNot,coffeeJSpyAnd,coffeeJSpyCalls
 
-syntax keyword coffeeJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
+syntax keyword coffeeJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
 
-syntax keyword coffeeJGlobalMethod xdescribe xit containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
+syntax keyword coffeeJGlobalMethod   xdescribe xit containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
 
-syntax keyword coffeeJGlobalMethod spyOn containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
+syntax keyword coffeeJGlobalMethod   spyOn containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
 
-syntax keyword coffeeJSpyAnd and contained
-syntax keyword coffeeJSpyAndMethods returnValue callFake throwError stub contained
-syntax keyword coffeeJSpyCalls calls contained
-syntax keyword coffeeJSpyMethods andReturn andCallThrough callThrough contained
-syntax keyword coffeeJCallsMethods any count argsFor allArgs all mostRecent first reset contained
+syntax keyword coffeeJSpyAnd         contained and 
+syntax keyword coffeeJSpyAndMethods  contained callThrough returnValue returnValues callFake throwError stub 
+syntax keyword coffeeJSpyCalls       contained calls 
+syntax keyword coffeeJCallsMethods   contained any count argsFor allArgs all mostRecent first reset 
 
-syntax keyword coffeeJGlobalMethod expect containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
-syntax keyword coffeeJExpectNot not contained nextgroup=coffeeJExpectNotdot
+syntax keyword coffeeJGlobalMethod   expect fail pending containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
+syntax keyword coffeeJExpectNot      contained not contained nextgroup=coffeeJExpectNotdot
 
-syntax keyword coffeeJExpectMethods toHaveBeenCalled toHaveBeenCalledWith toEqual toBe toMatch contained
-syntax keyword coffeeJExpectMethods toBeDefined toBeUndefined toBeNull toBeTruthy toBeFalsy contained
-syntax keyword coffeeJExpectMethods toContain toBeCloseTo toBeLessThan toBeGreaterThan toThrow contained
-
+syntax keyword coffeeJExpectMethods  contained toHaveBeenCalled toHaveBeenCalledTimes toHaveBeenCalledWith toEqual toBe toMatch 
+syntax keyword coffeeJExpectMethods  contained toBeDefined toBeUndefined toBeNull toBeTruthy toBeFalsy 
+syntax keyword coffeeJExpectMethods  contained toContain toBeCloseTo toBeLessThan toBeGreaterThan toThrow 
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already

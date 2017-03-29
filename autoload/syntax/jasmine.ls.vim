@@ -1,40 +1,38 @@
 " Vim syntax file
 " Language:    jasmine for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2016/04/19
-" Version:     2.0
+" Last Change: 2017/03/29
+" Version:     2.5
 " URL:         http://jasmine.github.io/
 
 
 syntax keyword lsJasmine jasmine containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsJdot
-syntax match   lsJdot contained /\./ nextgroup=lsJMethods
-syntax keyword lsJMethods contained any createSpy createSpyObj HtmlReporter Clock getEnv
+syntax match   lsJdot            contained /\./ nextgroup=lsJMethods
+syntax keyword lsJMethods        contained any anything createSpy createSpyObj HtmlReporter clock mockDate getEnv objectContaining arrayContaining stringMatching
 
-syntax keyword lsJMethods contained tick useMock
-syntax keyword lsJMethods contained addReporter specFilter
+syntax keyword lsJMethods        contained tick useMock
+syntax keyword lsJMethods        contained addReporter specFilter
 
 syntax cluster lsJFunctions      contains=lsJMethods,lsJEnvMethods,lsJEnvMethods,lsJExpectMethods,lsJSpyMethods,lsJSpyAndMethods,lsJSpyCallsMethods
-syntax cluster lsJAttrs      contains=lsJExpectNot,lsJSpyAnd,lsJSpyCalls
+syntax cluster lsJAttrs          contains=lsJExpectNot,lsJSpyAnd,lsJSpyCalls
 
-syntax keyword lsJGlobalMethod describe done runs waitsFor it beforeEach afterEach containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
+syntax keyword lsJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
 
-syntax keyword lsJGlobalMethod xdescribe xit containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
+syntax keyword lsJGlobalMethod   xdescribe xit containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
 
-syntax keyword lsJGlobalMethod spyOn containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
+syntax keyword lsJGlobalMethod   spyOn containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
 
-syntax keyword lsJSpyAnd and contained
-syntax keyword lsJSpyAndMethods returnValue callFake throwError stub contained
-syntax keyword lsJSpyCalls calls contained
-syntax keyword lsJSpyMethods andReturn andCallThrough callThrough contained
-syntax keyword lsJCallsMethods any count argsFor allArgs all mostRecent first reset contained
+syntax keyword lsJSpyAnd         contained and 
+syntax keyword lsJSpyAndMethods  contained callThrough returnValue returnValues callFake throwError stub 
+syntax keyword lsJSpyCalls       contained calls 
+syntax keyword lsJCallsMethods   contained any count argsFor allArgs all mostRecent first reset 
 
-syntax keyword lsJGlobalMethod expect containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
-syntax keyword lsJExpectNot not contained nextgroup=lsJExpectNotdot
+syntax keyword lsJGlobalMethod   expect fail pending containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
+syntax keyword lsJExpectNot      contained not contained nextgroup=lsJExpectNotdot
 
-syntax keyword lsJExpectMethods toHaveBeenCalled toHaveBeenCalledWith toEqual toBe toMatch contained
-syntax keyword lsJExpectMethods toBeDefined toBeUndefined toBeNull toBeTruthy toBeFalsy contained
-syntax keyword lsJExpectMethods toContain toBeCloseTo toBeLessThan toBeGreaterThan toThrow contained
-
+syntax keyword lsJExpectMethods  contained toHaveBeenCalled toHaveBeenCalledTimes toHaveBeenCalledWith toEqual toBe toMatch 
+syntax keyword lsJExpectMethods  contained toBeDefined toBeUndefined toBeNull toBeTruthy toBeFalsy 
+syntax keyword lsJExpectMethods  contained toContain toBeCloseTo toBeLessThan toBeGreaterThan toThrow 
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
