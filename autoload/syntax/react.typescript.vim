@@ -1,35 +1,35 @@
 " Vim syntax file
 " Language:    React for typescript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2017/02/15
-" Version:     15.4.2
+" Last Change: 2017/03/29
+" Version:     15.4.2.1
 " URL:         https://facebook.github.io/react/docs/react-api.html
 " URL:         https://facebook.github.io/react/docs/react-component.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword typescriptReact React containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
+syntax keyword typescriptReact      React containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
 syntax match   typescriptRDot       contained /\./ nextgroup=typescriptRProps,typescriptRMethods
 
-syntax keyword typescriptReact ReactDOM containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDDot
+syntax keyword typescriptReact      ReactDOM containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDDot
 syntax match   typescriptRDDot      contained /\./ nextgroup=typescriptRDMethods
 
-syntax keyword typescriptReact ReactDOMServer containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDSDot
+syntax keyword typescriptReact      ReactDOMServer containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDSDot
 syntax match   typescriptRDSDot     contained /\./ nextgroup=typescriptRDSMethods
 
 " React
-syntax keyword typescriptRProps     contained Component nextgroup=typescriptRCompMethods
-syntax keyword typescriptRProps     contained PureComponent Children addons
-syntax keyword typescriptRProps     contained PropTypes nextgroup=typescriptRPropDot
+syntax keyword typescriptRProps     Component nextgroup=typescriptRCompMethods
+syntax keyword typescriptRProps     PureComponent Children addons
+syntax keyword typescriptRProps     PropTypes nextgroup=typescriptRPropDot
 syntax match   typescriptRPropDot   contained /\./ nextgroup=typescriptRPropProps,typescriptRPropMethods
 
-syntax keyword typescriptRMethods   contained createClass createElement createFactory
-syntax keyword typescriptRMethods   contained cloneElement isValidElement
+syntax keyword typescriptRMethods   createClass createElement createFactory
+syntax keyword typescriptRMethods   cloneElement isValidElement
 
 " ReactDOM
-syntax keyword typescriptRDMethods  contained render unmountComponentAtNode findDOMNode
+syntax keyword typescriptRDMethods  render unmountComponentAtNode findDOMNode
 
 " ReactDOMServer
-syntax keyword typescriptRDMethods  contained renderToString renderToStaticMarkup 
+syntax keyword typescriptRDMethods  renderToString renderToStaticMarkup 
 
 " React.Component
 syntax keyword typescriptRCompMethods contained componentWillMount render componentDidMount

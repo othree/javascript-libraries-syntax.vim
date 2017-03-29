@@ -1,35 +1,35 @@
 " Vim syntax file
 " Language:    React for javascript
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2017/02/15
-" Version:     15.4.2
+" Last Change: 2017/03/29
+" Version:     15.4.2.1
 " URL:         https://facebook.github.io/react/docs/react-api.html
 " URL:         https://facebook.github.io/react/docs/react-component.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword javascriptReact React containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDot
+syntax keyword javascriptReact      React containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDot
 syntax match   javascriptRDot       contained /\./ nextgroup=javascriptRProps,javascriptRMethods
 
-syntax keyword javascriptReact ReactDOM containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDDot
+syntax keyword javascriptReact      ReactDOM containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDDot
 syntax match   javascriptRDDot      contained /\./ nextgroup=javascriptRDMethods
 
-syntax keyword javascriptReact ReactDOMServer containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDSDot
+syntax keyword javascriptReact      ReactDOMServer containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDSDot
 syntax match   javascriptRDSDot     contained /\./ nextgroup=javascriptRDSMethods
 
 " React
-syntax keyword javascriptRProps     contained Component nextgroup=javascriptRCompMethods
-syntax keyword javascriptRProps     contained PureComponent Children addons
-syntax keyword javascriptRProps     contained PropTypes nextgroup=javascriptRPropDot
+syntax keyword javascriptRProps     Component nextgroup=javascriptRCompMethods
+syntax keyword javascriptRProps     PureComponent Children addons
+syntax keyword javascriptRProps     PropTypes nextgroup=javascriptRPropDot
 syntax match   javascriptRPropDot   contained /\./ nextgroup=javascriptRPropProps,javascriptRPropMethods
 
-syntax keyword javascriptRMethods   contained createClass createElement createFactory
-syntax keyword javascriptRMethods   contained cloneElement isValidElement
+syntax keyword javascriptRMethods   createClass createElement createFactory
+syntax keyword javascriptRMethods   cloneElement isValidElement
 
 " ReactDOM
-syntax keyword javascriptRDMethods  contained render unmountComponentAtNode findDOMNode
+syntax keyword javascriptRDMethods  render unmountComponentAtNode findDOMNode
 
 " ReactDOMServer
-syntax keyword javascriptRDMethods  contained renderToString renderToStaticMarkup 
+syntax keyword javascriptRDMethods  renderToString renderToStaticMarkup 
 
 " React.Component
 syntax keyword javascriptRCompMethods contained componentWillMount render componentDidMount

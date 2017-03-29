@@ -1,35 +1,35 @@
 " Vim syntax file
 " Language:    React for coffee
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2017/02/15
-" Version:     15.4.2
+" Last Change: 2017/03/29
+" Version:     15.4.2.1
 " URL:         https://facebook.github.io/react/docs/react-api.html
 " URL:         https://facebook.github.io/react/docs/react-component.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword coffeeReact React containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDot
+syntax keyword coffeeReact      React containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDot
 syntax match   coffeeRDot       contained /\./ nextgroup=coffeeRProps,coffeeRMethods
 
-syntax keyword coffeeReact ReactDOM containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDDot
+syntax keyword coffeeReact      ReactDOM containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDDot
 syntax match   coffeeRDDot      contained /\./ nextgroup=coffeeRDMethods
 
-syntax keyword coffeeReact ReactDOMServer containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDSDot
+syntax keyword coffeeReact      ReactDOMServer containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDSDot
 syntax match   coffeeRDSDot     contained /\./ nextgroup=coffeeRDSMethods
 
 " React
-syntax keyword coffeeRProps     contained Component nextgroup=coffeeRCompMethods
-syntax keyword coffeeRProps     contained PureComponent Children addons
-syntax keyword coffeeRProps     contained PropTypes nextgroup=coffeeRPropDot
+syntax keyword coffeeRProps     Component nextgroup=coffeeRCompMethods
+syntax keyword coffeeRProps     PureComponent Children addons
+syntax keyword coffeeRProps     PropTypes nextgroup=coffeeRPropDot
 syntax match   coffeeRPropDot   contained /\./ nextgroup=coffeeRPropProps,coffeeRPropMethods
 
-syntax keyword coffeeRMethods   contained createClass createElement createFactory
-syntax keyword coffeeRMethods   contained cloneElement isValidElement
+syntax keyword coffeeRMethods   createClass createElement createFactory
+syntax keyword coffeeRMethods   cloneElement isValidElement
 
 " ReactDOM
-syntax keyword coffeeRDMethods  contained render unmountComponentAtNode findDOMNode
+syntax keyword coffeeRDMethods  render unmountComponentAtNode findDOMNode
 
 " ReactDOMServer
-syntax keyword coffeeRDMethods  contained renderToString renderToStaticMarkup 
+syntax keyword coffeeRDMethods  renderToString renderToStaticMarkup 
 
 " React.Component
 syntax keyword coffeeRCompMethods contained componentWillMount render componentDidMount

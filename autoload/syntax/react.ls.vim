@@ -1,35 +1,35 @@
 " Vim syntax file
 " Language:    React for ls
 " Maintainer:  othree <othree@gmail.com>
-" Last Change: 2017/02/15
-" Version:     15.4.2
+" Last Change: 2017/03/29
+" Version:     15.4.2.1
 " URL:         https://facebook.github.io/react/docs/react-api.html
 " URL:         https://facebook.github.io/react/docs/react-component.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword lsReact React containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDot
+syntax keyword lsReact      React containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDot
 syntax match   lsRDot       contained /\./ nextgroup=lsRProps,lsRMethods
 
-syntax keyword lsReact ReactDOM containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDDot
+syntax keyword lsReact      ReactDOM containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDDot
 syntax match   lsRDDot      contained /\./ nextgroup=lsRDMethods
 
-syntax keyword lsReact ReactDOMServer containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDSDot
+syntax keyword lsReact      ReactDOMServer containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDSDot
 syntax match   lsRDSDot     contained /\./ nextgroup=lsRDSMethods
 
 " React
-syntax keyword lsRProps     contained Component nextgroup=lsRCompMethods
-syntax keyword lsRProps     contained PureComponent Children addons
-syntax keyword lsRProps     contained PropTypes nextgroup=lsRPropDot
+syntax keyword lsRProps     Component nextgroup=lsRCompMethods
+syntax keyword lsRProps     PureComponent Children addons
+syntax keyword lsRProps     PropTypes nextgroup=lsRPropDot
 syntax match   lsRPropDot   contained /\./ nextgroup=lsRPropProps,lsRPropMethods
 
-syntax keyword lsRMethods   contained createClass createElement createFactory
-syntax keyword lsRMethods   contained cloneElement isValidElement
+syntax keyword lsRMethods   createClass createElement createFactory
+syntax keyword lsRMethods   cloneElement isValidElement
 
 " ReactDOM
-syntax keyword lsRDMethods  contained render unmountComponentAtNode findDOMNode
+syntax keyword lsRDMethods  render unmountComponentAtNode findDOMNode
 
 " ReactDOMServer
-syntax keyword lsRDMethods  contained renderToString renderToStaticMarkup 
+syntax keyword lsRDMethods  renderToString renderToStaticMarkup 
 
 " React.Component
 syntax keyword lsRCompMethods contained componentWillMount render componentDidMount
