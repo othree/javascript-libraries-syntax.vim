@@ -33,7 +33,7 @@ syntax keyword typescriptQAttributes     contained addClass attr hasClass html p
 syntax keyword typescriptQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
 syntax keyword typescriptQCSS            contained css
 syntax keyword typescriptQData           contained clearQueue data dequeue queue removeData
-syntax keyword typescriptQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
+syntax keyword typescriptQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then finally catch all defer when
 syntax keyword typescriptQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword typescriptQEffects        contained hide show toggle
 syntax keyword typescriptQEffects        contained animate delay stop finish

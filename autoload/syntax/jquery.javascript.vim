@@ -33,7 +33,7 @@ syntax keyword javascriptQAttributes     contained addClass attr hasClass html p
 syntax keyword javascriptQCallbacks      contained add disable disabled empty fire fired fireWith has lock locked remove Callbacks
 syntax keyword javascriptQCSS            contained css
 syntax keyword javascriptQData           contained clearQueue data dequeue queue removeData
-syntax keyword javascriptQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then
+syntax keyword javascriptQDeferred       contained Deferred always done fail notify progress promise reject rejectWith resolved resolveWith notifyWith state then finally catch all defer when
 syntax keyword javascriptQDimensions     contained height innerHeight innerWidth outerHeight outerWidth width
 syntax keyword javascriptQEffects        contained hide show toggle
 syntax keyword javascriptQEffects        contained animate delay stop finish
