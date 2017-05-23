@@ -10,7 +10,6 @@
 syntax keyword lsunderscore _ containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution
 " syntax match   lsunderscoredot contained /\./ nextgroup=@ls_Functions
 " syntax match   lsunderscoredot contained /([^)]*)\./ nextgroup=@ls_Functions
-
 syntax cluster ls_Functions contains=ls_collections,ls_strings,ls_arrays,ls_functions,ls_objects,ls_chaining,ls_utility,ls_lodash,ls_math,ls_number
 
 syntax match   ls_collections contained /contains/
@@ -24,6 +23,8 @@ syntax keyword ls_collections contained partition sortByAll includes callback
 " lodash 4.0.0
 syntax keyword ls_collections contained flatMap commit next plant reverse toJSON valueOf
 syntax keyword ls_collections contained forEachRight invokeMap keyBy orderBy sample sampleSize
+" lodash 4.7.0
+syntax keyword ls_collections contained flatMapDeep flatMapDepth
 
 " lodash 3.0.0
 syntax keyword ls_strings contained camelCase capitalize deburr endsWith escapeRegExp
@@ -48,6 +49,14 @@ syntax keyword ls_arrays contained join pull pullAll pullAllBy remove slice sort
 syntax keyword ls_arrays contained sortedLastIndexBy sortedLastIndexOf sortedUniq sortedUniqBy tail
 syntax keyword ls_arrays contained take takeRightWhile unionBy unionWith uniqBy uniqWith unzipWith
 syntax keyword ls_arrays contained xorBy xorWith zipObject zipWith
+" lodash 4.1.0
+syntax keyword ls_arrays contained zipObjectDeep
+" lodash 4.4.0
+syntax keyword ls_arrays contained flattenDepth
+" lodash 4.6.0
+syntax keyword ls_arrays contained pullAllWith
+" lodash 4.11.0
+syntax keyword ls_arrays contained nth
 
 syntax keyword ls_functions contained bind bindAll partial memoize delay throttle debounce
 syntax keyword ls_functions contained once after before wrap negate compose flow flowRight
@@ -70,7 +79,11 @@ syntax keyword ls_objects contained assignIn assignInWith assignWith defaultsDee
 syntax keyword ls_objects contained findKey findLastKey forIn forInRight forOwn forOwnRight
 syntax keyword ls_objects contained functionsIn hasIn mergeWith omitBy pickBy setWith toPairs
 syntax keyword ls_objects contained toPairsIn transform unset
-"
+" lodash 4.1.0
+syntax keyword ls_objects contained invertBy 
+" lodash 4.6.0
+syntax keyword ls_objects contained updateWith update
+
 syntax keyword ls_utility contained noConflict identify times random mixin uniqueId
 syntax keyword ls_utility contained escape unescape result template iteratee noop
 " lodash 3.0.0
@@ -78,6 +91,10 @@ syntax keyword ls_utility contained attempt matches matchesProperty propertyOf c
 " lodash 4.0.0
 syntax keyword ls_utility contained cond conforms flow identity matches method methodOf nthArg
 syntax keyword ls_utility contained over overEvery overSome rangeRight times toPath uniqueId
+" lodash 4.13.0
+syntax keyword ls_utility contained stubTrue stubString stubObject stubFalse stubArray
+" lodash 4.14.0
+syntax keyword ls_utility contained defaultTo
 
 syntax keyword ls_chaining contained chain value thru
 
@@ -95,9 +112,20 @@ syntax keyword ls_lodash contained isEqualWith isInteger isLength isMatchWith is
 syntax keyword ls_lodash contained isSymbol lt lte toInteger toLength toNumber toSafeInteger toString
 syntax keyword ls_lodash contained templateSettings evaluate imports interpolate varible 
 syntax keyword ls_lodash contained VERSION
+" lodash 4.3.0
+syntax keyword ls_arrays contained isArrayBuffer isBuffer isMap isSet isWeakMap isWeakSet
+" lodash 4.4.0
+syntax keyword ls_arrays contained castArray 
+" lodash 4.12.0
+syntax keyword ls_arrays contained toFinite 
+" lodash 4.14.0
+syntax keyword ls_arrays contained conformsTo
 
 " lodash 4.0.0
 syntax keyword ls_math contained add ceil floor max maxBy mean min minBy round subtract sum sumBy
+" lodash 4.7.0
+syntax keyword ls_math contained divide multiply meanBy 
+
 syntax keyword ls_number contained clamp inRange
 
 " Define the default highlighting.

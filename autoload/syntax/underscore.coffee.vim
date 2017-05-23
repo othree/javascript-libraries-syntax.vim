@@ -10,7 +10,6 @@
 syntax keyword coffeeunderscore _ containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution
 " syntax match   coffeeunderscoredot contained /\./ nextgroup=@coffee_Functions
 " syntax match   coffeeunderscoredot contained /([^)]*)\./ nextgroup=@coffee_Functions
-
 syntax cluster coffee_Functions contains=coffee_collections,coffee_strings,coffee_arrays,coffee_functions,coffee_objects,coffee_chaining,coffee_utility,coffee_lodash,coffee_math,coffee_number
 
 syntax match   coffee_collections contained /contains/
@@ -24,6 +23,8 @@ syntax keyword coffee_collections contained partition sortByAll includes callbac
 " lodash 4.0.0
 syntax keyword coffee_collections contained flatMap commit next plant reverse toJSON valueOf
 syntax keyword coffee_collections contained forEachRight invokeMap keyBy orderBy sample sampleSize
+" lodash 4.7.0
+syntax keyword coffee_collections contained flatMapDeep flatMapDepth
 
 " lodash 3.0.0
 syntax keyword coffee_strings contained camelCase capitalize deburr endsWith escapeRegExp
@@ -48,6 +49,14 @@ syntax keyword coffee_arrays contained join pull pullAll pullAllBy remove slice 
 syntax keyword coffee_arrays contained sortedLastIndexBy sortedLastIndexOf sortedUniq sortedUniqBy tail
 syntax keyword coffee_arrays contained take takeRightWhile unionBy unionWith uniqBy uniqWith unzipWith
 syntax keyword coffee_arrays contained xorBy xorWith zipObject zipWith
+" lodash 4.1.0
+syntax keyword coffee_arrays contained zipObjectDeep
+" lodash 4.4.0
+syntax keyword coffee_arrays contained flattenDepth
+" lodash 4.6.0
+syntax keyword coffee_arrays contained pullAllWith
+" lodash 4.11.0
+syntax keyword coffee_arrays contained nth
 
 syntax keyword coffee_functions contained bind bindAll partial memoize delay throttle debounce
 syntax keyword coffee_functions contained once after before wrap negate compose flow flowRight
@@ -70,7 +79,11 @@ syntax keyword coffee_objects contained assignIn assignInWith assignWith default
 syntax keyword coffee_objects contained findKey findLastKey forIn forInRight forOwn forOwnRight
 syntax keyword coffee_objects contained functionsIn hasIn mergeWith omitBy pickBy setWith toPairs
 syntax keyword coffee_objects contained toPairsIn transform unset
-"
+" lodash 4.1.0
+syntax keyword coffee_objects contained invertBy 
+" lodash 4.6.0
+syntax keyword coffee_objects contained updateWith update
+
 syntax keyword coffee_utility contained noConflict identify times random mixin uniqueId
 syntax keyword coffee_utility contained escape unescape result template iteratee noop
 " lodash 3.0.0
@@ -78,6 +91,10 @@ syntax keyword coffee_utility contained attempt matches matchesProperty property
 " lodash 4.0.0
 syntax keyword coffee_utility contained cond conforms flow identity matches method methodOf nthArg
 syntax keyword coffee_utility contained over overEvery overSome rangeRight times toPath uniqueId
+" lodash 4.13.0
+syntax keyword coffee_utility contained stubTrue stubString stubObject stubFalse stubArray
+" lodash 4.14.0
+syntax keyword coffee_utility contained defaultTo
 
 syntax keyword coffee_chaining contained chain value thru
 
@@ -95,9 +112,20 @@ syntax keyword coffee_lodash contained isEqualWith isInteger isLength isMatchWit
 syntax keyword coffee_lodash contained isSymbol lt lte toInteger toLength toNumber toSafeInteger toString
 syntax keyword coffee_lodash contained templateSettings evaluate imports interpolate varible 
 syntax keyword coffee_lodash contained VERSION
+" lodash 4.3.0
+syntax keyword coffee_arrays contained isArrayBuffer isBuffer isMap isSet isWeakMap isWeakSet
+" lodash 4.4.0
+syntax keyword coffee_arrays contained castArray 
+" lodash 4.12.0
+syntax keyword coffee_arrays contained toFinite 
+" lodash 4.14.0
+syntax keyword coffee_arrays contained conformsTo
 
 " lodash 4.0.0
 syntax keyword coffee_math contained add ceil floor max maxBy mean min minBy round subtract sum sumBy
+" lodash 4.7.0
+syntax keyword coffee_math contained divide multiply meanBy 
+
 syntax keyword coffee_number contained clamp inRange
 
 " Define the default highlighting.
