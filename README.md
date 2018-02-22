@@ -28,6 +28,7 @@ Libraries
 * [Ramda](http://ramdajs.com/)
 * [Vue](https://vuejs.org/)
 * [d3](https://d3js.org/)
+* [tape](https://github.com/substack/tape), assume test and t as global object
 
 File Types
 ----------
@@ -74,8 +75,9 @@ Support libs id:
 * Ramda: ramda
 * Vue.js: vue
 * d3.js: d3
+* tape: tape
 
-Default lib set is: `jquery,underscore,backbone`
+Default lib set is: `jquery,underscore,backbone,react`
 
 You can use [local vimrc][] to setup libraries used in project. Sample code for local vimrc:
 

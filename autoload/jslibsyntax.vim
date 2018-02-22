@@ -22,7 +22,8 @@ let s:libs = [
   \ 'flux',
   \ 'handlebars',
   \ 'd3',
-  \ 'vue'
+  \ 'vue',
+  \ 'tape'
   \ ]
 
 let s:default_libs = [
