@@ -28,7 +28,7 @@ Libraries
 * [Ramda](http://ramdajs.com/)
 * [Vue](https://vuejs.org/)
 * [d3](https://d3js.org/)
-* [tape](https://github.com/substack/tape), assume test and t as global object
+* [tape](https://github.com/substack/tape), assume `test` and `t` are global object
 
 File Types
 ----------
