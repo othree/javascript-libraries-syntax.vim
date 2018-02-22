@@ -109,6 +109,9 @@ All repeat defination will be removed when SyntaxComplete supports this feature.
 Changes
 -------
 
+### Version 0.7
+* Add tape
+
 ### Version 0.6
 * Add Vue.js
 * Add d3.js
