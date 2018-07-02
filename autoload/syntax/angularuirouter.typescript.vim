@@ -3,23 +3,23 @@
 " Maintainer: Dan Hansen <https://www.linkedin.com/in/dansomething>
 " URL:        http://angular-ui.github.io/ui-router/
 
-syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString $stateProvider nextgroup=typescriptASstateProviderdot
+syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString $stateProvider nextgroup=typescriptASstateProviderdot
 syntax match   typescriptASstateProverdot contained /\./ nextgroup=typescriptASstateProviderMethods
 syntax keyword typescriptASstateProviderMethods contained state decorator
 
-syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString $urlRouterProvider nextgroup=typescriptASurlRouterProviderdot
+syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString $urlRouterProvider nextgroup=typescriptASurlRouterProviderdot
 syntax match   typescriptASstateProverdot contained /\./ nextgroup=typescriptASurlRouterProviderMethods
 syntax keyword typescriptASurlRouterProviderMethods contained when otherwise rule
 
-syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString $state nextgroup=typescriptASstatedot
+syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString $state nextgroup=typescriptASstatedot
 syntax match   typescriptASstatedot contained /\./ nextgroup=typescriptASstateMethods
 syntax keyword typescriptASstateMethods contained current get go href includes is reload transitionTo
 
-syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString $urlRouter nextgroup=typescriptASurlRouterdot
+syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString $urlRouter nextgroup=typescriptASurlRouterdot
 syntax match   typescriptASurlRouterdot contained /\./ nextgroup=typescriptASurlRouterMethods
 syntax keyword typescriptASurlRouterMethods contained href sync
 
-syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString $stateParams $uiViewScroll
+syntax keyword typescriptUIRouter containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString $stateParams $uiViewScroll
 
 
 " Define the default highlighting.

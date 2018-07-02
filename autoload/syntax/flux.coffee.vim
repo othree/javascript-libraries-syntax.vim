@@ -5,7 +5,7 @@
 " Version:     2.0.2
 " URL:         https://facebook.github.io/flux/docs/dispatcher.html
 
-syntax keyword coffeeFlux Dispatcher containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeFDot
+syntax keyword coffeeFlux Dispatcher containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeFDot
 syntax match   coffeeFDot contained /\./ nextgroup=coffeeFFunctions
 
 syntax keyword coffeeFDispatcher contained register unregister waitFor dispatch isDispatching

@@ -10,7 +10,7 @@ if exists("b:current_syntax") && b:current_syntax == 'coffee'
   setlocal iskeyword+=$
 endif
 
-syntax keyword coffeeVue             Vue vm containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeVDot
+syntax keyword coffeeVue             Vue vm containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeVDot
 syntax match   coffeeVDot            contained /\./ nextgroup=coffeeVFunctions,coffeeVAttrs
 
 " Vue.*

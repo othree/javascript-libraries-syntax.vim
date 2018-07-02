@@ -5,7 +5,7 @@
 " Version:     2.0.0
 " URL:         http://handlebarsjs.com/
 
-syntax keyword lsHandlebars Handlebars containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsHDot,lsHutility
+syntax keyword lsHandlebars Handlebars containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsHDot,lsHutility
 syntax match   lsHDot       contained /\./ nextgroup=@lsHmethods
 " syntax match   lsunderscoredot contained /([^)]*)\./ nextgroup=@ls_Functions
 

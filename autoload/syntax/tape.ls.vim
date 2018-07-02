@@ -6,11 +6,11 @@
 " URL:         https://github.com/substack/tape
 
 
-syntax keyword lsTape test       containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsTdot
+syntax keyword lsTape test       containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsTdot
 syntax match   lsTdot            contained /\./ nextgroup=lsTMethods
 syntax keyword lsTMethods        contained skip onfinish onFailure createHarness only createStream
 
-syntax keyword lsTapeAssert t    containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsTAssertdot
+syntax keyword lsTapeAssert t    containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsTAssertdot
 syntax match   lsTAssertdot      contained /\./ nextgroup=lsTAssertMethods
 syntax keyword lsTAssertMethods  contained plan end fail pass timeoutAfter skip ok notOk error
 syntax keyword lsTAssertMethods  contained equal notEqual deepEqual notDeepEqual deepLooseEqual notDeepLooseEqual

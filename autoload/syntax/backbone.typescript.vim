@@ -5,7 +5,7 @@
 " Version:     1.2.3
 " URL:         http://backbonejs.org/
 
-syntax keyword typescriptBackbone Backbone containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptBDot
+syntax keyword typescriptBackbone Backbone containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptBDot
 syntax match   typescriptBDot     contained /\./ nextgroup=typescriptBObjects
 syntax keyword typescriptBObjects contained Collection Model View Events Router History Utility sync ajax emulateHTTP emulateJSON
 

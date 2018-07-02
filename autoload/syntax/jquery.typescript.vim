@@ -11,7 +11,7 @@ if exists("b:current_syntax") && b:current_syntax == 'typescript'
   setlocal iskeyword+=$
 endif
 
-syntax keyword typescriptjQuery jQuery $ containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=@typescriptAfterIdentifier
+syntax keyword typescriptjQuery jQuery $ containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=@typescriptAfterIdentifier
 " syntax match   typescriptjQuerydot       contained /\./ nextgroup=@typescriptQGlobals
 " syntax match   typescriptjQuerydot       contained /([^)]*)\./ nextgroup=@typescriptQFunctions
 

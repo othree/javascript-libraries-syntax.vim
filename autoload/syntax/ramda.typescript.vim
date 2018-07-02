@@ -5,7 +5,7 @@
 " Version:     0.21.0
 " URL:         http://ramdajs.com/
 
-syntax keyword typescriptRamda       R containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
+syntax keyword typescriptRamda       R containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
 syntax match   typescriptRaDot       contained /\./ nextgroup=typescriptRaFunctions
 
 syntax cluster typescriptRaFunctions contains=typescriptRaFunction,typescriptRaMath,typescriptRaList,typescriptRaLogic,typescriptRaObject,typescriptRaRelation,typescriptRaType,typescriptRaString

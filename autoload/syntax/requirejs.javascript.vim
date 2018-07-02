@@ -6,11 +6,11 @@
 " URL:         http://requirejs.org/
 
 
-syntax keyword javascriptRequire require requirejs containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRequiredot
+syntax keyword javascriptRequire require requirejs containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRequiredot
 syntax match   javascriptRequiredot contained /\./ nextgroup=javascriptRequireMethods
 syntax keyword javascriptRequireMethods contained config
 
-syntax keyword javascriptRdefine define containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString nextgroup=javascriptRdefinedot
+syntax keyword javascriptRdefine define containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString nextgroup=javascriptRdefinedot
 syntax match   javascriptRdefinedot contained /\./ nextgroup=javascriptRdefineMethods
 syntax keyword javascriptRdefineMethods contained amd
 

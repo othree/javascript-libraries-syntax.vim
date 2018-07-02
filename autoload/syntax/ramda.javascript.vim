@@ -5,7 +5,7 @@
 " Version:     0.21.0
 " URL:         http://ramdajs.com/
 
-syntax keyword javascriptRamda       R containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDot
+syntax keyword javascriptRamda       R containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptRDot
 syntax match   javascriptRaDot       contained /\./ nextgroup=javascriptRaFunctions
 
 syntax cluster javascriptRaFunctions contains=javascriptRaFunction,javascriptRaMath,javascriptRaList,javascriptRaLogic,javascriptRaObject,javascriptRaRelation,javascriptRaType,javascriptRaString

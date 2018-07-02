@@ -10,7 +10,7 @@ if exists("b:current_syntax") && b:current_syntax == 'ls'
   setlocal iskeyword+=$
 endif
 
-syntax keyword lsVue             Vue vm containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsVDot
+syntax keyword lsVue             Vue vm containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsVDot
 syntax match   lsVDot            contained /\./ nextgroup=lsVFunctions,lsVAttrs
 
 " Vue.*

@@ -5,7 +5,7 @@
 " Version:     1.2.3
 " URL:         http://backbonejs.org/
 
-syntax keyword javascriptBackbone Backbone containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptBDot
+syntax keyword javascriptBackbone Backbone containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptBDot
 syntax match   javascriptBDot     contained /\./ nextgroup=javascriptBObjects
 syntax keyword javascriptBObjects contained Collection Model View Events Router History Utility sync ajax emulateHTTP emulateJSON
 

@@ -5,7 +5,7 @@
 " Version:     1.2.3
 " URL:         http://backbonejs.org/
 
-syntax keyword lsBackbone Backbone containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsBDot
+syntax keyword lsBackbone Backbone containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsBDot
 syntax match   lsBDot     contained /\./ nextgroup=lsBObjects
 syntax keyword lsBObjects contained Collection Model View Events Router History Utility sync ajax emulateHTTP emulateJSON
 

@@ -5,7 +5,7 @@
 " Version:     2.0.0
 " URL:         http://handlebarsjs.com/
 
-syntax keyword coffeeHandlebars Handlebars containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeHDot,coffeeHutility
+syntax keyword coffeeHandlebars Handlebars containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeHDot,coffeeHutility
 syntax match   coffeeHDot       contained /\./ nextgroup=@coffeeHmethods
 " syntax match   coffeeunderscoredot contained /([^)]*)\./ nextgroup=@coffee_Functions
 

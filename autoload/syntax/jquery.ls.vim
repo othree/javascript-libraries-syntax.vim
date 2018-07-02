@@ -11,7 +11,7 @@ if exists("b:current_syntax") && b:current_syntax == 'ls'
   setlocal iskeyword+=$
 endif
 
-syntax keyword lsjQuery jQuery $ containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=@lsAfterIdentifier
+syntax keyword lsjQuery jQuery $ containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=@lsAfterIdentifier
 " syntax match   lsjQuerydot       contained /\./ nextgroup=@lsQGlobals
 " syntax match   lsjQuerydot       contained /([^)]*)\./ nextgroup=@lsQFunctions
 

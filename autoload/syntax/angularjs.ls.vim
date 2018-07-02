@@ -5,7 +5,7 @@
 " Version:     1.1.13.1
 " URL:         http://angularjs.org/
 
-syntax keyword lsAngular angular containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsAngularDot
+syntax keyword lsAngular angular containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsAngularDot
 syntax match   lsAngularDot contained /\./ nextgroup=lsAngularMethods
 syntax keyword lsAngularMethods contained bind bootstrap copy element equals
 syntax keyword lsAngularMethods contained extend forEach fromJson identity injector
@@ -13,50 +13,50 @@ syntax keyword lsAngularMethods contained isArray isDate isDefined isElement isF
 syntax keyword lsAngularMethods contained isNumber isObject isString isUndefined lowercase
 syntax keyword lsAngularMethods contained mock module noop toJson uppercase version
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $anchorScroll $cacheFactory $compile $controller $document
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $exceptionHandler $filter $httpBackend
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $locale $parse $rootElement
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $routeParams $templateCache $window 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $cookies $resource $sanitize
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $element
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $anchorScroll $cacheFactory $compile $controller $document
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $exceptionHandler $filter $httpBackend
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $locale $parse $rootElement
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $routeParams $templateCache $window 
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $cookies $resource $sanitize
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $element
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $attributes nextgroup=lsASattributesdot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $attributes nextgroup=lsASattributesdot
 syntax match   lsASattributesdot contained /\./ nextgroup=lsASattributesMethods
 syntax keyword lsASattributesMethods contained $normalize $addClass $removeClass $updateClass $observe $set $attr
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $http nextgroup=lsAShttpdot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $http nextgroup=lsAShttpdot
 syntax match   lsAShttpdot contained /\./ nextgroup=lsAShttpMethods
 syntax keyword lsAShttpMethods contained get head post put delete jsonp defaults prendingRequests 
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $interpolate nextgroup=lsASinterpolatedot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $interpolate nextgroup=lsASinterpolatedot
 syntax match   lsASinterpolatedot contained /\./ nextgroup=lsASinterpolateMethods
 syntax keyword lsASinterpolateMethods contained endSymbol startSymbol
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $location nextgroup=lsASlocationdot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $location nextgroup=lsASlocationdot
 syntax match   lsASlocationdot contained /\./ nextgroup=lsASlocationMethods
 syntax keyword lsASlocationMethods contained absUrl hash host path port protocol replace search url
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $log nextgroup=lsASlogdot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $log nextgroup=lsASlogdot
 syntax match   lsASlogdot contained /\./ nextgroup=lsASlogMethods
 syntax keyword lsASlogMethods contained error info log warn
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $q nextgroup=lsASqdot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $q nextgroup=lsASqdot
 syntax match   lsASqdot contained /\./ nextgroup=lsASqMethods
 syntax keyword lsASqMethods contained all defer reject when
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $route nextgroup=lsASroutedot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $route nextgroup=lsASroutedot
 syntax match   lsASroutedot contained /\./ nextgroup=lsASrouteMethods
 syntax keyword lsASrouteMethods contained reload current route
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $timeout nextgroup=lsAStimeoutdot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $timeout nextgroup=lsAStimeoutdot
 syntax match   lsAStimeoutdot contained /\./ nextgroup=lsAStimeoutMethods
 syntax keyword lsAStimeoutMethods contained cancel
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $scope $rootScope nextgroup=lsASscopedot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $scope $rootScope nextgroup=lsASscopedot
 syntax match   lsASscopedot contained /\./ nextgroup=lsASscopeMethods
 syntax keyword lsASscopeMethods contained $apply $broadcast $destroy $digest $emit $eval $evalAsync $new $on $watch $id
 
-syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsString $cookieStore nextgroup=lsAScookieStoredot
+syntax keyword lsAServices containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $cookieStore nextgroup=lsAScookieStoredot
 syntax match   lsAScookieStoredot contained /\./ nextgroup=lsAScookieStoreMethods
 syntax keyword lsAScookieStoreMethods contained get put remove
 

@@ -3,23 +3,23 @@
 " Maintainer: Dan Hansen <https://www.linkedin.com/in/dansomething>
 " URL:        http://angular-ui.github.io/ui-router/
 
-syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $stateProvider nextgroup=javascriptASstateProviderdot
+syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString $stateProvider nextgroup=javascriptASstateProviderdot
 syntax match   javascriptASstateProverdot contained /\./ nextgroup=javascriptASstateProviderMethods
 syntax keyword javascriptASstateProviderMethods contained state decorator
 
-syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $urlRouterProvider nextgroup=javascriptASurlRouterProviderdot
+syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString $urlRouterProvider nextgroup=javascriptASurlRouterProviderdot
 syntax match   javascriptASstateProverdot contained /\./ nextgroup=javascriptASurlRouterProviderMethods
 syntax keyword javascriptASurlRouterProviderMethods contained when otherwise rule
 
-syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $state nextgroup=javascriptASstatedot
+syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString $state nextgroup=javascriptASstatedot
 syntax match   javascriptASstatedot contained /\./ nextgroup=javascriptASstateMethods
 syntax keyword javascriptASstateMethods contained current get go href includes is reload transitionTo
 
-syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $urlRouter nextgroup=javascriptASurlRouterdot
+syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString $urlRouter nextgroup=javascriptASurlRouterdot
 syntax match   javascriptASurlRouterdot contained /\./ nextgroup=javascriptASurlRouterMethods
 syntax keyword javascriptASurlRouterMethods contained href sync
 
-syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString $stateParams $uiViewScroll
+syntax keyword javascriptUIRouter containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString $stateParams $uiViewScroll
 
 
 " Define the default highlighting.

@@ -7,13 +7,13 @@
 " URL:         https://facebook.github.io/react/docs/react-component.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword typescriptReact      React containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
+syntax keyword typescriptReact      React containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDot
 syntax match   typescriptRDot       contained /\./ nextgroup=typescriptRProps,typescriptRMethods
 
-syntax keyword typescriptReact      ReactDOM containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDDot
+syntax keyword typescriptReact      ReactDOM containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDDot
 syntax match   typescriptRDDot      contained /\./ nextgroup=typescriptRDMethods
 
-syntax keyword typescriptReact      ReactDOMServer containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDSDot
+syntax keyword typescriptReact      ReactDOMServer containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptRDSDot
 syntax match   typescriptRDSDot     contained /\./ nextgroup=typescriptRDSMethods
 
 " React

@@ -7,13 +7,13 @@
 " URL:         https://facebook.github.io/react/docs/react-component.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword coffeeReact      React containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDot
+syntax keyword coffeeReact      React containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDot
 syntax match   coffeeRDot       contained /\./ nextgroup=coffeeRProps,coffeeRMethods
 
-syntax keyword coffeeReact      ReactDOM containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDDot
+syntax keyword coffeeReact      ReactDOM containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDDot
 syntax match   coffeeRDDot      contained /\./ nextgroup=coffeeRDMethods
 
-syntax keyword coffeeReact      ReactDOMServer containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDSDot
+syntax keyword coffeeReact      ReactDOMServer containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeRDSDot
 syntax match   coffeeRDSDot     contained /\./ nextgroup=coffeeRDSMethods
 
 " React

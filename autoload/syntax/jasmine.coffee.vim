@@ -6,7 +6,7 @@
 " URL:         http://jasmine.github.io/
 
 
-syntax keyword coffeeJasmine jasmine containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeJdot
+syntax keyword coffeeJasmine jasmine containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeJdot
 syntax match   coffeeJdot            contained /\./ nextgroup=coffeeJMethods
 syntax keyword coffeeJMethods        contained any anything createSpy createSpyObj HtmlReporter clock mockDate getEnv objectContaining arrayContaining stringMatching
 
@@ -16,18 +16,18 @@ syntax keyword coffeeJMethods        contained addReporter specFilter
 syntax cluster coffeeJFunctions      contains=coffeeJMethods,coffeeJEnvMethods,coffeeJEnvMethods,coffeeJExpectMethods,coffeeJSpyMethods,coffeeJSpyAndMethods,coffeeJSpyCallsMethods
 syntax cluster coffeeJAttrs          contains=coffeeJExpectNot,coffeeJSpyAnd,coffeeJSpyCalls
 
-syntax keyword coffeeJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
+syntax keyword coffeeJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString nextgroup=@coffeeAfterIdentifier
 
-syntax keyword coffeeJGlobalMethod   xdescribe xit containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
+syntax keyword coffeeJGlobalMethod   xdescribe xit containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString nextgroup=@coffeeAfterIdentifier
 
-syntax keyword coffeeJGlobalMethod   spyOn containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
+syntax keyword coffeeJGlobalMethod   spyOn containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString nextgroup=@coffeeAfterIdentifier
 
 syntax keyword coffeeJSpyAnd         contained and 
 syntax keyword coffeeJSpyAndMethods  contained callThrough returnValue returnValues callFake throwError stub 
 syntax keyword coffeeJSpyCalls       contained calls 
 syntax keyword coffeeJCallsMethods   contained any count argsFor allArgs all mostRecent first reset 
 
-syntax keyword coffeeJGlobalMethod   expect fail pending containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeAfterIdentifier
+syntax keyword coffeeJGlobalMethod   expect fail pending containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString nextgroup=@coffeeAfterIdentifier
 syntax keyword coffeeJExpectNot      contained not contained nextgroup=coffeeJExpectNotdot
 
 syntax keyword coffeeJExpectMethods  contained toHaveBeenCalled toHaveBeenCalledTimes toHaveBeenCalledWith toEqual toBe toMatch 

@@ -6,11 +6,11 @@
 " URL:         https://github.com/substack/tape
 
 
-syntax keyword coffeeTape test       containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeTdot
+syntax keyword coffeeTape test       containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeTdot
 syntax match   coffeeTdot            contained /\./ nextgroup=coffeeTMethods
 syntax keyword coffeeTMethods        contained skip onfinish onFailure createHarness only createStream
 
-syntax keyword coffeeTapeAssert t    containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeTAssertdot
+syntax keyword coffeeTapeAssert t    containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeTAssertdot
 syntax match   coffeeTAssertdot      contained /\./ nextgroup=coffeeTAssertMethods
 syntax keyword coffeeTAssertMethods  contained plan end fail pass timeoutAfter skip ok notOk error
 syntax keyword coffeeTAssertMethods  contained equal notEqual deepEqual notDeepEqual deepLooseEqual notDeepLooseEqual

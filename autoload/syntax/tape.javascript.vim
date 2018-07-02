@@ -6,11 +6,11 @@
 " URL:         https://github.com/substack/tape
 
 
-syntax keyword javascriptTape test       containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptTdot
+syntax keyword javascriptTape test       containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptTdot
 syntax match   javascriptTdot            contained /\./ nextgroup=javascriptTMethods
 syntax keyword javascriptTMethods        contained skip onfinish onFailure createHarness only createStream
 
-syntax keyword javascriptTapeAssert t    containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptTAssertdot
+syntax keyword javascriptTapeAssert t    containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptTAssertdot
 syntax match   javascriptTAssertdot      contained /\./ nextgroup=javascriptTAssertMethods
 syntax keyword javascriptTAssertMethods  contained plan end fail pass timeoutAfter skip ok notOk error
 syntax keyword javascriptTAssertMethods  contained equal notEqual deepEqual notDeepEqual deepLooseEqual notDeepLooseEqual
