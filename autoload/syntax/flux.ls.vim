@@ -5,7 +5,7 @@
 " Version:     2.0.2
 " URL:         https://facebook.github.io/flux/docs/dispatcher.html
 
-syntax keyword lsFlux Dispatcher containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsFDot
+syntax keyword lsFlux Dispatcher containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsFDot
 syntax match   lsFDot contained /\./ nextgroup=lsFFunctions
 
 syntax keyword lsFDispatcher contained register unregister waitFor dispatch isDispatching

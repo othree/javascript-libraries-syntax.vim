@@ -3,23 +3,23 @@
 " Maintainer: Dan Hansen <https://www.linkedin.com/in/dansomething>
 " URL:        http://angular-ui.github.io/ui-router/
 
-syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $stateProvider nextgroup=coffeeASstateProviderdot
+syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString $stateProvider nextgroup=coffeeASstateProviderdot
 syntax match   coffeeASstateProverdot contained /\./ nextgroup=coffeeASstateProviderMethods
 syntax keyword coffeeASstateProviderMethods contained state decorator
 
-syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $urlRouterProvider nextgroup=coffeeASurlRouterProviderdot
+syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString $urlRouterProvider nextgroup=coffeeASurlRouterProviderdot
 syntax match   coffeeASstateProverdot contained /\./ nextgroup=coffeeASurlRouterProviderMethods
 syntax keyword coffeeASurlRouterProviderMethods contained when otherwise rule
 
-syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $state nextgroup=coffeeASstatedot
+syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString $state nextgroup=coffeeASstatedot
 syntax match   coffeeASstatedot contained /\./ nextgroup=coffeeASstateMethods
 syntax keyword coffeeASstateMethods contained current get go href includes is reload transitionTo
 
-syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $urlRouter nextgroup=coffeeASurlRouterdot
+syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString $urlRouter nextgroup=coffeeASurlRouterdot
 syntax match   coffeeASurlRouterdot contained /\./ nextgroup=coffeeASurlRouterMethods
 syntax keyword coffeeASurlRouterMethods contained href sync
 
-syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString $stateParams $uiViewScroll
+syntax keyword coffeeUIRouter containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString $stateParams $uiViewScroll
 
 
 " Define the default highlighting.

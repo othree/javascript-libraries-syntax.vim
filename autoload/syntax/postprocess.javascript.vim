@@ -14,5 +14,5 @@ syntax cluster props add=@javascriptRFunctions,@gavascriptRAttrs
 syntax cluster props add=@javascriptVFunctions,javascriptVAttrs
 
 if !exists("javascript_props")
-  syntax match javascriptLDot /\./ containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptLineComment,javascriptString nextgroup=@props
+  syntax match javascriptLDot /\./ containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptLineComment,javascriptRegexpString,javascriptString nextgroup=@props
 endif

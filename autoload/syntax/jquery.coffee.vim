@@ -11,7 +11,7 @@ if exists("b:current_syntax") && b:current_syntax == 'coffee'
   setlocal iskeyword+=$
 endif
 
-syntax keyword coffeejQuery jQuery $ containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=@coffeeAfterIdentifier
+syntax keyword coffeejQuery jQuery $ containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=@coffeeAfterIdentifier
 " syntax match   coffeejQuerydot       contained /\./ nextgroup=@coffeeQGlobals
 " syntax match   coffeejQuerydot       contained /([^)]*)\./ nextgroup=@coffeeQFunctions
 

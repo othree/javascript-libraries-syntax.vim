@@ -3,23 +3,23 @@
 " Maintainer: Dan Hansen <https://www.linkedin.com/in/dansomething>
 " URL:        http://angular-ui.github.io/ui-router/
 
-syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsString $stateProvider nextgroup=lsASstateProviderdot
+syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $stateProvider nextgroup=lsASstateProviderdot
 syntax match   lsASstateProverdot contained /\./ nextgroup=lsASstateProviderMethods
 syntax keyword lsASstateProviderMethods contained state decorator
 
-syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsString $urlRouterProvider nextgroup=lsASurlRouterProviderdot
+syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $urlRouterProvider nextgroup=lsASurlRouterProviderdot
 syntax match   lsASstateProverdot contained /\./ nextgroup=lsASurlRouterProviderMethods
 syntax keyword lsASurlRouterProviderMethods contained when otherwise rule
 
-syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsString $state nextgroup=lsASstatedot
+syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $state nextgroup=lsASstatedot
 syntax match   lsASstatedot contained /\./ nextgroup=lsASstateMethods
 syntax keyword lsASstateMethods contained current get go href includes is reload transitionTo
 
-syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsString $urlRouter nextgroup=lsASurlRouterdot
+syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $urlRouter nextgroup=lsASurlRouterdot
 syntax match   lsASurlRouterdot contained /\./ nextgroup=lsASurlRouterMethods
 syntax keyword lsASurlRouterMethods contained href sync
 
-syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsString $stateParams $uiViewScroll
+syntax keyword lsUIRouter containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString $stateParams $uiViewScroll
 
 
 " Define the default highlighting.

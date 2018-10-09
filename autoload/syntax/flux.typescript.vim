@@ -5,7 +5,7 @@
 " Version:     2.0.2
 " URL:         https://facebook.github.io/flux/docs/dispatcher.html
 
-syntax keyword typescriptFlux Dispatcher containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptFDot
+syntax keyword typescriptFlux Dispatcher containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptFDot
 syntax match   typescriptFDot contained /\./ nextgroup=typescriptFFunctions
 
 syntax keyword typescriptFDispatcher contained register unregister waitFor dispatch isDispatching

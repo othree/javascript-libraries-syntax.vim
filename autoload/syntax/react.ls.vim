@@ -7,13 +7,13 @@
 " URL:         https://facebook.github.io/react/docs/react-component.html
 " URL:         https://facebook.github.io/react/docs/component-api.html
 
-syntax keyword lsReact      React containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDot
+syntax keyword lsReact      React containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDot
 syntax match   lsRDot       contained /\./ nextgroup=lsRProps,lsRMethods
 
-syntax keyword lsReact      ReactDOM containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDDot
+syntax keyword lsReact      ReactDOM containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDDot
 syntax match   lsRDDot      contained /\./ nextgroup=lsRDMethods
 
-syntax keyword lsReact      ReactDOMServer containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDSDot
+syntax keyword lsReact      ReactDOMServer containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsRDSDot
 syntax match   lsRDSDot     contained /\./ nextgroup=lsRDSMethods
 
 " React

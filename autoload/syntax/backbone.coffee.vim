@@ -5,7 +5,7 @@
 " Version:     1.2.3
 " URL:         http://backbonejs.org/
 
-syntax keyword coffeeBackbone Backbone containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeBDot
+syntax keyword coffeeBackbone Backbone containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeRegexpString,coffeeString,coffeeTemplate,coffeeTemplateSubstitution nextgroup=coffeeBDot
 syntax match   coffeeBDot     contained /\./ nextgroup=coffeeBObjects
 syntax keyword coffeeBObjects contained Collection Model View Events Router History Utility sync ajax emulateHTTP emulateJSON
 

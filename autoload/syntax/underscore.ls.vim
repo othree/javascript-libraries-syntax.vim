@@ -7,7 +7,7 @@
 " LoDash:      4.0.0
 " URL:         http://lodash.com/
 
-syntax keyword lsunderscore _ containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution
+syntax keyword lsunderscore _ containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution
 " syntax match   lsunderscoredot contained /\./ nextgroup=@ls_Functions
 " syntax match   lsunderscoredot contained /([^)]*)\./ nextgroup=@ls_Functions
 syntax cluster ls_Functions contains=ls_collections,ls_strings,ls_arrays,ls_functions,ls_objects,ls_chaining,ls_utility,ls_lodash,ls_math,ls_number

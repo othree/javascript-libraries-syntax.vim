@@ -6,7 +6,7 @@
 " URL:         http://jasmine.github.io/
 
 
-syntax keyword lsJasmine jasmine containedin=ALLBUT,lsComment,lsLineComment,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsJdot
+syntax keyword lsJasmine jasmine containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString,lsTemplate,lsTemplateSubstitution nextgroup=lsJdot
 syntax match   lsJdot            contained /\./ nextgroup=lsJMethods
 syntax keyword lsJMethods        contained any anything createSpy createSpyObj HtmlReporter clock mockDate getEnv objectContaining arrayContaining stringMatching
 
@@ -16,18 +16,18 @@ syntax keyword lsJMethods        contained addReporter specFilter
 syntax cluster lsJFunctions      contains=lsJMethods,lsJEnvMethods,lsJEnvMethods,lsJExpectMethods,lsJSpyMethods,lsJSpyAndMethods,lsJSpyCallsMethods
 syntax cluster lsJAttrs          contains=lsJExpectNot,lsJSpyAnd,lsJSpyCalls
 
-syntax keyword lsJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
+syntax keyword lsJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString nextgroup=@lsAfterIdentifier
 
-syntax keyword lsJGlobalMethod   xdescribe xit containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
+syntax keyword lsJGlobalMethod   xdescribe xit containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString nextgroup=@lsAfterIdentifier
 
-syntax keyword lsJGlobalMethod   spyOn containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
+syntax keyword lsJGlobalMethod   spyOn containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString nextgroup=@lsAfterIdentifier
 
 syntax keyword lsJSpyAnd         contained and 
 syntax keyword lsJSpyAndMethods  contained callThrough returnValue returnValues callFake throwError stub 
 syntax keyword lsJSpyCalls       contained calls 
 syntax keyword lsJCallsMethods   contained any count argsFor allArgs all mostRecent first reset 
 
-syntax keyword lsJGlobalMethod   expect fail pending containedin=ALLBUT,lsComment,lsLineComment,lsString nextgroup=@lsAfterIdentifier
+syntax keyword lsJGlobalMethod   expect fail pending containedin=ALLBUT,lsComment,lsLineComment,lsRegexpString,lsString nextgroup=@lsAfterIdentifier
 syntax keyword lsJExpectNot      contained not contained nextgroup=lsJExpectNotdot
 
 syntax keyword lsJExpectMethods  contained toHaveBeenCalled toHaveBeenCalledTimes toHaveBeenCalledWith toEqual toBe toMatch 

@@ -7,7 +7,7 @@
 " LoDash:      4.0.0
 " URL:         http://lodash.com/
 
-syntax keyword typescriptunderscore _ containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
+syntax keyword typescriptunderscore _ containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
 " syntax match   typescriptunderscoredot contained /\./ nextgroup=@typescript_Functions
 " syntax match   typescriptunderscoredot contained /([^)]*)\./ nextgroup=@typescript_Functions
 syntax cluster typescript_Functions contains=typescript_collections,typescript_strings,typescript_arrays,typescript_functions,typescript_objects,typescript_chaining,typescript_utility,typescript_lodash,typescript_math,typescript_number

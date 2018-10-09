@@ -6,7 +6,7 @@
 " URL:         http://jasmine.github.io/
 
 
-syntax keyword typescriptJasmine jasmine containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptJdot
+syntax keyword typescriptJasmine jasmine containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution nextgroup=typescriptJdot
 syntax match   typescriptJdot            contained /\./ nextgroup=typescriptJMethods
 syntax keyword typescriptJMethods        contained any anything createSpy createSpyObj HtmlReporter clock mockDate getEnv objectContaining arrayContaining stringMatching
 
@@ -16,18 +16,18 @@ syntax keyword typescriptJMethods        contained addReporter specFilter
 syntax cluster typescriptJFunctions      contains=typescriptJMethods,typescriptJEnvMethods,typescriptJEnvMethods,typescriptJExpectMethods,typescriptJSpyMethods,typescriptJSpyAndMethods,typescriptJSpyCallsMethods
 syntax cluster typescriptJAttrs          contains=typescriptJExpectNot,typescriptJSpyAnd,typescriptJSpyCalls
 
-syntax keyword typescriptJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
+syntax keyword typescriptJGlobalMethod   describe done runs waitsFor it beforeEach afterEach beforeAll afterAll containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString nextgroup=@typescriptAfterIdentifier
 
-syntax keyword typescriptJGlobalMethod   xdescribe xit containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
+syntax keyword typescriptJGlobalMethod   xdescribe xit containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString nextgroup=@typescriptAfterIdentifier
 
-syntax keyword typescriptJGlobalMethod   spyOn containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
+syntax keyword typescriptJGlobalMethod   spyOn containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString nextgroup=@typescriptAfterIdentifier
 
 syntax keyword typescriptJSpyAnd         contained and 
 syntax keyword typescriptJSpyAndMethods  contained callThrough returnValue returnValues callFake throwError stub 
 syntax keyword typescriptJSpyCalls       contained calls 
 syntax keyword typescriptJCallsMethods   contained any count argsFor allArgs all mostRecent first reset 
 
-syntax keyword typescriptJGlobalMethod   expect fail pending containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptString nextgroup=@typescriptAfterIdentifier
+syntax keyword typescriptJGlobalMethod   expect fail pending containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString nextgroup=@typescriptAfterIdentifier
 syntax keyword typescriptJExpectNot      contained not contained nextgroup=typescriptJExpectNotdot
 
 syntax keyword typescriptJExpectMethods  contained toHaveBeenCalled toHaveBeenCalledTimes toHaveBeenCalledWith toEqual toBe toMatch 

@@ -5,7 +5,7 @@
 " Version:     2.0.0
 " URL:         http://handlebarsjs.com/
 
-syntax keyword javascriptHandlebars Handlebars containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptHDot,javascriptHutility
+syntax keyword javascriptHandlebars Handlebars containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptHDot,javascriptHutility
 syntax match   javascriptHDot       contained /\./ nextgroup=@javascriptHmethods
 " syntax match   javascriptunderscoredot contained /([^)]*)\./ nextgroup=@javascript_Functions
 

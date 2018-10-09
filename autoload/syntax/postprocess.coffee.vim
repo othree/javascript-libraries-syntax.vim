@@ -13,7 +13,10 @@ syntax cluster props add=@coffeeRaFunctions
 syntax cluster props add=@coffeeQAttrs,@coffee_Attrs,@coffeeBAttrs,@coffeepAttrs,@coffeeAAttrs,@coffeeJAttrs
 syntax cluster props add=@coffeeRProp
 " syntax match   coffeeLDot /\./   containedin=ALLBUT,coffeeComment,coffeeLineComment,coffeeString nextgroup=@coffeeLibraryFuncs,@coffeeLibraryAttrs
-"
-syntax region  coffeeString     start=/"/  skip=/\\\\\|\\"/  end=/"/ contains=@coffeeInterpString,@jSelectors
-syntax region  coffeeString     start=/'/  skip=/\\\\\|\\'/  end=/'/ contains=@coffeeBasicString,@jSelectors
+
+
+syntax region  coffeeString     start=/"/  skip=/\\\\\|\\"/  end=/"/   contains=@coffeeInterpString,@jSelectors
+syntax region  coffeeString     start=/'/  skip=/\\\\\|\\'/  end=/'/   contains=@coffeeBasicString,@jSelectors
+syntax region  coffeeHeredoc    start=/"""/                  end=/"""/ contains=@coffeeInterpString fold
+syntax region  coffeeHeredoc    start=/'''/                  end=/'''/ contains=@coffeeBasicString fold
 

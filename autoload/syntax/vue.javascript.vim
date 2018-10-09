@@ -10,7 +10,7 @@ if exists("b:current_syntax") && b:current_syntax == 'javascript'
   setlocal iskeyword+=$
 endif
 
-syntax keyword javascriptVue             Vue vm containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptVDot
+syntax keyword javascriptVue             Vue vm containedin=ALLBUT,javascriptComment,javascriptLineComment,javascriptRegexpString,javascriptString,javascriptTemplate,javascriptTemplateSubstitution nextgroup=javascriptVDot
 syntax match   javascriptVDot            contained /\./ nextgroup=javascriptVFunctions,javascriptVAttrs
 
 " Vue.*
