@@ -11,4 +11,6 @@ syntax keyword htmlArg contained ui-reset ui-route ui-scrollfixed ui-show
 syntax keyword htmlArg contained ui-hide ui-toggle ui-validate ui-date
 syntax keyword htmlArg contained ui-codemirror ui-ace ui-calendar ui-map
 syntax keyword htmlArg contained ui-select2 ui-tinymce ui-sortable ui-sref
-syntax keyword htmlArg contained ui-sref-active
+syntax keyword htmlArg contained ui-sref-active close-others is-open
+
+syntax keyword htmlTagName contained accordion
