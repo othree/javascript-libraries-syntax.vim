@@ -10,7 +10,6 @@
 syntax keyword typescriptunderscore _ containedin=ALLBUT,typescriptComment,typescriptLineComment,typescriptRegexpString,typescriptString,typescriptTemplate,typescriptTemplateSubstitution
 " syntax match   typescriptunderscoredot contained /\./ nextgroup=@typescript_Functions
 " syntax match   typescriptunderscoredot contained /([^)]*)\./ nextgroup=@typescript_Functions
-
 syntax cluster typescript_Functions contains=typescript_collections,typescript_strings,typescript_arrays,typescript_functions,typescript_objects,typescript_chaining,typescript_utility,typescript_lodash,typescript_math,typescript_number
 
 syntax match   typescript_collections contained /contains/
@@ -24,6 +23,8 @@ syntax keyword typescript_collections contained partition sortByAll includes cal
 " lodash 4.0.0
 syntax keyword typescript_collections contained flatMap commit next plant reverse toJSON valueOf
 syntax keyword typescript_collections contained forEachRight invokeMap keyBy orderBy sample sampleSize
+" lodash 4.7.0
+syntax keyword typescript_collections contained flatMapDeep flatMapDepth
 
 " lodash 3.0.0
 syntax keyword typescript_strings contained camelCase capitalize deburr endsWith escapeRegExp
@@ -48,6 +49,14 @@ syntax keyword typescript_arrays contained join pull pullAll pullAllBy remove sl
 syntax keyword typescript_arrays contained sortedLastIndexBy sortedLastIndexOf sortedUniq sortedUniqBy tail
 syntax keyword typescript_arrays contained take takeRightWhile unionBy unionWith uniqBy uniqWith unzipWith
 syntax keyword typescript_arrays contained xorBy xorWith zipObject zipWith
+" lodash 4.1.0
+syntax keyword typescript_arrays contained zipObjectDeep
+" lodash 4.4.0
+syntax keyword typescript_arrays contained flattenDepth
+" lodash 4.6.0
+syntax keyword typescript_arrays contained pullAllWith
+" lodash 4.11.0
+syntax keyword typescript_arrays contained nth
 
 syntax keyword typescript_functions contained bind bindAll partial memoize delay throttle debounce
 syntax keyword typescript_functions contained once after before wrap negate compose flow flowRight
@@ -55,7 +64,7 @@ syntax keyword typescript_functions contained once after before wrap negate comp
 syntax keyword typescript_functions contained ary before curryRight negate rearg
 syntax keyword typescript_functions contained backflow compose partial cancel
 " lodash 4.0.0
-syntax keyword typescript_functions contained curry defer eachRight findLast flip negate overArgs rest spread unary 
+syntax keyword typescript_functions contained curry defer eachRight findLast flip negate overArgs rest spread unary
 
 syntax keyword typescript_objects contained keys values pairs invert functions extend pick omit
 syntax keyword typescript_objects contained defaults clone tap has isEqual isEmpty isElement isArray
@@ -70,7 +79,12 @@ syntax keyword typescript_objects contained assignIn assignInWith assignWith def
 syntax keyword typescript_objects contained findKey findLastKey forIn forInRight forOwn forOwnRight
 syntax keyword typescript_objects contained functionsIn hasIn mergeWith omitBy pickBy setWith toPairs
 syntax keyword typescript_objects contained toPairsIn transform unset
-"
+" lodash 4.1.0
+syntax keyword typescript_objects contained invertBy
+" lodash 4.6.0
+syntax keyword typescript_objects contained updateWith update
+
+
 syntax keyword typescript_utility contained noConflict identify times random mixin uniqueId
 syntax keyword typescript_utility contained escape unescape result template iteratee noop
 " lodash 3.0.0
@@ -78,6 +92,10 @@ syntax keyword typescript_utility contained attempt matches matchesProperty prop
 " lodash 4.0.0
 syntax keyword typescript_utility contained cond conforms flow identity matches method methodOf nthArg
 syntax keyword typescript_utility contained over overEvery overSome rangeRight times toPath uniqueId
+" lodash 4.13.0
+syntax keyword typescript_utility contained stubTrue stubString stubObject stubFalse stubArray
+" lodash 4.14.0
+syntax keyword typescript_utility contained defaultTo
 
 syntax keyword typescript_chaining contained chain value thru
 
@@ -93,11 +111,21 @@ syntax keyword typescript_lodash contained isError isMatch isNative isTypedArray
 syntax keyword typescript_lodash contained clone cloneDeepWith cloneWith eq gt gte isArrayLike isArrayLikeObject
 syntax keyword typescript_lodash contained isEqualWith isInteger isLength isMatchWith isNil isObjectLike isSafeInteger
 syntax keyword typescript_lodash contained isSymbol lt lte toInteger toLength toNumber toSafeInteger toString
-syntax keyword typescript_lodash contained templateSettings evaluate imports interpolate varible 
+syntax keyword typescript_lodash contained templateSettings evaluate imports interpolate varible
 syntax keyword typescript_lodash contained VERSION
+" lodash 4.3.0
+syntax keyword typescript_arrays contained isArrayBuffer isBuffer isMap isSet isWeakMap isWeakSet
+" lodash 4.4.0
+syntax keyword typescript_arrays contained castArray
+" lodash 4.12.0
+syntax keyword typescript_arrays contained toFinite
+" lodash 4.14.0
+syntax keyword typescript_arrays contained conformsTo
 
 " lodash 4.0.0
 syntax keyword typescript_math contained add ceil floor max maxBy mean min minBy round subtract sum sumBy
+" lodash 4.7.0
+syntax keyword typescript_math contained divide multiply meanBy
 syntax keyword typescript_number contained clamp inRange
 
 " Define the default highlighting.
